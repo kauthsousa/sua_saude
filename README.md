@@ -29,3 +29,9 @@ Sua saúde é um sistema que visa modernizar a gestão de clínicas hospitalares
 
 4. Acesse os endpoints em :
    
+
+<br/>
+<hr>
+<br/>
+
+![Sua Saúde](./src/app/images/logo.png)
