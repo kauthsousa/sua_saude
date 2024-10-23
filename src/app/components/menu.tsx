@@ -6,7 +6,7 @@ import styles from "../page.module.css";
 export default function Menu() {
     return (
         <div className={styles.menusuperior}>
-            <Image src="/sua_saude/src/app/images/logodeitada.png" className={styles.imagem_logo} alt="Sua Saúde logo" width={160} height={80} priority />
+            <Image src="/images/logodeitada.png" className={styles.imagem_logo} alt="Sua Saúde logo" width={160} height={40} priority />
             <nav className={styles.menu_opcoes} aria-label="Menu lateral">
                 <ul>
                     <li><Link href="../user/home" aria-label="Ir para Seja um parceiro">Seja um Parceiro</Link></li>
