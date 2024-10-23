@@ -8,10 +8,21 @@
   justify-content: space-between;
 }
 
-.menusuperior nav ul li{
+.menusuperior nav {
+  margin: 1.8em;
+}
+
+.menusuperior nav ul li {
   list-style-type: none;
   display: inline;
-  padding: 0em 1em;
+  padding: 0em 3em;
+}
+
+.menusuperior nav ul li:last-child {
+  background: #007486;
+  color: white;
+  padding: 1em 5em;
+  border-radius: 50px;
 }
 
 /*  HOME  */
