@@ -2,12 +2,12 @@
 // import Image from "next/image";
 import styles from "../../page.module.css";
 
-import MenuDeslogado from "../../components/menusuperior_deslogado";
+import MenuLogado from "../../components/menusuperior_logado";
 
 export default function CadastroUser() {
   return (
     <div className={styles.pagina_cadastro}>
-      <header><MenuDeslogado/></header>
+      <header><MenuLogado/></header>
       <main className={styles.main}> 
         
       </main>

@@ -25,15 +25,15 @@ a {
 
 @font-face {
   font-family: Comfortaa-bold;
-  src: url(./fonts/Comfortaa-Bold.ttf);
+  src: url(../../public/fonts/Comfortaa-Bold.ttf);
 }
 
 @font-face {
   font-family: Comfortaa-regular;
-  src: url(./fonts/Comfortaa-Regular.ttf);
+  src: url(../../public/fonts/Comfortaa-Regular.ttf);
 }
 
 @font-face {
   font-family: Comfortaa-light;
-  src: url(./fonts/Comfortaa-Light.ttf);
+  src: url(../../public/fonts/Comfortaa-Light.ttf);
 }
