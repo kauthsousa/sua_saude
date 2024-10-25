@@ -121,9 +121,10 @@
   border-color: #888888;
 }
 
-.icone_pesquisa {
-  width: 3vh;
-  height: 3vh;
+.lupa {
+  margin: 0 0 0 1vh;
+  width: 2vh;
+  height: 2vh;
 }
 
 .inputs_pesquisa button {

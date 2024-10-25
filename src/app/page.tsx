@@ -22,6 +22,7 @@ export default function Home() {
           </h3>
           <div className={styles.inputs_pesquisa}>
             <select aria-label="Pesquisar por especialidade">
+              <option disabled selected>Pesquisar por especialidade</option>
               <option>Cardiologista</option>
               <option>Ortopedista</option>
               <option>Bartolomeu do Pneu</option>
@@ -32,7 +33,7 @@ export default function Home() {
               aria-label="Pesquise por cidade"
             />
             <button>Pesquisar
-              <Image className={styles.icone_pesquisa} src="/images/lupa.png" alt={""} width={80} height={80} />
+              <Image className={styles.lupa} src="/images/lupa.png" alt={""} width={80} height={80} />
             </button>
           </div>
 
