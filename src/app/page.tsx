@@ -2,14 +2,12 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
-import Menu from "./components/menu";
+import MenuDeslogado from "./components/menusuperior_deslogado";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <header>
-        <Menu />
-      </header>
+      <header><MenuDeslogado /></header>
       <main className={styles.main}>
         <div className={styles.banner_pesquisa}>
           <Image className={styles.top} src="/images/top.png" alt={""} layout="responsive" width={1500} height={300} />
