@@ -1,5 +1,6 @@
 /*  COMPONENTES  */
 
+/* menu superior */
 .imagem_logo{
   margin: 1em;
   width: 12.5em;
@@ -40,8 +41,6 @@
   background: hsla(188, 69%, 48%, 1);
 }
 
-
-
 .icon_perfil{
   width: 1em;
   height: auto;
@@ -76,7 +75,6 @@
 }
 
 .btnPerfil img{
-  /*margin-bottom: 0.2em;*/
   margin-right: 0.5em;
 }
 
@@ -263,4 +261,118 @@ a.secondary {
   .logo {
     filter: invert();
   }
+}
+
+/* CADASTRO */
+.telaCadastro{
+  height: 100%;
+  width: 100%;
+  background: url(../../public/images/backgroundCadastro.png);
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: 3em 0;
+}
+
+.imgCadastro{
+  width: 21.5em;
+  height: auto;
+}
+
+.modalCadastro{
+  background: #fff;
+  width: 35%;
+  height: 100%;
+  border-radius: 40px;
+  font-family: Comfortaa-Regular;
+  padding: 4em 3em;
+  margin-left: 5em;
+}
+
+.titulo_modalCadastro{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 1.5em;
+  font-size: 1.5em;
+}
+
+.camposCadastro{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.geral{
+  border-radius: 20px;
+  border: 1px solid hsla(0, 0%, 49%, 1);
+  padding: 0.8% 1.5em 0 1.5em;
+  line-height: 2.2em;
+  width: 100%;
+  margin: 0.5em 0;
+}
+
+.geral::placeholder{
+  font-family: Comfortaa-Regular;
+  font-size: 1em;
+}
+
+.intermediario{
+  width: 57% !important;
+  margin-right: 3% !important;
+}
+
+.pequeno{
+  width: 40% !important;
+}
+
+.data{
+  color: hsla(0, 0%, 49%, 1);
+  padding-top: 0 !important;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.data::after{
+  content: url(../../public/images/calendar.svg);
+  pointer-events: none;
+}
+
+.camposCadastro input[type="checkbox"]{
+  transform: scale(1.5);
+}
+
+.checkProf{
+  margin: 2em 1em 1em 0.2em;
+}
+
+.checkTermo{
+  margin: 0 1em 2em 0.2em;
+}
+
+.camposCadastro span{
+  font-size: 0.8em;
+}
+
+
+
+.modalCadastro button{
+  font-family: Comfortaa-Regular;
+  background: hsla(188, 100%, 26%, 1);
+  border-radius: 20px;
+  width: 100%;
+  line-height: 3em;
+  border: none;
+  color: white;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.modalCadastro button:hover{
+  background: hsla(188, 69%, 48%, 1);
 }
