@@ -37,7 +37,7 @@
 }
 
 .deslogado li:last-child:hover {
-  background: hsla(188, 69%, 48%, 1);
+  background: #26b8cf;
 }
 
 
@@ -107,10 +107,6 @@
   font-family: Comfortaa-regular;
   padding: 0.5em 0.8em !important;
   margin-right: 1em;
-}
-
-.campo_pesquisa:focus {
-  outline: 1px solid #007486;
 }
 
 .campo_pesquisa input {
@@ -245,7 +241,7 @@
 }
 
 .inputs_pesquisa button:hover {
-  background-color: #005c61;
+  background-color: #26b8cf;
 }
 
 .chamada {
@@ -317,17 +313,82 @@
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: 0.5s;
 }
 
 .botao_criar_conta button:hover {
-  background-color: #005c61;
+  background-color: #26b8cf;
 }
+
+.carousel_container {
+  margin-top: 5vh;
+  width: 80%;
+}
+
+.carousel_card {
+  width: 5vh;
+  height: 30%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  margin: 0 10vh;
+  transition: transform 0.3s ease;
+}
+
+.carousel_card:hover {
+  transform: scale(1.02);
+}
+
+.carousel_image {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+  border-bottom: 3px solid #0a7566;
+}
+
+.carousel_title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #0a7566;
+  margin: 2vh 0 2vh 0;
+  text-align: center;
+}
+
+.arrow_button {
+  background-color: #0a7566;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.arrow_button:hover {
+  background-color: #26b8cf;
+}
+
+.arrow_left {
+  left: -20px;
+}
+
+.arrow_right {
+  right: -20px;
+}
+
 
 .mapa {
   width: 100%;
-  height: 50vh;
-  background-color: #000000;
+  height: 30vh;
 }
 
 /* OUTROS */

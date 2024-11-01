@@ -3,6 +3,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import MenuDeslogado from "./components/menusuperior_deslogado";
+import Carrossel from "./components/carrosel_especialidades";
 
 export default function Home() {
   return (
@@ -49,7 +50,7 @@ export default function Home() {
           {/* BANNER PROPAGANDA */}
           <div className={styles.propaganda}>
             <p>Marque já a sua consulta!<br /><br />Os melhores profissionais e mais perto de você a um clique!</p>
-            <Image className={styles.icones_propaganda} src="/images/iconsImage.png" alt="Ícones" width={150} height={220} />
+            <Image className={styles.icones_propaganda} src="/images/iconsImage.png" alt="Ícones" width={280} height={440} />
           </div>
 
           {/* BOTÃO CRIAR CONTA */}
@@ -58,6 +59,9 @@ export default function Home() {
           </div>
 
           {/* ESPECIALIDADES */}
+          <div className={styles.mapa}>
+            <Carrossel />
+          </div>
 
           {/* LOCALIZAÇÃO */}
           <div className={styles.mapa}>
