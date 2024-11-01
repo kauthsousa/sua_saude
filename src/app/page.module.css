@@ -403,8 +403,9 @@ a.secondary {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 60%;
+  width: 65%;
   align-items: center;
+  font-size: 0.9em;
 }
 
 .camposCadastro span{
@@ -433,8 +434,12 @@ a.secondary {
   color: hsla(0, 0%, 49%, 1);
   display: flex;
   align-items: center;
-  padding-left: 0em;
+  padding-left: 0.2em;
   padding-bottom: 0.3em;
+}
+
+.codProf{
+  padding-left: 2.01em;
 }
 
 .select select{
