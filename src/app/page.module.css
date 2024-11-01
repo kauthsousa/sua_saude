@@ -383,8 +383,9 @@ a.secondary {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 63%;
+  width: 71%;
   align-items: center;
+  font-size: 0.9em;
 }
 
 .checkTermo{
@@ -392,8 +393,9 @@ a.secondary {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 78.6%;
+  width: 88.5%;
   align-items: center;
+  font-size: 0.9em;
 }
 
 .checkAgendaAberta{
