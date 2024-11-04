@@ -21,13 +21,13 @@ export default function Login() {
                     height={300}
                     priority
                 />
-                <div className={`${styles.modalCadastro} ${styles.login}`} role="form" aria-labelledby="tituloCadastro">
-                    <span id="tituloCadastro" className={styles.titulo_modalCadastro}>Login</span>
+                <div className={`${styles.modalCadastro} ${styles.login}`} role="form" aria-labelledby="tituloLogin">
+                    <span id="tituloLogin" className={styles.titulo_modalCadastro}>Login</span>
                     <div className={styles.camposCadastro}>
                         <form>
                             <label htmlFor="email" aria-hidden="true" hidden>Email</label>
                             <input
-                                type="text"
+                                type="email"
                                 id="email"
                                 placeholder="Email"
                                 maxLength={100}

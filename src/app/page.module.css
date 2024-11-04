@@ -491,3 +491,17 @@ a.secondary {
 .hoverLink:hover{
   text-decoration: underline;
 }
+
+/* RECUPERAR CONTA */
+.recConta{
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+}
+
+.avisoRecConta{
+  color: hsla(0, 0%, 49%, 1);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 1em 0 2em 0;
+}
