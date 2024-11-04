@@ -422,13 +422,15 @@ a.secondary {
   color: white;
   transition: 0.3s ease-in-out;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 .modalCadastro button:hover{
   background: hsla(188, 69%, 48%, 1);
 }
 
+
+/* CADASTRO PROFISSIONAL DE SAÚDE */
 .select{
   height: 2.1em;
   color: hsla(0, 0%, 49%, 1);
@@ -457,4 +459,35 @@ a.secondary {
 
 .selectBlack{
   color: black;
+}
+
+/* LOGIN */
+.login{
+  padding: 3.5em;
+}
+
+.inputLogin{
+  margin-bottom: 1em;
+  font-size: 0.95em;
+}
+
+.esqueceuSenha{
+  color: hsla(0, 0%, 49%, 1);
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  margin: 0.2em 0 2em 0;
+  cursor: pointer;
+}
+
+.semConta{
+  display: flex;
+  justify-content: center;
+  font-size: 0.9em;
+  margin: 2em 0 0 0;
+  cursor: pointer;
+}
+
+.hoverLink:hover{
+  text-decoration: underline;
 }
