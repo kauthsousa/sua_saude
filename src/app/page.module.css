@@ -454,3 +454,7 @@ a.secondary {
   outline: none;
   border: none;
 }
+
+.selectBlack{
+  color: black;
+}
