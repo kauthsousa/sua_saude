@@ -1,49 +1,57 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import InputMask from "react-input-mask";
 import styles from "../../page.module.css";
 import MenuDeslogado from "../../components/menusuperior_deslogado";
 import Image from "next/image";
+import { useRouter } from 'next/router';
 
 export default function CadastroUser() {
   const [inputType, setInputType] = useState<string>('text');
   const [dataNascimento, setDataNascimento] = useState<string>("");
+  const [dataVisualizada, setDataVisualizada] = useState<string>("");
   const [senha, setSenha] = useState('');
   const [confirmarSenha, setConfirmarSenha] = useState('');
   const [erroSenha, setErroSenha] = useState('');
 
+  const formatarData = (data: string): string => {
+    if (!data) return "";
+    const [ano, mes, dia] = data.split('-');
+    return `${dia}/${mes}/${ano}`;
+  };
+
   const handleFocus = () => {
-    setInputType('date'); // Define que o calendário está aberto
+    setInputType('date');
+    setDataVisualizada(dataNascimento); // Para mostrar a data ISO ao abrir o calendário
   };
 
   const handleBlur = () => {
-    setInputType('text');// Define que o calendário não está mais aberto
+    setInputType('text');
+    setDataVisualizada(formatarData(dataNascimento)); // Formata para dd/mm/aaaa ao sair do campo
   };
 
   const obterDataMinima = (): string => {
     const hoje = new Date();
     hoje.setFullYear(hoje.getFullYear() - 18);
-    return hoje.toISOString().split('T')[0]; // Formato "yyyy-mm-dd"
+    return hoje.toISOString().split('T')[0];
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); // Impede o envio do formulário padrão
+    e.preventDefault();
 
-    const dataParts = dataNascimento.split('-');
+    const dataParts = dataNascimento.split('/');
     const dataNascimentoDate = new Date(
-      Number(dataParts[0]),
+      Number(dataParts[2]),
       Number(dataParts[1]) - 1,
-      Number(dataParts[2])
-    ); // Cria um objeto Date
-    const idade = new Date().getFullYear() - dataNascimentoDate.getFullYear(); // Calcula a idade
+      Number(dataParts[0])
+    );
+    const idade = new Date().getFullYear() - dataNascimentoDate.getFullYear();
 
-    // Verifica se o usuário tem menos de 18 anos
     if (idade < 18 || (idade === 18 && dataNascimentoDate > new Date())) {
       alert("Você deve ter pelo menos 18 anos para se cadastrar.");
       return;
     }
 
-    // Verifica se as senhas coincidem
     if (senha !== confirmarSenha) {
       setErroSenha('As senhas não coincidem.');
       return;
@@ -51,9 +59,17 @@ export default function CadastroUser() {
       setErroSenha('');
     }
 
-    // Se passou nas validações, exibe o alerta de sucesso
     alert("Cadastro realizado com sucesso!");
-    // Continue com o envio do formulário
+
+    setTimeout(() => {
+      window.location.reload();
+    }, 100);
+  };
+
+  const handleDataChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const valor = e.target.value;
+    setDataNascimento(valor);
+    setDataVisualizada(valor);
   };
 
   const handleSenhaChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -82,7 +98,8 @@ export default function CadastroUser() {
               <input
                 type={inputType}
                 max={obterDataMinima()}
-                onChange={(e) => setDataNascimento(e.target.value)}
+                value={inputType === 'text' ? dataVisualizada : dataNascimento}
+                onChange={handleDataChange}
                 placeholder="Data de nascimento"
                 onFocus={handleFocus}
                 onBlur={handleBlur}
