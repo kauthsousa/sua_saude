@@ -505,3 +505,78 @@ a.secondary {
   text-align: center;
   margin: 1em 0 2em 0;
 }
+
+/* CONFIGURAÇÕES */
+.telaConfiguracoes{
+  height: 100%;
+  width: 100%;
+  background: url(../../public/images/top2.png);
+  display: flex;
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: 3em 0;
+}
+
+.titulo_modalConfiguracoes{
+  font-size: 1.5em;
+  grid-area: titulo;
+}
+
+.camposConfig{
+  grid-column: 1;
+  grid-row: 2;
+  grid-area: camposConfig;
+  margin-right: 5em;
+  margin-top: 1em;
+}
+
+.modalConfig{
+  background-color: rgba(125, 125, 125, 0);
+  width: 80%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 0.5em 100vh;
+  gap: 2em;
+  grid-template-areas: 
+  "titulo titulo"
+  "camposConfig imagem_perfil"
+  ;
+}
+
+.perfil{
+  grid-area: imagem_perfil;
+  grid-column: 2;
+  grid-row: 2;
+  border-left: 3px solid hsla(188, 100%, 26%, 1);
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.imagem_perfil{
+  border-radius: 50%;
+  width: 15em;
+  height: auto;
+  margin-left: 7.5em;
+  margin-bottom: 1.5em;
+}
+
+.btnFoto{
+  width: 50% !important;
+  line-height: 1.2em !important;
+  height: auto;
+  padding: .7em 2em;
+  margin-left: 6.2em;
+  font-size: 1.2em !important;
+}
+
+.dataConfig{
+  margin-bottom: 4em;
+}
