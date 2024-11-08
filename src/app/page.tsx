@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import MenuDeslogado from "./components/menusuperior_deslogado";
 import Carrossel from "./components/carrosel_especialidades";
+import Rodape from "./components/rodape";
 
 export default function Home() {
   return (
@@ -70,7 +71,7 @@ export default function Home() {
 
         </div>
       </main>
-      <footer className={styles.footer}></footer>
+      <Rodape></Rodape>
     </div>
   );
 }

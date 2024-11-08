@@ -425,21 +425,62 @@ a.secondary {
   min-width: 180px;
 }
 
-.footer {
-  grid-row-start: 3;
+.rodape {
   display: flex;
-  gap: 24px;
+  justify-content: space-around;
+  padding: 20px 0 10vh 0;
+  background-color: #fff;
+  color: #000;
+  font-family: Comfortaa-regular;
+  font-size: 12px;
 }
 
-.footer a {
+.contato {
   display: flex;
-  align-items: center;
-  gap: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 200px;
+  gap: 3px;
 }
 
-.footer img {
-  flex-shrink: 0;
+.contato p {
+  white-space: nowrap;
 }
+
+.social {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.icon_rede_social {
+  color: #006d6f;
+  font-size: 1.5rem;
+}
+
+.section {
+  text-align: left;
+  max-width: 120vh;
+}
+
+.section h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.section li {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
