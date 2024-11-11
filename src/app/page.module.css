@@ -129,6 +129,7 @@
 /*  HOME  */
 
 .main {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -535,6 +536,7 @@ a.secondary {
 .titulo_modalConfiguracoes{
   font-size: 1.5em;
   grid-area: titulo;
+  font-family: Comfortaa-Regular;
 }
 
 .camposConfig{
@@ -595,4 +597,97 @@ a.secondary {
   width: 30vw;
   height: auto;
   margin-top: 15%;
+}
+
+/* FAVORITOS */
+.telaFavoritos{
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 4em;
+  align-content: center;
+}
+
+.telaFavoritos span{ 
+  margin-bottom: 1em;
+}
+
+.itemFavorito{
+  border: 1px solid hsla(0, 0%, 76%, 1);
+  border-radius: 10px;
+  padding: 1.5em;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 9em;
+  gap: 1em;
+  grid-template-areas: 
+  "imgFavorito proFavorito"
+  ;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgFavorito{
+  grid-area: imgFavorito;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.proFavorito{
+  border-radius: 50%;
+  width: 7.5em;
+  height: auto;
+}
+
+.estrela{
+  width: 1.2em;
+  height: auto;
+}
+
+.dadosPro_favorito{
+  grid: proFavorito;
+  font-family: Comfortaa-Regular;
+  height: 100%;
+  padding-top: -5em;
+  margin-top: -1.5em;
+}
+
+.dadosGeral{
+  line-height: 2em;
+  font-size: 0.8em;
+}
+
+.nomePro{
+  font-size: 1.2em;
+}
+
+.dadosGeral a{
+  text-decoration: underline;
+}
+
+.btnConsulta{
+  font-family: Comfortaa-Regular;
+  background: hsla(188, 100%, 26%, 1);
+  border-radius: 20px;
+  width: 17vw;
+  height: auto;
+  border: none;
+  color: white;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  font-size: 0.8em;
+  margin-top: 1.5em;
+  padding: 0.5em 2em;
+  text-align: start;
+  line-height: 1em;
+}
+
+.btnConsulta:hover{
+  background: hsla(188, 69%, 48%, 1);
 }
