@@ -80,6 +80,11 @@ export default function CadastroUser() {
     setConfirmarSenha(e.target.value);
   };
 
+  const handleSubmite = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    alert("Dados atualizados com sucesso!");
+  }
+
   return (
     <div className={styles.pagina_cadastro} role="main">
       <header aria-label="Menu Principal">
@@ -90,7 +95,7 @@ export default function CadastroUser() {
         <div className={`${styles.modalCadastro} ${styles.modalConfig}`} role="form" aria-labelledby="tituloCadastro">
           <span id="tituloCadastro" className={styles.titulo_modalConfiguracoes}>Configurações</span>
           <div className={`${styles.camposCadastro} ${styles.camposConfig}`}>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmite}>
               <input type="text" placeholder="Nome Completo" className={styles.geral} maxLength={200} required aria-required="true" aria-label="Nome Completo"/>
               <input type="email" placeholder="Email" className={styles.geral} required aria-required="true" aria-label="Email"/>
               <InputMask mask="(99) 9.9999-9999" placeholder="Celular" className={styles.geral} required aria-required="true" aria-label="Celular"/>
@@ -103,32 +108,24 @@ export default function CadastroUser() {
                 placeholder="Data de nascimento"
                 onFocus={handleFocus}
                 onBlur={handleBlur}
-                className={`${styles.pequeno} ${styles.geral} ${styles.data} ${inputType === 'date' ? styles.dateInput : ''} ${styles.dataConfig}`}
+                className={`${styles.pequeno} ${styles.geral} ${styles.data} ${inputType === 'date' ? styles.dateInput : ''} ${styles.spaceConfig}`}
                 required
                 aria-required="true"
                 aria-label="Data de Nascimento"
               />
-              <InputMask mask="999.999.999-99" placeholder="CPF" className={`${styles.geral} ${styles.intermediario}`} required aria-required="true" aria-label="CPF"/>
+              <InputMask mask="999.999.999-99" placeholder="CPF" className={`${styles.geral} ${styles.intermediarioC}`} required aria-required="true" aria-label="CPF"/>
               
               <InputMask mask="99999-999" placeholder="CEP" className={`${styles.pequeno} ${styles.geral}`} required aria-required="true" aria-label="CEP"/>
-              <input type="text" placeholder="Cidade" maxLength={50} className={`${styles.intermediario} ${styles.geral} ${styles.cidade}`} required aria-required="true" aria-label="Cidade"/>
+              <input type="text" placeholder="Cidade" maxLength={50} className={`${styles.intermediarioC} ${styles.geral} ${styles.cidade}`} required aria-required="true" aria-label="Cidade"/>
               <input type="text" placeholder="Logradouro" maxLength={50} className={`${styles.geral} ${styles.logradouro}`} required aria-required="true" aria-label="Logradouro"/>
               <input type="number" placeholder="Número" maxLength={7} className={`${styles.pequeno} ${styles.geral} ${styles.logradouro}`} required aria-required="true" aria-label="Número"/>
-              <input type="text" placeholder="UF" className={`${styles.intermediario} ${styles.geral}`} required aria-required="true" aria-label="Número"/>
-              <input type="text" placeholder="Bairro" maxLength={50} className={`${styles.geral}`} required aria-required="true" aria-label="Bairro"/>
+              <input type="text" placeholder="UF" className={`${styles.intermediarioC} ${styles.geral}`} required aria-required="true" aria-label="Número"/>
+              <input type="text" placeholder="Bairro" maxLength={50} className={`${styles.geral} ${styles.spaceConfig}`} required aria-required="true" aria-label="Bairro"/>
               
               
               <input type="password" placeholder="Senha" maxLength={20} className={`${styles.geral}`} value={senha} onChange={handleSenhaChange} required aria-required="true" aria-label="Senha"/>
-              <input type="password" placeholder="Confirmar senha" className={styles.geral} value={confirmarSenha} onChange={handleConfirmarSenhaChange} required aria-required="true" aria-label="Confirmar Senha"/>
+              <input type="password" placeholder="Confirmar senha" className={`${styles.geral} ${styles.spaceConfig}`} value={confirmarSenha} onChange={handleConfirmarSenhaChange} required aria-required="true" aria-label="Confirmar Senha"/>
               {erroSenha && <p className={styles.erro} role="alert">{erroSenha}</p>}
-              <div className={styles.checkProf}>
-                <input type="checkbox" id="profissionalSaude" value="Profissional da Saúde" aria-labelledby="profissionalSaudeLabel" />
-                <label id="profissionalSaudeLabel" htmlFor="profissionalSaude">Sou um profissional da Saúde</label>
-              </div>
-              <div className={styles.checkTermo}>
-                <input type="checkbox" id="termosUso" value="Aceita os Termos" required aria-required="true" />
-                <label htmlFor="termosUso">Aceito os termos de uso do Sua Saúde</label>
-              </div>
               <button type="submit">Atualizar Cadastro</button>
             </form>
           </div>

@@ -347,6 +347,11 @@ a.secondary {
   width: 40% !important;
 }
 
+.intermediarioC{
+  width: 57% !important;
+  margin-left: 3% !important;
+}
+
 .data{
   appearance: none;
   color: hsla(0, 0%, 49%, 1);
@@ -368,6 +373,7 @@ a.secondary {
   background-repeat: no-repeat;
   background-position: 90%;
   margin: 0.5em 0;
+  margin-bottom: 2.35em;
 }
 
 .data.dateInput::-webkit-calendar-picker-indicator{
@@ -552,31 +558,29 @@ a.secondary {
   grid-column: 2;
   grid-row: 2;
   border-left: 3px solid hsla(188, 100%, 26%, 1);
-  height: 60vh;
+  height: 70vh;
   width: 100%;
   display: flex;
   justify-items: center;
-  align-items: flex-start;
   flex-direction: column;
+  align-items: center;
 }
 
 .imagem_perfil{
   border-radius: 50%;
-  width: 15em;
+  width: 13em;
   height: auto;
-  margin-left: 7.5em;
   margin-bottom: 1.5em;
 }
 
 .btnFoto{
-  width: 50% !important;
+  width: 45% !important;
   line-height: 1.2em !important;
   height: auto;
   padding: .7em 2em;
-  margin-left: 6.2em;
   font-size: 1.2em !important;
 }
 
-.dataConfig{
-  margin-bottom: 4em;
+.spaceConfig{
+  margin-bottom: 2.5em;
 }
