@@ -264,6 +264,11 @@ a.secondary {
 }
 
 /* CADASTRO */
+.pagina_cadastro{
+  width: 100%;
+  height: 100%;
+}
+
 .telaCadastro{
   height: 100%;
   width: 100%;
@@ -583,4 +588,11 @@ a.secondary {
 
 .spaceConfig{
   margin-bottom: 2.5em;
+}
+
+/* SEM FAVORITOS */
+.img_semFavoritos{
+  width: 30vw;
+  height: auto;
+  margin-top: 15%;
 }

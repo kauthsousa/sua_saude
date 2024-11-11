@@ -91,7 +91,6 @@ export default function CadastroUser() {
         <MenuLogado />
       </header>
       <main className={`${styles.main} ${styles.telaConfiguracoes}`}>
-        {/*<Image src="/images/top2.png" className={styles.imgConfiguracoes} alt="Imagem do topo da página" width={2000} height={500} priority />*/}
         <div className={`${styles.modalCadastro} ${styles.modalConfig}`} role="form" aria-labelledby="tituloCadastro">
           <span id="tituloCadastro" className={styles.titulo_modalConfiguracoes}>Configurações</span>
           <div className={`${styles.camposCadastro} ${styles.camposConfig}`}>
@@ -126,6 +125,7 @@ export default function CadastroUser() {
               <input type="password" placeholder="Senha" maxLength={20} className={`${styles.geral}`} value={senha} onChange={handleSenhaChange} required aria-required="true" aria-label="Senha"/>
               <input type="password" placeholder="Confirmar senha" className={`${styles.geral} ${styles.spaceConfig}`} value={confirmarSenha} onChange={handleConfirmarSenhaChange} required aria-required="true" aria-label="Confirmar Senha"/>
               {erroSenha && <p className={styles.erro} role="alert">{erroSenha}</p>}
+
               <button type="submit">Atualizar Cadastro</button>
             </form>
           </div>
