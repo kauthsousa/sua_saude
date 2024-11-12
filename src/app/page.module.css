@@ -153,7 +153,8 @@
   font-weight: 600;
 }
 
-.banner_pesquisa {
+.banner_pesquisa, 
+.banner_central {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -172,7 +173,8 @@
 
 }
 
-.banner_pesquisa .titulo {
+.banner_pesquisa .titulo,
+.banner_central .titulo {
   font-family: Comfortaa-light;
   font-weight: 500;
   font-size: 2rem;
@@ -192,7 +194,26 @@
   justify-content: center;
   margin-top: 2vh;
   max-width: 100%;
+}
 
+.input_duvidas {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 2vh;
+  max-width: 100%;
+}
+
+.input_duvidas input {
+  width: 70vh;
+  padding: 1.1vh 2.5vh;
+  font-size: 1em;
+  border-radius: 30px;
+  outline: none;
+  color: gray;
+  border: 2px solid #d1d1d1;
+  transition: border-color 0.3s ease;
+  font-family: Comfortaa-light;
 }
 
 .inputs_pesquisa select,
@@ -227,7 +248,8 @@
   height: 2vh;
 }
 
-.inputs_pesquisa button {
+.inputs_pesquisa button,
+.input_duvidas button {
   padding: 1.1vh 2.5vh;
   font-family: Comfortaa-light;
   background-color: #00777d;
@@ -296,7 +318,6 @@
   height: 80%;
   width: auto;
   transform: translateX(160%);
-  /* gambiarinha */
 }
 
 .botao_criar_conta {
@@ -326,18 +347,19 @@
 }
 
 .carousel_card {
-  width: 5vh;
-  height: 30%;
+  margin: 0vh;
+  width: 10%;
+  height: 20%;
   border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 0vh;
   display: flex;
+  overflow: hidden;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   background-color: #ffffff;
-  margin: 0 10vh;
   transition: transform 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .carousel_card:hover {

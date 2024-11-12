@@ -9,9 +9,9 @@ const Carrossel = () => {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 800,
         slidesToShow: 5,
-        slidesToScroll: 1,
+        slidesToScroll: 3,
         responsive: [
             {
                 breakpoint: 1024,
