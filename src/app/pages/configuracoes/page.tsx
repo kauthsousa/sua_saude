@@ -95,36 +95,41 @@ export default function CadastroUser() {
           <span id="tituloCadastro" className={styles.titulo_modalConfiguracoes}>Configurações</span>
           <div className={`${styles.camposCadastro} ${styles.camposConfig}`}>
             <form onSubmit={handleSubmite}>
-              <input type="text" placeholder="Nome Completo" className={styles.geral} maxLength={200} required aria-required="true" aria-label="Nome Completo"/>
-              <input type="email" placeholder="Email" className={styles.geral} required aria-required="true" aria-label="Email"/>
-              <InputMask mask="(99) 9.9999-9999" placeholder="Celular" className={styles.geral} required aria-required="true" aria-label="Celular"/>
-              <InputMask mask="(99) 9.9999-9999" placeholder="Telefone" className={styles.geral} aria-label="Telefone"/>
-              <input
-                type={inputType}
-                max={obterDataMinima()}
-                value={inputType === 'text' ? dataVisualizada : dataNascimento}
-                onChange={handleDataChange}
-                placeholder="Data de nascimento"
-                onFocus={handleFocus}
-                onBlur={handleBlur}
-                className={`${styles.pequeno} ${styles.geral} ${styles.data} ${inputType === 'date' ? styles.dateInput : ''} ${styles.spaceConfig}`}
-                required
-                aria-required="true"
-                aria-label="Data de Nascimento"
-              />
-              <InputMask mask="999.999.999-99" placeholder="CPF" className={`${styles.geral} ${styles.intermediarioC}`} required aria-required="true" aria-label="CPF"/>
-              
-              <InputMask mask="99999-999" placeholder="CEP" className={`${styles.pequeno} ${styles.geral}`} required aria-required="true" aria-label="CEP"/>
-              <input type="text" placeholder="Cidade" maxLength={50} className={`${styles.intermediarioC} ${styles.geral} ${styles.cidade}`} required aria-required="true" aria-label="Cidade"/>
-              <input type="text" placeholder="Logradouro" maxLength={50} className={`${styles.geral} ${styles.logradouro}`} required aria-required="true" aria-label="Logradouro"/>
-              <input type="number" placeholder="Número" maxLength={7} className={`${styles.pequeno} ${styles.geral} ${styles.logradouro}`} required aria-required="true" aria-label="Número"/>
-              <input type="text" placeholder="UF" className={`${styles.intermediarioC} ${styles.geral}`} required aria-required="true" aria-label="Número"/>
-              <input type="text" placeholder="Bairro" maxLength={50} className={`${styles.geral} ${styles.spaceConfig}`} required aria-required="true" aria-label="Bairro"/>
-              
-              
-              <input type="password" placeholder="Senha" maxLength={20} className={`${styles.geral}`} value={senha} onChange={handleSenhaChange} required aria-required="true" aria-label="Senha"/>
-              <input type="password" placeholder="Confirmar senha" className={`${styles.geral} ${styles.spaceConfig}`} value={confirmarSenha} onChange={handleConfirmarSenhaChange} required aria-required="true" aria-label="Confirmar Senha"/>
-              {erroSenha && <p className={styles.erro} role="alert">{erroSenha}</p>}
+              <div className={styles.config1}>
+                <input type="text" placeholder="Nome Completo" className={styles.geralC} maxLength={200} required aria-required="true" aria-label="Nome Completo"/>
+                <input type="email" placeholder="Email" className={styles.geralC} required aria-required="true" aria-label="Email"/>
+                <InputMask mask="(99) 9.9999-9999" placeholder="Celular" className={styles.geralC} required aria-required="true" aria-label="Celular"/>
+                <InputMask mask="(99) 9.9999-9999" placeholder="Telefone" className={styles.geralC} aria-label="Telefone"/>
+                <input
+                  type={inputType}
+                  max={obterDataMinima()}
+                  value={inputType === 'text' ? dataVisualizada : dataNascimento}
+                  onChange={handleDataChange}
+                  placeholder="Data de nascimento"
+                  onFocus={handleFocus}
+                  onBlur={handleBlur}
+                  className={`${styles.pequeno} ${styles.geralC} ${styles.dataC} ${inputType === 'date' ? styles.dateInput : ''}`}
+                  required
+                  aria-required="true"
+                  aria-label="Data de Nascimento"
+                />
+                <InputMask mask="999.999.999-99" placeholder="CPF" className={`${styles.geralC} ${styles.intermediarioC}`} required aria-required="true" aria-label="CPF"/>
+              </div>
+
+              <div className={styles.config1}>
+                <InputMask mask="99999-999" placeholder="CEP" className={`${styles.pequeno} ${styles.geralC}`} required aria-required="true" aria-label="CEP"/>
+                <input type="text" placeholder="Cidade" maxLength={50} className={`${styles.intermediarioC} ${styles.geralC} ${styles.cidade}`} required aria-required="true" aria-label="Cidade"/>
+                <input type="text" placeholder="Logradouro" maxLength={50} className={`${styles.geralC} ${styles.logradouro}`} required aria-required="true" aria-label="Logradouro"/>
+                <input type="number" placeholder="Número" maxLength={7} className={`${styles.pequeno} ${styles.geralC}`} required aria-required="true" aria-label="Número"/>
+                <input type="text" placeholder="UF" className={`${styles.intermediarioC} ${styles.geralC}`} required aria-required="true" aria-label="Número"/>
+                <input type="text" placeholder="Bairro" maxLength={50} className={`${styles.geralC}`} required aria-required="true" aria-label="Bairro"/>
+              </div>
+
+              <div className={styles.config1}>
+                <input type="password" placeholder="Senha" maxLength={20} className={`${styles.geralC}`} value={senha} onChange={handleSenhaChange} required aria-required="true" aria-label="Senha"/>
+                <input type="password" placeholder="Confirmar senha" className={`${styles.geralC} ${styles.spaceConfig}`} value={confirmarSenha} onChange={handleConfirmarSenhaChange} required aria-required="true" aria-label="Confirmar Senha"/>
+                {erroSenha && <p className={styles.erro} role="alert">{erroSenha}</p>}
+              </div>
 
               <button type="submit">Atualizar Cadastro</button>
             </form>

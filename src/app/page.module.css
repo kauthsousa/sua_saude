@@ -25,7 +25,7 @@
   list-style-type: none;
   display: inline;
   padding: 0em 1.5em;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .deslogado li:last-child {
@@ -57,17 +57,17 @@
 .logado li {
   list-style-type: none;
   padding: 0em 1em;
-  font-size: 1.2em;
+  font-size: 1.1em;
+  padding-bottom: 0.5em;
 }
 
 .btnPerfil {
   background: #fff;
   color: #007486;
-  padding: 0.5em 1em;
+  padding: 0.5em 1.5em;
   border-radius: 50px;
   margin-left: 1em;
   border: 1px solid #007486;
-
   align-items: center;
   justify-content: space-between;
   width: 11em;
@@ -103,7 +103,7 @@
   align-items: center;
   justify-content: space-between;
   font-family: Comfortaa-regular;
-  padding: 0.5em 0.8em !important;
+  padding: 0.5em 1em !important;
   margin-right: 1em;
 }
 
@@ -330,6 +330,11 @@ a.secondary {
   border: .5px solid hsla(0, 0%, 65%, 1);
 }
 
+.geral::placeholder{
+  font-family: Comfortaa-Regular;
+  font-size: 1em;
+}
+
 .logradouro{
   line-height: 2.15em;
   margin-top: 7px;
@@ -337,11 +342,6 @@ a.secondary {
 
 .cidade{
   margin-bottom: 0;
-}
-
-.geral::placeholder{
-  font-family: Comfortaa-Regular;
-  font-size: 1em;
 }
 
 .intermediario{
@@ -379,7 +379,6 @@ a.secondary {
   background-repeat: no-repeat;
   background-position: 90%;
   margin: 0.5em 0;
-  margin-bottom: 2.35em;
 }
 
 .data.dateInput::-webkit-calendar-picker-indicator{
@@ -391,7 +390,7 @@ a.secondary {
 }
 
 .checkProf{
-  margin: 2em 1em 1em 0.2em;
+  margin: 2em 1em 2.5vh 0.2em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -401,7 +400,7 @@ a.secondary {
 }
 
 .checkTermo{
-  margin: 0 1em 2em 0.2em;
+  margin: 0 2vh 2em 0.2em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -429,7 +428,7 @@ a.secondary {
   background: hsla(188, 100%, 26%, 1);
   border-radius: 20px;
   width: 100%;
-  line-height: 3em;
+  line-height: 8vh;
   border: none;
   color: white;
   transition: 0.3s ease-in-out;
@@ -544,7 +543,11 @@ a.secondary {
   grid-row: 2;
   grid-area: camposConfig;
   margin-right: 5em;
-  margin-top: 1em;
+  margin-top: 16px;
+}
+
+.config1{
+  margin-bottom: 5vh;
 }
 
 .modalConfig{
@@ -558,6 +561,51 @@ a.secondary {
   "titulo titulo"
   "camposConfig imagem_perfil"
   ;
+}
+
+.geralC{
+  border-radius: 20px;
+  border: 1px solid hsla(0, 0%, 49%, 1);
+  padding: 5px 1.5em 0 1.5em;
+  line-height: 2.2em;
+  width: 100%;
+  margin: 0.5em 0;
+  font-family: Comfortaa-Regular;
+}
+
+.geralC:focus{
+  outline: none;
+  outline: .5px solid hsla(0, 0%, 65%, 1);
+  border: .5px solid hsla(0, 0%, 65%, 1);
+}
+
+.geralC::placeholder{
+  font-family: Comfortaa-Regular;
+  font-size: 1em;
+}
+
+.dataC{
+  color: hsla(0, 0%, 49%, 1);
+  font-family: Comfortaa-Regular;
+  line-height: 2.2em;
+}
+
+.dataC::-webkit-calendar-picker-indicator{
+  opacity: 0;
+  color: hsla(0, 0%, 49%, 1);
+}
+
+.dataC.dateInput{
+  font-size: 0.9em;
+  background: #fff url(../../public/images/calendar.svg);
+  background-repeat: no-repeat;
+  background-position: 90%;
+  margin: 0;
+  line-height: 1.9em;
+}
+
+.dataC.dateInput::-webkit-calendar-picker-indicator{
+  opacity: 0;
 }
 
 .perfil{
@@ -586,10 +634,6 @@ a.secondary {
   height: auto;
   padding: .7em 2em;
   font-size: 1.2em !important;
-}
-
-.spaceConfig{
-  margin-bottom: 2.5em;
 }
 
 /* SEM FAVORITOS */
@@ -666,10 +710,6 @@ a.secondary {
 .nomePro{
   font-size: 1.2em;
 }
-
-/*.dadosGeral a{
-  text-decoration: underline;
-}*/
 
 .btnConsulta{
   font-family: Comfortaa-Regular;

@@ -103,7 +103,7 @@ export default function CadastroUser() {
                 placeholder="Data de nascimento"
                 onFocus={handleFocus}
                 onBlur={handleBlur}
-                className={`${styles.intermediario} ${styles.geral} ${styles.data} ${inputType === 'date' ? styles.dateInput : ''}`}
+                className={`${styles.intermediario} ${styles.geral} ${styles.data} ${inputType === 'date' ? styles.dateInput : ''} ${styles.dateConfig}`}
                 required
                 aria-required="true"
                 aria-label="Data de Nascimento"
