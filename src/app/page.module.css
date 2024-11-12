@@ -667,27 +667,40 @@ a.secondary {
   font-size: 1.2em;
 }
 
-.dadosGeral a{
+/*.dadosGeral a{
   text-decoration: underline;
-}
+}*/
 
 .btnConsulta{
   font-family: Comfortaa-Regular;
   background: hsla(188, 100%, 26%, 1);
   border-radius: 20px;
-  width: 17vw;
+  width: 15vw;
   height: auto;
   border: none;
   color: white;
   transition: 0.3s ease-in-out;
   cursor: pointer;
   font-size: 0.8em;
-  margin-top: 1.5em;
+  margin-top: 2em;
   padding: 0.5em 2em;
-  text-align: start;
+  text-align: center;
   line-height: 1em;
 }
 
 .btnConsulta:hover{
   background: hsla(188, 69%, 48%, 1);
+}
+
+.lixeira{
+  width: 1.5em;
+  height: auto;
+  float: right;
+  margin: 1em;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.lixeira:hover{
+  filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(180deg);
 }

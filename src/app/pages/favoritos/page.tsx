@@ -26,11 +26,15 @@ export default function SemFavoritos() {
                             </div>
                         </div>
                         <div className={styles.dadosPro_favorito}>
-                            <div><span className={`${styles.dadosGeral} ${styles.nomePro}`}>Ana Moreira - Nutricionista Clínica e Esportiva</span><br/>
-                            <span className={`${styles.dadosGeral}`}>Endereço: Rua dos Prazeres, 18, Centro - Cidade do Norte - CE</span><br/>
-                            <span className={`${styles.dadosGeral}`}>12 avaliações <Link href="/comentarios">( <u>ver comentários</u> )</Link></span><br/>
-                            <span className={`${styles.dadosGeral}`}>9 km de distância de você</span><br/></div>
+                        <Image src="/images/lixeira.svg" className={styles.lixeira} alt="Lixeira" width={100} height={100} priority/>
+                            <div>
+                                <span className={`${styles.dadosGeral} ${styles.nomePro}`}>Ana Moreira - Nutricionista Clínica e Esportiva</span><br/>
+                                <span className={`${styles.dadosGeral}`}>Endereço: Rua dos Prazeres, 18, Centro - Cidade do Norte - CE</span><br/>
+                                <span className={`${styles.dadosGeral}`}>12 avaliações <Link href="/comentarios">( <u>ver comentários</u> )</Link></span><br/>
+                                <span className={`${styles.dadosGeral}`}>9 km de distância de você</span><br/>
+                            </div>
                             <button className={`${styles.btnConsulta}`}>Agendar Consulta</button>
+                            
                         </div>
                     </div>
                 </div>
