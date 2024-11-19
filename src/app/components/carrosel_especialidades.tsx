@@ -18,7 +18,7 @@ const Carrossel = () => {
                 settings: {
                     slidesToShow: 3,
                 },
-            }
+            },
         ],
     };
 
@@ -36,6 +36,9 @@ const Carrossel = () => {
 
     return (
         <div className={styles.carousel_container}>
+            <button className={`${styles.arrow_button} ${styles.arrow_left}`}>
+                &#9664;
+            </button>
             <Slider {...settings}>
                 {especialidades.map((especialidade, index) => (
                     <div key={index} className={styles.carousel_card}>
@@ -44,14 +47,11 @@ const Carrossel = () => {
                     </div>
                 ))}
             </Slider>
-
-            <button className={`${styles.arrow_button} ${styles.arrow_left}`}>
-                &#9664;
-            </button>
             <button className={`${styles.arrow_button} ${styles.arrow_right}`}>
                 &#9654;
             </button>
         </div>
+
     );
 };
 

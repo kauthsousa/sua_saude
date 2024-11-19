@@ -3,8 +3,9 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import MenuDeslogado from "./components/menusuperior_deslogado";
-import Carrossel from "./components/carrosel_especialidades";
+import Carousel from "./components/carrosel_especialidades";
 import Rodape from "./components/rodape";
+import Mapa from './components/mapa';
 
 export default function Home() {
   return (
@@ -60,13 +61,13 @@ export default function Home() {
           </div>
 
           {/* ESPECIALIDADES */}
-          <div className={styles.mapa}>
-            <Carrossel />
+          <div className={styles.carousel}>
+            <Carousel />
           </div>
 
           {/* LOCALIZAÇÃO */}
           <div className={styles.mapa}>
-
+            <Mapa />
           </div>
 
         </div>
