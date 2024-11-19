@@ -8,8 +8,8 @@ const Mapa = () => {
     };
 
     const center = {
-        lat: -23.55052, // Latitude do centro do mapa (exemplo: São Paulo)
-        lng: -46.633308, // Longitude do centro do mapa
+        lat: -23.55052,
+        lng: -46.633308,
     };
 
     return (
@@ -19,7 +19,6 @@ const Mapa = () => {
                 center={center}
                 zoom={12}
             >
-                {/* Adicione um marcador */}
                 <Marker position={center} />
             </GoogleMap>
         </LoadScript>
