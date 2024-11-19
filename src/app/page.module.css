@@ -28,7 +28,7 @@
 }
 
 .deslogado li:last-child {
-  background: #007486;
+  background: #00777d;
   color: white;
   padding: 0.5em 4em;
   border-radius: 50px;
@@ -63,11 +63,11 @@
 
 .btnPerfil {
   background: #fff;
-  color: #007486;
+  color: #00777d;
   padding: 0.5em 1em;
   border-radius: 50px;
   margin-left: 1em;
-  border: 1px solid #007486;
+  border: 1px solid #00777d;
 
   align-items: center;
   justify-content: space-between;
@@ -267,7 +267,7 @@
 }
 
 .chamada {
-  background-color: #007486;
+  background-color: #00777d;
   width: 100%;
   margin-top: 8vh;
   padding: 2.5vh;
@@ -327,7 +327,7 @@
 .botao_criar_conta button {
   padding: 1.5vh 15vh;
   font-family: Comfortaa-light;
-  background-color: #007486;
+  background-color: #00777d;
   color: white;
   font-size: 1em;
   font-weight: bold;
@@ -341,80 +341,83 @@
   background-color: #26b8cf;
 }
 
-.carousel_container {
-  margin: 5vh auto;
-  width: 70%;
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative;
 }
 
-.carousel_card {
-  margin: 0 15px;
-  border-radius: 20%;
-  width: 100px;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  background-color: #007486;
-  transition: transform 0.3s ease;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.carousel_card:hover {
-  transform: scale(1.02);
-}
-
-.carousel_image {
-  width: 100%;
-  height: 25vh;
-  border-radius: 20%;
-  border-bottom: 3px solid #007486;
-}
-
-.carousel_title {
-  font-size: 14px;
-  font-weight: 500;
-  color: #FFF;
-  margin: 2vh 0 2vh 0;
-  text-align: center;
-  font-family: Comfortaa-light;
-  font-weight: 900;
-}
-
-.arrow_button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #007486;
-  color: #ffffff;
+.navButton {
+  background-color: #00777d;
+  color: white;
   border: none;
   border-radius: 50%;
   width: 40px;
   height: 40px;
+  font-size: 20px;
+  font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: 0.5s;
-  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  margin: 0 16px;
 }
 
-.arrow_button:hover {
-  background-color: #26b8cf;
+.navButton:hover {
+  background-color: #00777d;
 }
 
-.arrow_left {
-  left: -50px;
+.carouselTrack {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
-.arrow_right {
-  right: -50px;
+.carouselTrack::-webkit-scrollbar {
+  display: none;
 }
 
-.carousel {
+.card {
+  min-width: 18vh;
+  max-width: 18vh;
+  background-color: white;
+  border-radius: 15%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.image {
   width: 100%;
-  height: 30vh;
+  height: 180px;
+  object-fit: cover;
 }
+
+.label {
+  background-color: #00777d;
+  color: white;
+  font-size: 14px;
+  font-family: Comfortaa-regular;
+  font-weight: 700;
+  padding: 1vh;
+  margin: 0;
+  width: 100%;
+  text-transform: capitalize;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 
 /* OUTROS */
 .ctas {

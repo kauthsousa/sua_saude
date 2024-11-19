@@ -1,58 +1,95 @@
-import React from 'react';
-import Slider from 'react-slick';
-import Image from 'next/image';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import styles from "./../page.module.css"
+// components/Carousel.js
+import styles from "../page.module.css";
+import React, { useRef, useEffect } from "react";
 
-const Carrossel = () => {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 800,
-        slidesToShow: 5,
-        slidesToScroll: 3,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                },
-            },
-        ],
-    };
+const Carousel: React.FC = () => {
+    const carouselRef = useRef<HTMLDivElement | null>(null);
 
-    const especialidades = [
-        { title: 'Nutricionista', image: '/images/especialidade_1.png' },
-        { title: 'Ortopedista', image: '/images/especialidade_2.png' },
-        { title: 'Fisioterapeuta', image: '/images/especialidade_3.png' },
-        { title: 'Dentista', image: '/images/especialidade_4.png' },
-        { title: 'Ginecologista', image: '/images/especialidade_5.png' },
-        { title: 'Urologista', image: '/images/especialidade_6.png' },
-        { title: 'Ultrassonografia', image: '/images/especialidade_7.png' },
-        { title: 'Cardiologista', image: '/images/especialidade_8.png' },
-        { title: 'Pediatra', image: '/images/especialidade_9.png' },
+    const items = [
+        { id: 1, label: "Nutricionista", image: "/images/especialidade_1.png" },
+        { id: 2, label: "Ortopedista", image: "/images/especialidade_2.png" },
+        { id: 3, label: "Fisioterapeuta", image: "/images/especialidade_3.png" },
+        { id: 4, label: "Dentista", image: "/images/especialidade_4.png" },
+        { id: 5, label: "Ginecologista", image: "/images/especialidade_5.png" },
+        { id: 6, label: "Urologista", image: "/images/especialidade_6.png" },
+        { id: 7, label: "Ultrassonografia", image: "/images/especialidade_7.png" },
+        { id: 8, label: "Cardiologista", image: "/images/especialidade_8.png" },
+        { id: 9, label: "Pediatra", image: "/images/especialidade_9.png" },
     ];
 
+    const clonedItems = [...items, ...items, ...items];
+
+    const scrollLeft = () => {
+        if (carouselRef.current) {
+            carouselRef.current.scrollBy({
+                left: -300,
+                behavior: "smooth",
+            });
+        }
+    };
+
+    const scrollRight = () => {
+        if (carouselRef.current) {
+            carouselRef.current.scrollBy({
+                left: 300,
+                behavior: "smooth",
+            });
+        }
+    };
+
+    useEffect(() => {
+        const carousel = carouselRef.current;
+
+        const handleScroll = () => {
+            if (!carousel) return;
+
+            const maxScrollLeft = carousel.scrollWidth / 3; // 1/3 da largura total
+            const currentScroll = carousel.scrollLeft;
+
+            if (currentScroll >= maxScrollLeft * 2) {
+                carousel.scrollLeft = maxScrollLeft;
+            } else if (currentScroll <= 0) {
+                carousel.scrollLeft = maxScrollLeft;
+            }
+        };
+
+        if (carousel) {
+            carousel.addEventListener("scroll", handleScroll);
+        }
+
+        return () => {
+            if (carousel) {
+                carousel.removeEventListener("scroll", handleScroll);
+            }
+        };
+    }, []);
+
+    useEffect(() => {
+        const carousel = carouselRef.current;
+        if (carousel) {
+            const maxScrollLeft = carousel.scrollWidth / 3;
+            carousel.scrollLeft = maxScrollLeft;
+        }
+    }, []);
+
     return (
-        <div className={styles.carousel_container}>
-            <button className={`${styles.arrow_button} ${styles.arrow_left}`}>
-                &#9664;
+        <div className={styles.carouselContainer}>
+            <button className={styles.navButton} onClick={scrollLeft}>
+                &lt;
             </button>
-            <Slider {...settings}>
-                {especialidades.map((especialidade, index) => (
-                    <div key={index} className={styles.carousel_card}>
-                        <img src={especialidade.image} alt={especialidade.title} className={styles.carousel_image} />
-                        <p className={styles.carousel_title}>{especialidade.title}</p>
+            <div className={styles.carouselTrack} ref={carouselRef}>
+                {clonedItems.map((item, index) => (
+                    <div key={index} className={styles.card}>
+                        <img src={item.image} alt={item.label} className={styles.image} />
+                        <h4 className={styles.label}>{item.label}</h4>
                     </div>
                 ))}
-            </Slider>
-            <button className={`${styles.arrow_button} ${styles.arrow_right}`}>
-                &#9654;
+            </div>
+            <button className={styles.navButton} onClick={scrollRight}>
+                &gt;
             </button>
         </div>
-
     );
 };
 
-export default Carrossel;
+export default Carousel;
