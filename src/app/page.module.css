@@ -150,7 +150,6 @@
 .semana ul{
   list-style: none;
   display: flex;
-  gap: 5.5em;
   margin-top: 2em;
   justify-content: center;
 }
@@ -158,7 +157,17 @@
 .semana ul li{
   color: hsla(0, 0%, 49%, 1);
   font-size: 0.8em;
+  margin: 0 3.5em;
 }
+
+.semana ul li:nth-child(5){
+  margin-right: 2em;
+}
+
+.semana ul li:nth-child(6){
+  margin-left: 5em;
+}
+
 
 .calendarTop{
   display: flex;
