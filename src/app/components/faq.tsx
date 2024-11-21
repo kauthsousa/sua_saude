@@ -20,7 +20,7 @@ const FAQ = () => {
         { question: "Pergunta Frequente 5", answer: "Curabitur tempus aliquet felis..." },
     ];
 
-    const respostasRef = useRef([]); // Array de refs
+    const respostasRef = useRef([]);
 
     const toggleResposta = (index) => {
         if (activeIndex === index) {
