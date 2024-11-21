@@ -61,7 +61,7 @@ export default function Home() {
           </div>
 
           {/* ESPECIALIDADES */}
-          <div className={styles.carousel}>
+          <div>
             <Carousel />
           </div>
 
