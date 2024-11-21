@@ -3,7 +3,7 @@
 import Image from "next/image";
 import styles from "../../page.module.css";
 import Rodape from "@/app/components/rodape";
-import { SlArrowDown } from "react-icons/sl";
+import FAQ from "@/app/components/faq";
 import MenuDeslogado from "@/app/components/menusuperior_deslogado";
 
 export default function Home() {
@@ -34,30 +34,7 @@ export default function Home() {
 
                     {/* PERGUNTAS FREQUENTES */}
                     <div className={styles.faqs}>
-                        <div className={styles.pergunta}>
-                            <h3>Pergunta Frequente</h3>
-                            <SlArrowDown className={styles.icone} />
-                        </div>
-                        <div className={styles.pergunta}>
-                            <h3>Pergunta Frequente</h3>
-                            <SlArrowDown className={styles.icone} />
-                        </div>
-                        <div className={styles.pergunta}>
-                            <h3>Pergunta Frequente</h3>
-                            <SlArrowDown className={styles.icone} />
-                        </div>
-                        <div className={styles.pergunta}>
-                            <h3>Pergunta Frequente</h3>
-                            <SlArrowDown className={styles.icone} />
-                        </div>
-                        <div className={styles.pergunta}>
-                            <h3>Pergunta Frequente</h3>
-                            <SlArrowDown className={styles.icone} />
-                        </div>
-                        <div className={styles.pergunta}>
-                            <h3>Pergunta Frequente</h3>
-                            <SlArrowDown className={styles.icone} />
-                        </div>
+                        <FAQ />
                     </div>
                 </div>
             </main>

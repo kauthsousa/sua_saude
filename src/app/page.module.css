@@ -429,35 +429,50 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1em;
-  margin: 15vh 0;
+  gap: 2vh;
+  margin: 8vh 0;
 }
 
 .pergunta {
   width: 60%;
-  height: 7vh;
   border: solid 1px #888888;
+  color: #888888;
+  font-family: Comfortaa-regular;
   border-radius: 15px;
-  padding: 0.8em;
+  padding: 1.5vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 
-.pergunta h3 {
+.resposta {
+  margin-top: 1vh;
+  padding: 1vh;
   font-family: Comfortaa-regular;
-  font-weight: 500;
-  font-size: 1.3em;
-  color: #515151;
-  margin: 0 2vh;
+  text-align: justify;
+  font-size: 1em;
+  color: white;
+  border-top: 1px solid #cccccc;
+  height: 0vh;
+  overflow: hidden;
+  transition: height 0.4s ease, color 0.5s ease;
 }
 
-.pergunta .icone {
-  color: #666666;
+.resposta.expandida {
+  color: #888888;
+  height: 200px;
+}
+
+.header .icone {
   font-size: 1.7em;
-  margin: 0 2vh;
 }
-
 
 /* OUTROS */
 .ctas {
