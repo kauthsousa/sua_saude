@@ -356,8 +356,7 @@
   color: white;
   border: none;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  padding: 1vh;
   font-size: 20px;
   font-weight: bold;
   display: flex;
@@ -417,7 +416,6 @@
   text-transform: capitalize;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-
 
 /* OUTROS */
 .ctas {
