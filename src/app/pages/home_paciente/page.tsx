@@ -5,6 +5,9 @@ import Image from "next/image";
 import MenuLogado from "../../components/menusuperior_logado";
 import Calendar from "../../components/calendario";
 import Compromissos from "../../components/compromissos";
+import Mapa from "@/app/components/mapa";
+{/*import Carousel from "@/app/components/carrosel_especialidades";*/}
+import opcoesPaciente from "@/app/components/opcoesPaciente";
 
 export default function HomePaciente() {
   return (
@@ -13,9 +16,10 @@ export default function HomePaciente() {
       <main className={`${styles.main}`}> 
         <div className={`${styles.home_paciente}`}></div>{/*<Image src="/images/bgHomePaciente.png" className={styles.bgHomePaciente} alt="Foto de perfil" width={3500} height={500} priority/>   */}
         <div className={styles.especialidadesH}></div>
-        <div>{/* CARROSSEL */}</div>
+        {/*<div><Carousel/></div>*/}
         <div><Calendar/></div>
         <div><Compromissos/></div>
+        <div><Mapa/></div>
       </main>
       <footer className={styles.footer}>
       </footer>

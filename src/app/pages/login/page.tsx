@@ -48,7 +48,7 @@ export default function Login() {
                                 aria-label="Senha"
                             />
                             <Link href="recuperarconta" className={`${styles.esqueceuSenha} ${styles.hoverLink}`}>Esqueceu a senha? Recuperar conta</Link>
-                            <button type="submit">Entrar</button>
+                            <Link href="home_paciente"><button type="submit">Entrar</button></Link>
                             <Link href="cadastrouser" className={`${styles.semConta} ${styles.hoverLink}`}>Ainda não possui conta? Cadastre-se</Link>
                         </form>
                     </div>

@@ -15,6 +15,7 @@
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
+  position: relative;
 }
 
 .menusuperior nav {
@@ -62,16 +63,19 @@
 }
 
 .btnPerfil {
+  font-size: 0.9em;
   background: #fff;
   color: #007486;
-  padding: 0.5em 1.5em;
+  padding: 0.5em 1.5em 0.6em 1.5em;
   border-radius: 50px;
-  margin-left: 1em;
   border: 1px solid #007486;
   align-items: center;
   justify-content: space-between;
-  width: 11em;
+  width: 12em;
   flex-wrap: nowrap;
+  font-family: Comfortaa-Regular;
+  cursor: pointer;
+  position: relative;
 }
 
 .btnPerfil img{
@@ -268,10 +272,8 @@
 }
 
 .btnCancelar:hover{
-  background-color: #008080; /* Cor do fundo ao passar o mouse */
-  color: white; /* Texto branco ao passar o mouse */
-  transform: scale(1.05); /* Aumenta o botão levemente */
-  box-shadow: 0 4px 10px rgba(0, 128, 128, 0.3);
+  border: 1px solid hsla(188, 69%, 48%, 1);
+  color: hsla(188, 69%, 48%, 1);/* Texto branco ao passar o mouse */
 }
 
 .btnConfirmar{
@@ -285,12 +287,51 @@
 .btnConfirmar:hover{
   background-color: hsla(188, 69%, 48%, 1);
   border: 1px solid hsla(188, 69%, 48%, 1);
-  transform: scale(1.05); /* Aumenta o botão levemente */
-  box-shadow: 0 4px 10px rgba(0, 128, 128, 0.3);
+}
+
+/* opções paciente */
+.opcoesPaciente{
+  background-color: #fff;
+  border-radius: 0 0 20px 20px;
+  height: auto;
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
+  right: 7.2em;
+  z-index: 1000;
+  position: absolute;
+  margin-top: 12.7em;
+  border: 0.5px solid #007486;
+  border-top: 0;
+  opacity: 0; 
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.opcoesPaciente.show { 
+  opacity: 1; 
+  transform: translateY(0); 
+}
+
+.lista_opPaciente li{
+  font-family: Comfortaa-Regular;
+  color: #007486;
+  border-bottom: 1px solid #007486;
+  line-height: 2em;
+  font-size: 0.9em;
+}
+
+.lista_opPaciente li:last-child{
+  margin-bottom: .5em;
+}
+
+.lista_opPaciente{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
 }
 
 /*  HOME  */
-
 .main {
   width: 100%;
   display: flex;
