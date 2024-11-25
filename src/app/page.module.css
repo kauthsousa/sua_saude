@@ -988,7 +988,7 @@ a.secondary {
 }
 
 .containerFav{
-  width: 90%;
+  width: 95%;
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -1048,6 +1048,11 @@ a.secondary {
   font-size: 1em;
   font-family: Comfortaa-regular;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.btnDependentes:hover{
+  background: hsla(188, 69%, 48%, 1);
 }
 
 .addDep{
@@ -1072,4 +1077,8 @@ a.secondary {
   display: flex;
   flex-direction: column;
   font-family: Comfortaa-regular;
+}
+
+.info span{
+  line-height: 2.5em;
 }
