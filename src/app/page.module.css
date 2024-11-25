@@ -1082,3 +1082,20 @@ a.secondary {
 .info span{
   line-height: 2.5em;
 }
+
+.novoDep{
+  width: 42%;
+}
+
+.dataDep{
+  line-height: 2.5em;
+}
+
+.titulo_novoDep{
+  color: #007486;
+}
+
+.btnNovoDep{
+  margin-top: 2em;
+  line-height: 2.2em !important;
+}
