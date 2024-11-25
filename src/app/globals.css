@@ -37,3 +37,8 @@ a {
   font-family: Comfortaa-light;
   src: url(../../public/fonts/Comfortaa-Light.ttf);
 }
+
+@font-face {
+  font-family: AbhayaLibre-Regular;
+  src: url(../../public/fonts/AbhayaLibre-Regular.ttf);
+}

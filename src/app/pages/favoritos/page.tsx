@@ -5,7 +5,14 @@ import MenuLogado from "../../components/menusuperior_logado";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function SemFavoritos() {
+export default function Favoritos() {
+
+    const [activePage, setActivePage] = useState<number>(1); // Estado com tipo explícito
+
+    const handlePageClick = (pageNumber: number) => {
+        setActivePage(pageNumber); // Atualiza o estado com o número do botão clicado
+    };
+
     return (
         <div className={styles.pagina_cadastro} role="main">
             <header aria-label="Menu Principal">
@@ -36,6 +43,17 @@ export default function SemFavoritos() {
                             <button className={`${styles.btnConsulta}`}>Agendar Consulta</button>
                             
                         </div>
+                    </div>
+                    <div className={styles.nextPages}>
+                        {[1, 2, 3].map((page) => (
+                            <button
+                            key={page}
+                            className={`${styles.nPagina} ${activePage === page ? styles.active : ""}`}
+                            onClick={() => handlePageClick(page)}
+                            >
+                            {page}
+                            </button>
+                        ))}
                     </div>
                 </div>
             </main>

@@ -73,7 +73,7 @@
   justify-content: space-between;
   width: 12em;
   flex-wrap: nowrap;
-  font-family: Comfortaa-Regular;
+  font-family: Comfortaa-regular;
   cursor: pointer;
   position: relative;
 }
@@ -132,7 +132,7 @@
 
 /* calendário */
 .pagina_homePaciente{
-  font-family: Comfortaa-Regular;
+  font-family: Comfortaa-regular;
 }
 
 .calendar{
@@ -260,14 +260,14 @@
   border: none;
   pointer-events: none;
   width: 30em;
-  font-family: Comfortaa-Regular;
+  font-family: Comfortaa-regular;
 }
 
 .btnCompromisso button{
   width: 15vw;
   padding: 5px 0;
   border-radius: 20px;
-  font-family: Comfortaa-Regular;
+  font-family: Comfortaa-regular;
   font-size: 0.7em;
   cursor: pointer;
 }
@@ -323,7 +323,7 @@
 }
 
 .lista_opPaciente li{
-  font-family: Comfortaa-Regular;
+  font-family: Comfortaa-regular;
   color: #007486;
   border-bottom: 1px solid #007486;
   line-height: 2em;
@@ -506,7 +506,7 @@ a.secondary {
   width: 35%;
   height: 100%;
   border-radius: 40px;
-  font-family: Comfortaa-Regular;
+  font-family: Comfortaa-regular;
   padding: 4em 3em;
   margin-left: 5em;
 }
@@ -534,7 +534,7 @@ a.secondary {
   line-height: 2.2em;
   width: 100%;
   margin: 0.5em 0;
-  font-family: Comfortaa-Regular;
+  font-family: Comfortaa-regular;
 }
 
 .geral:focus{
@@ -544,7 +544,7 @@ a.secondary {
 }
 
 .geral::placeholder{
-  font-family: Comfortaa-Regular;
+  font-family: Comfortaa-regular;
   font-size: 1em;
 }
 
@@ -576,7 +576,7 @@ a.secondary {
   color: hsla(0, 0%, 49%, 1);
   padding: 0 1.5em !important;
   line-height: 2.5em;
-  font-family: Comfortaa-Regular;
+  font-family: Comfortaa-regular;
 }
 
 .data::-webkit-calendar-picker-indicator{
@@ -637,7 +637,7 @@ a.secondary {
 }
 
 .modalCadastro button{
-  font-family: Comfortaa-Regular;
+  font-family: Comfortaa-regular;
   background: hsla(188, 100%, 26%, 1);
   border-radius: 20px;
   width: 100%;
@@ -748,7 +748,7 @@ a.secondary {
 .titulo_modalConfiguracoes{
   font-size: 1.5em;
   grid-area: titulo;
-  font-family: Comfortaa-Regular;
+  font-family: Comfortaa-regular;
 }
 
 .camposConfig{
@@ -783,7 +783,7 @@ a.secondary {
   line-height: 2.2em;
   width: 100%;
   margin: 0.5em 0;
-  font-family: Comfortaa-Regular;
+  font-family: Comfortaa-regular;
 }
 
 .geralC:focus{
@@ -793,13 +793,13 @@ a.secondary {
 }
 
 .geralC::placeholder{
-  font-family: Comfortaa-Regular;
+  font-family: Comfortaa-regular;
   font-size: 1em;
 }
 
 .dataC{
   color: hsla(0, 0%, 49%, 1);
-  font-family: Comfortaa-Regular;
+  font-family: Comfortaa-regular;
   line-height: 2.2em;
 }
 
@@ -909,7 +909,7 @@ a.secondary {
 
 .dadosPro_favorito{
   grid: proFavorito;
-  font-family: Comfortaa-Regular;
+  font-family: Comfortaa-regular;
   height: 100%;
   padding-top: -5em;
   margin-top: -1.5em;
@@ -925,7 +925,7 @@ a.secondary {
 }
 
 .btnConsulta{
-  font-family: Comfortaa-Regular;
+  font-family: Comfortaa-regular;
   background: hsla(188, 100%, 26%, 1);
   border-radius: 20px;
   width: 15vw;
@@ -956,6 +956,35 @@ a.secondary {
 
 .lixeira:hover{
   filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(180deg);
+}
+
+.nextPages{
+  width: 12%;
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  align-self: center;
+  align-items: center;
+  margin: 2em;
+}
+
+.nPagina{
+  color: #007486;
+  border-radius: 100%;
+  border: 1px solid #007486;
+  padding: 7px 17px;
+  font-family: AbhayaLibre-Regular;
+  font-size: 1.5em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.nPagina.active{
+  background-color: #007486;
+  color: #fff;
 }
 
 /* HOME PACIENTE */
