@@ -489,20 +489,20 @@
   background: url(../../public/images/backgroundCadastro.png) no-repeat center center;
   background-size: cover;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 15vh 0;
+  padding: 10vh 13%;
   font-family: Comfortaa-regular;
   font-weight: 500;
 }
 
 .modal {
+  width: 50vh;
+  height: 60vh;
   background-color: #fff;
   border-radius: 20px;
   padding: 2em;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  max-width: 400px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -521,11 +521,11 @@
 
 .modal textarea {
   resize: none;
-  height: 120px;
+  height: 19vh;
 }
 
 .modal button {
-  background-color: #008080;
+  background-color: #00777d;
   color: #fff;
   border: none;
   border-radius: 25px;
@@ -538,22 +538,26 @@
 }
 
 .modal button:hover {
-  background-color: #006666;
+  background-color: #26b8cf;
+}
+
+.chamadaContato {
+  max-width: 40%;
+  text-align: left;
 }
 
 .chamadaContato h1 {
-  font-size: 2em;
+  font-size: 2.5em;
   color: #fff;
-  text-align: center;
+  margin-bottom: 0.5em;
 }
 
 .chamadaContato h3 {
-  font-size: 1em;
+  font-size: 1.2em;
   color: #fff;
-  text-align: center;
-  margin-top: 0.5em;
+  line-height: 1.5;
+  font-weight: 400;
 }
-
 
 
 /* OUTROS */
