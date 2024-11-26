@@ -38,11 +38,11 @@ export default function NovoDependente({ onClose }: NovoDependenteProps) {
     return(
         <div className={styles.modalOverlay}>    
             <div className={`${styles.modalCadastro} ${styles.novoDep}`} role="form" aria-labelledby="nomeDependente">
+                <Image src="/images/close.png" alt="Botão de Fechar" onClick={onClose} className={styles.btnCloseDep} width={300} height={300} priority/>
                 <span id="nomeDependente" className={`${styles.titulo_modalCadastro} ${styles.titulo_novoDep}`}>Daniel Soares</span>
-                <Image src="/image/close.png" alt="Botão de Fechar" className={styles.btnCloseDep} width={200} height={200} priority/>
                 <form>
                     <div className={styles.dados_novoDep}>
-                        <input type="text" placeholder="Nome Completo" className={styles.geral}/>
+                        <input type="text" placeholder="Nome completo" className={styles.geral} aria-required="true" aria-label="Nome completo" required/>
                         <input
                             type={inputType}
                             value={inputType === 'text' ? dataVisualizada : dataNascimento}
