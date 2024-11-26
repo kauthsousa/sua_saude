@@ -474,6 +474,13 @@
   font-size: 1.7em;
 }
 
+.termos {
+  margin: 5vh 20%;
+  font-family: Comfortaa-regular;
+  text-align: justify;
+  font-size: 1.3em;
+}
+
 /* OUTROS */
 .ctas {
   display: flex;
