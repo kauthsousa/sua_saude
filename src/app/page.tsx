@@ -6,8 +6,36 @@ import MenuDeslogado from "./components/menusuperior_deslogado";
 import Carousel from "./components/carrosel_especialidades";
 import Rodape from "./components/rodape";
 import Mapa from './components/mapa';
+import { useState } from "react";
+
+// Componente do Modal
+function Modal({ isOpen, onClose }) {
+  if (!isOpen) return null;
+
+  return (
+    <div className={styles.modalOverlay}>
+      <div className={styles.modalContent}>
+        <p>Você será redirecionado para outra página, continuar mesmo assim?</p>
+        <div className={styles.modalButtons}>
+          <button onClick={() => console.log("Redirecionar")}>Sim</button>
+          <button onClick={onClose}>Não</button>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function Home() {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const handleMapaClick = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <div className={styles.page}>
       <header><MenuDeslogado /></header>
@@ -66,12 +94,15 @@ export default function Home() {
           </div>
 
           {/* LOCALIZAÇÃO */}
-          <div className={styles.mapa}>
+          <div className={styles.mapa} onClick={handleMapaClick}>
             <Mapa />
           </div>
-
         </div>
       </main>
+
+      {/* Modal */}
+      <Modal isOpen={isModalOpen} onClose={closeModal} />
+
       <Rodape></Rodape>
     </div>
   );

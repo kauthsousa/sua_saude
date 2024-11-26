@@ -500,7 +500,7 @@
   width: 50vh;
   height: 60vh;
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 40px;
   padding: 2em;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -513,7 +513,7 @@
   width: 100%;
   padding: 0.8em;
   border: 1px solid #888888;
-  border-radius: 10px;
+  border-radius: 20px;
   font-size: 1em;
   outline: none;
   font-family: Comfortaa-regular;
@@ -559,6 +559,71 @@
   font-weight: 400;
 }
 
+/* MODAL */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: white;
+  padding: 5vh;
+  border-radius: 8px;
+  text-align: center;
+  width: 35vh;
+  height: 28vh;
+  font-family: Comfortaa-regular;
+  font-weight: 800;
+  font-size: large;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3vh;
+  flex-wrap: wrap;
+}
+
+.modalButtons button {
+  margin: 1vh 0;
+  padding: 1vh 2vh;
+  width: 100%;
+  border: none;
+  border-radius: 25px;
+  font-size: large;
+  cursor: pointer;
+  font-family: Comfortaa-regular;
+  font-weight: 800;
+}
+
+.modalButtons button:first-child {
+  background-color: #00777d;
+  color: white;
+  transition: 0.5s;
+}
+
+.modalButtons button:first-child:hover {
+  background-color: #26b8cf;
+}
+
+.modalButtons button:last-child {
+  border: 1px solid #00777d;
+  background: none;
+  transition: 0.5s;
+}
+
+.modalButtons button:last-child:hover {
+  border: 1px solid #888888;
+  background-color: #cccccc;
+}
 
 /* OUTROS */
 .ctas {
@@ -597,11 +662,12 @@ a.secondary {
 .rodape {
   display: flex;
   justify-content: space-around;
-  padding: 20px 0 10vh 0;
+  padding: 5vh 0 5vh 0;
   background-color: #fff;
   color: #000;
   font-family: Comfortaa-regular;
   font-size: 12px;
+
 }
 
 .contato {
