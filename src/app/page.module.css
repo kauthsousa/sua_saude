@@ -482,6 +482,21 @@
   font-size: 1.3em;
 }
 
+.telaCadastro {
+  height: 100%;
+  width: 100%;
+  background: url(../../public/images/backgroundCadastro.png);
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: 3em 0;
+}
+
+/*FALE CONOSCO */
+
 /* OUTROS */
 .ctas {
   display: flex;
