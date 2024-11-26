@@ -576,7 +576,7 @@
 .modalContent {
   background: white;
   padding: 5vh;
-  border-radius: 8px;
+  border-radius: 25px;
   text-align: center;
   width: 35vh;
   height: 28vh;
@@ -623,6 +623,25 @@
 .modalButtons button:last-child:hover {
   border: 1px solid #888888;
   background-color: #cccccc;
+}
+
+.fechar {
+  margin: 6vh 0;
+  padding: 1vh 2vh;
+  width: 100%;
+  border: none;
+  border-radius: 25px;
+  font-size: large;
+  cursor: pointer;
+  font-family: Comfortaa-regular;
+  font-weight: 800;
+  color: #fff;
+  background-color: #00777d;
+  transition: 0.5s;
+}
+
+.fechar:hover {
+  background-color: #26b8cf;
 }
 
 /* OUTROS */

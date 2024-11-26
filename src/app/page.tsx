@@ -8,7 +8,6 @@ import Rodape from "./components/rodape";
 import Mapa from './components/mapa';
 import { useState } from "react";
 
-// Componente do Modal
 function Modal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
