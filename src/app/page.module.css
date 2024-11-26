@@ -482,20 +482,79 @@
   font-size: 1.3em;
 }
 
+/*FALE CONOSCO */
 .telaCadastro {
   height: 100%;
   width: 100%;
-  background: url(../../public/images/backgroundCadastro.png);
+  background: url(../../public/images/backgroundCadastro.png) no-repeat center center;
   background-size: cover;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
   justify-content: center;
-  padding: 3em 0;
+  align-items: center;
+  padding: 15vh 0;
+  font-family: Comfortaa-regular;
+  font-weight: 500;
 }
 
-/*FALE CONOSCO */
+.modal {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 2em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.modal input,
+.modal textarea {
+  width: 100%;
+  padding: 0.8em;
+  border: 1px solid #888888;
+  border-radius: 10px;
+  font-size: 1em;
+  outline: none;
+  font-family: Comfortaa-regular;
+}
+
+.modal textarea {
+  resize: none;
+  height: 120px;
+}
+
+.modal button {
+  background-color: #008080;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 2vh;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: Comfortaa-regular;
+  font-weight: 900;
+}
+
+.modal button:hover {
+  background-color: #006666;
+}
+
+.chamadaContato h1 {
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
+}
+
+.chamadaContato h3 {
+  font-size: 1em;
+  color: #fff;
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+
 
 /* OUTROS */
 .ctas {
