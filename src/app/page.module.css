@@ -639,7 +639,7 @@ a.secondary {
   font-size: 0.8em;
 }
 
-.modalCadastro button{
+/*.modalCadastro button{
   font-family: Comfortaa-regular;
   background: hsla(188, 100%, 26%, 1);
   border-radius: 20px;
@@ -654,7 +654,7 @@ a.secondary {
 
 .modalCadastro button:hover{
   background: hsla(188, 69%, 48%, 1);
-}
+}*/
 
 
 /* CADASTRO PROFISSIONAL DE SAÚDE */
@@ -1104,7 +1104,8 @@ a.secondary {
   position: fixed;
   z-index: 1000;
   height: auto;
-  padding: 3em;
+  padding: 4em 3em;
+  border-radius: 20px;
 }
 
 .dataDep{
@@ -1150,4 +1151,56 @@ a.secondary {
   margin: 0 16vh;
   font-size: 1.2em;
   font-weight: 600;
+}
+
+.titleCancelamento{
+  font-size: 0.8em;
+  font-weight: 600;
+  margin: 0 1vh;
+}
+
+.cancelamento{
+  width: 19%;
+  height: auto;
+  text-align: center;
+  padding: 5vh;
+}
+
+.botoesModal{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vh;
+}
+
+.btnSemFundo{
+  color: #007486;
+  border: 1px solid #007486;
+  background-color: #fff;
+  transition: 0.3s ease-in-out;
+  border-radius: 20px;
+  width: 100%;
+  padding: 0.5vh 2vh;
+  font-family: Comfortaa-regular;
+}
+
+.btnSemFundo:hover{
+  border: 1px solid hsla(188, 69%, 48%, 1);
+  color: hsla(188, 69%, 48%, 1);/* Texto branco ao passar o mouse */
+}
+
+.btnComFundo{
+  color: #fff;
+  background-color: #007486;
+  border: 1px solid #007486;
+  transition: 0.3s ease-in-out;
+  border-radius: 20px;
+  width: 100%;
+  margin-top: 2vh;
+  padding: 0.5vh 2vh;
+  font-family: Comfortaa-regular;
+}
+
+.btnComFundo:hover{
+  background-color: hsla(188, 69%, 48%, 1);
+  border: 1px solid hsla(188, 69%, 48%, 1);
 }

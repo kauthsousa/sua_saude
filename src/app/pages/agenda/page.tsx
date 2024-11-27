@@ -1,11 +1,25 @@
 "use client"
+import React, {useState} from "react";
 import styles from "../../page.module.css";
 import MenuLogado from "../../components/menusuperior_logado";
 import Calendar from "../../components/calendario";
 import Compromissos from "../../components/compromissos";
 import Mapa from "@/app/components/mapa";
+import Cancelamento from "@/app/components/cancelamento";
 
-export default function HomePaciente() {
+export default function Agenda() {
+    
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
+
+    // Função de confirmação do cancelamento
+    const handleConfirmCancel = () => {
+        console.log("Consulta cancelada com sucesso!"); // Exemplo de lógica
+        closeModal(); // Fecha o modal após confirmar
+    };
+
     return (
         <div>
             <header><MenuLogado/></header>
@@ -22,7 +36,8 @@ export default function HomePaciente() {
                             botoes={[
                             {
                                 texto: "Cancelar compromisso",
-                                onClick: () => console.log("Cancelado"),
+                                onClick: () => {console.log("Cancelado");
+                                openModal()},
                                 classeEstilo: styles.btnCancelar,
                                 ariaLabel: "Cancelar compromisso",
                             },
@@ -43,7 +58,8 @@ export default function HomePaciente() {
                             botoes={[
                             {
                                 texto: "Cancelar compromisso",
-                                onClick: () => console.log("Cancelado"),
+                                onClick: () => {console.log("Cancelado");
+                                    openModal()},
                                 classeEstilo: styles.btnCancelar,
                                 ariaLabel: "Cancelar compromisso",
                             },
@@ -81,6 +97,12 @@ export default function HomePaciente() {
                         />
                     </div>
                 </div>
+                {isModalOpen && (
+                    <Cancelamento 
+                        onClose={closeModal} 
+                        onConfirm={handleConfirmCancel} // Passa a lógica para o botão "Sim"
+                    />
+                )}
                 <Mapa/>
             </main>
             <footer className={styles.footer}></footer>
