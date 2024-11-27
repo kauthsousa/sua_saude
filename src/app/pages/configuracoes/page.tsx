@@ -1,12 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import InputMask from "react-input-mask";
 import styles from "../../page.module.css";
 import MenuLogado from "../../components/menusuperior_logado";
 import Image from "next/image";
 import { useRouter } from 'next/router';
 
-export default function CadastroUser() {
+export default function Configuracoes() {
   const [inputType, setInputType] = useState<string>('text');
   const [dataNascimento, setDataNascimento] = useState<string>("");
   const [dataVisualizada, setDataVisualizada] = useState<string>("");
@@ -85,6 +85,21 @@ export default function CadastroUser() {
     alert("Dados atualizados com sucesso!");
   }
 
+  const inputFileRef = useRef<HTMLInputElement | null>(null);
+
+  const handleButtonClick = () => {
+    // Abre o seletor de arquivos
+    inputFileRef.current?.click();
+  };
+
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      console.log("Arquivo selecionado:", file);
+      // Aqui você pode enviar o arquivo para o servidor ou processá-lo conforme necessário
+    }
+  };
+
   return (
     <div className={styles.pagina_cadastro} role="main">
       <header aria-label="Menu Principal">
@@ -136,7 +151,9 @@ export default function CadastroUser() {
           </div>
           <div className={styles.perfil}>
             <Image src="/images/perfil_foto.png" className={styles.imagem_perfil} alt="Foto de perfil" width={500} height={500} priority/>
-            <button className={styles.btnFoto}>Enviar nova foto de perfil</button>
+            <button className={styles.btnFoto} onClick={handleButtonClick} aria-label="Enviar nova foto de perfil">Enviar nova foto de perfil</button>
+            {/* Input escondido para envio de arquivos */}
+            <input type="file" accept="image/*" ref={inputFileRef} style={{ display: "none" }} onChange={handleFileChange}/>
           </div>
         </div>
       </main>
