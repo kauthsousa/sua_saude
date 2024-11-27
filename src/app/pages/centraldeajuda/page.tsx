@@ -6,7 +6,7 @@ import Rodape from "@/app/components/rodape";
 import FAQ from "@/app/components/faq";
 import MenuDeslogado from "@/app/components/menusuperior_deslogado";
 
-export default function Home() {
+export default function CentralDeAjuda() {
     return (
         <div className={styles.page}>
             <header><MenuDeslogado /></header>

@@ -21,7 +21,7 @@ function FeedbackModal({ isOpen, onClose }) {
     );
 }
 
-export default function Home() {
+export default function FaleConosco() {
     const [isModalOpen, setModalOpen] = useState(false);
 
     const handleSubmit = (e) => {
