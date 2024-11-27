@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./page.module.css";
 import MenuDeslogado from "./components/menusuperior_deslogado";
 import Carousel from "./components/carrosel_especialidades";
@@ -58,7 +59,7 @@ export default function Home() {
 
           {/* BOTÃO CRIAR CONTA */}
           <div className={styles.botao_criar_conta}>
-            <button>Criar uma conta GRÁTIS</button>
+            <button><Link href="/pages/cadastrouser">Criar uma conta GRÁTIS</Link></button>
           </div>
 
           {/* ESPECIALIDADES */}
