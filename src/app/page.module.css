@@ -276,7 +276,7 @@
 }
 
 .btnCancelar{
-  color: #007486;
+  color: #000;
   border: 1px solid #007486;
   background-color: #fff;
   margin-left: 50px;
@@ -284,8 +284,8 @@
 }
 
 .btnCancelar:hover{
-  border: 1px solid hsla(188, 69%, 48%, 1);
-  color: hsla(188, 69%, 48%, 1);/* Texto branco ao passar o mouse */
+  border: 1px solid #888888;
+  background-color: #cccccc;
 }
 
 .btnConfirmar{
