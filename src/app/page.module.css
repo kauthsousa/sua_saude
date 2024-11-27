@@ -416,6 +416,58 @@
   width: 100%;
 }
 
+/* avaliar consulta */
+.avaliarConsulta{
+  color: #007486;
+  line-height: 2em;
+  height: auto !important;
+  width: 40% !important;
+  padding: 2em 3em !important;
+  border-radius: 20px !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputAvaliacao{
+  color: #007486;
+  width: auto;
+  padding: 0 !important;
+  background: transparent;
+}
+
+.opinião{
+  font-family: Comfortaa-regular;
+  width: 65%;
+  height: 15vh;
+  padding: 1em;
+  border-radius: 10px;
+  margin: 1em 0;
+}
+
+.btnAvaliar{
+  width: 65% !important;
+  line-height: 2.5em !important;
+}
+
+.topAvaliar{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.estrela{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-left: -50px;
+  align-items: center;
+}
+
+.estrelaImg{
+  width: 3em;
+  height: auto;
+}
+
 /*  HOME  */
 .main {
   width: 100%;
