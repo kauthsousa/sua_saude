@@ -7,6 +7,7 @@ import MenuDeslogado from "./components/menusuperior_deslogado";
 import Carousel from "./components/carrosel_especialidades";
 import Rodape from "./components/rodape";
 import Mapa from './components/mapa';
+import Pesquisa from "./components/inputs_pesquisa"
 
 export default function Home() {
 
@@ -27,24 +28,7 @@ export default function Home() {
           </h3>
 
           {/* INPUTS DE PESQUISA */}
-          <div className={styles.inputs_pesquisa}>
-            <select aria-label="Pesquisar por especialidade">
-              <option disabled selected>Pesquisar por especialidade</option>
-              <option>Cardiologista</option>
-              <option>Ortopedista</option>
-              <option>Esp. 1</option>
-              <option>Esp. 2</option>
-              <option>Esp. 3</option>
-            </select>
-            <input
-              type="text"
-              placeholder="Pesquisar por Cidade"
-              aria-label="Pesquise por cidade"
-            />
-            <button>Pesquisar
-              <Image className={styles.lupa} src="/images/lupa.png" alt="Ícone de Pesquisar" width={240} height={120} />
-            </button>
-          </div>
+          <Pesquisa />
 
           {/* CHAMADA */}
           <div className={styles.chamada}>
