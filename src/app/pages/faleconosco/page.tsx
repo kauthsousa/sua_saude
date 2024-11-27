@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import styles from "../../page.module.css";
 import MenuDeslogado from "../../components/menusuperior_deslogado";
 import Rodape from "../../components/rodape";
+import InputMask from "react-input-mask";
 
 // Componente Modal
 function FeedbackModal({ isOpen, onClose }) {
@@ -29,6 +30,7 @@ export default function Home() {
     };
 
     const closeModal = () => {
+        location.reload();
         setModalOpen(false);
     };
 
@@ -46,8 +48,8 @@ export default function Home() {
                 <form onSubmit={handleSubmit}>
                     <div className={styles.modal}>
                         <input type="text" placeholder="Nome Completo" required />
-                        <input type="email" placeholder="E-mail" required />
-                        <input type="text" placeholder="Telefone" />
+                        <input type="email" placeholder="Email" required />
+                        <InputMask mask="(99) 9.9999-9999" placeholder="Telefone" required />
                         <input type="text" placeholder="Assunto" required />
                         <textarea placeholder="Descrição" required />
                         <button type="submit">Enviar Feedback</button>
