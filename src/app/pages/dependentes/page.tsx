@@ -32,8 +32,7 @@ export default function Dependentes() {
                     <Image src="/images/lixeira.svg" className={styles.lixeira} alt="Lixeira" width={100} height={100} priority/>
                 </div>
             </main>
-
-
+            
             {isModalOpen && (
                 <NovoDependente onClose={closeModal} /> // Passa a função `closeModal` como prop
             )}

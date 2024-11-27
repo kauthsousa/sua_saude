@@ -6,13 +6,18 @@ import Calendar from "../../components/calendario";
 import Compromissos from "../../components/compromissos";
 import Mapa from "@/app/components/mapa";
 import Cancelamento from "@/app/components/cancelamento";
+import DetalhesConsulta from "@/app/components/detalhesConsulta";
 
 export default function Agenda() {
     
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [modalAberto, abrirModal] = useState(false);
 
     const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
+
+    const modalAbrir = () => abrirModal(true);
+    const fecharModal = () => abrirModal(false);
 
     // Função de confirmação do cancelamento
     const handleConfirmCancel = () => {
@@ -83,7 +88,9 @@ export default function Agenda() {
                             botoes={[
                             {
                                 texto: "Ver detalhes",
-                                onClick: () => console.log("Detalhes vistos"),
+                                onClick: () => {console.log("Detalhes vistos");
+                                    modalAbrir();
+                                },
                                 classeEstilo: styles.btnCancelar,
                                 ariaLabel: "Ver detalhes do compromisso",
                             },
@@ -103,6 +110,13 @@ export default function Agenda() {
                         onConfirm={handleConfirmCancel} // Passa a lógica para o botão "Sim"
                     />
                 )}
+
+                {modalAberto && (
+                    <DetalhesConsulta 
+                        onClose={fecharModal} 
+                    />
+                )}
+
                 <Mapa/>
             </main>
             <footer className={styles.footer}></footer>
