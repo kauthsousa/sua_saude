@@ -724,22 +724,22 @@
   font-weight: 500;
 }
 
-.modal {
+.formulario {
   width: 50vh;
-  height: 60vh;
+  height: auto;
   background-color: #fff;
   border-radius: 40px;
-  padding: 2em;
+  padding: 3vh;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
 
-.modal input,
-.modal textarea {
+.formulario input,
+.formulario textarea {
   width: 100%;
-  padding: 0.8em;
+  padding: 1vh 2vh;
   border: 1px solid #888888;
   border-radius: 20px;
   font-size: 1em;
@@ -747,22 +747,21 @@
   font-family: Comfortaa-regular;
 }
 
-.modal textarea {
-  resize: none;
-  height: 19vh;
+.formulario textarea {
+  height: 20vh;
 }
 
-.modal button {
+.formulario button {
   background-color: #00777d;
   color: #fff;
   border: none;
-  border-radius: 25px;
-  padding: 2vh;
+  border-radius: 50px;
+  padding: 1.5vh 2vh;
   font-size: 1em;
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-family: Comfortaa-regular;
-  font-weight: 900;
+  font-weight: 800;
 }
 
 .modal button:hover {

@@ -46,7 +46,7 @@ export default function FaleConosco() {
                     </h3>
                 </div>
                 <form onSubmit={handleSubmit}>
-                    <div className={styles.modal}>
+                    <div className={styles.formulario}>
                         <input type="text" placeholder="Nome Completo" required />
                         <input type="email" placeholder="Email" required />
                         <InputMask mask="(99) 9.9999-9999" placeholder="Telefone" required />
