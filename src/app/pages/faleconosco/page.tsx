@@ -38,26 +38,29 @@ export default function FaleConosco() {
         <div className={styles.page}>
             <header><MenuDeslogado /></header>
             {/*O nome dessa classe está "contato" por usar as mesmas propriedades de um elemento de outra página*/}
-            <main className={styles.telaCadastro}>
-                <div className={styles.chamadaContato}>
-                    <h1>Fale Conosco</h1>
-                    <h3>
-                        Entre em contato conosco e tire suas dúvidas. Teremos prazer em te atender! Sua saúde é a nossa prioridade.
-                    </h3>
-                </div>
-                <form onSubmit={handleSubmit}>
-                    <div className={styles.formulario}>
-                        <input type="text" placeholder="Nome Completo" required />
-                        <input type="email" placeholder="Email" required />
-                        <InputMask mask="(99) 9.9999-9999" placeholder="Telefone" required />
-                        <input type="text" placeholder="Assunto" required />
-                        <textarea placeholder="Descrição" required />
-                        <button type="submit">Enviar Feedback</button>
+            <main>
+                <div className={styles.telaCadastro}>
+                    <div className={styles.chamadaContato}>
+                        <h1>Fale Conosco!</h1>
+                        <h3>
+                            Entre em contato conosco e tire suas dúvidas.
+                            Teremos prazer em te atender! Sua saúde é a nossa prioridade.
+                        </h3>
                     </div>
-                </form>
+                    <form onSubmit={handleSubmit}>
+                        <div className={styles.formulario}>
+                            <input type="text" placeholder="Nome Completo" required />
+                            <input type="email" placeholder="Email" required />
+                            <InputMask mask="(99) 9.9999-9999" placeholder="Telefone" required />
+                            <input type="text" placeholder="Assunto" required />
+                            <textarea placeholder="Descrição" required />
+                            <button type="submit">Enviar Feedback</button>
+                        </div>
+                    </form>
 
-                {/* Modal */}
-                <FeedbackModal isOpen={isModalOpen} onClose={closeModal} />
+                    {/* Modal */}
+                    <FeedbackModal isOpen={isModalOpen} onClose={closeModal} />
+                </div>
             </main>
 
             <Rodape />
