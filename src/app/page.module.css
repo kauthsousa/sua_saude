@@ -876,119 +876,95 @@
 }
 
 /* CARD PROFISSIONAL */
-.listaprofissionais {
-  width: 100%;
+.lista {
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-/* Estilizar o item do card */
-.itemFavorito {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
   gap: 20px;
+  padding: 20px;
+  margin: 0;
+  width: 100%;
+  font-family: Comfortaa-regular;
 }
 
-/* Imagem do profissional */
-.imgFavorito {
-  flex-shrink: 0;
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+  width: 50vh;
+}
+
+.imagem {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
   border: 2px solid #ddd;
 }
 
-.imgFavorito img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Informações e botão */
-.dadosPro_favorito {
-  flex-grow: 1;
+.informacoes {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 5px;
+  flex-grow: 1;
 }
 
-/* Informações do profissional */
-.dadosGeral {
-  font-size: 1rem;
-  color: #333;
-}
-
-.nomePro {
+.nome {
+  font-size: 1.4rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin: 0;
 }
 
-/* Botão de consulta */
-.btnConsulta {
-  margin-top: 10px;
-  background-color: #007BFF;
-  color: #fff;
+.especialidade {
+  color: #555;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.endereco {
+  font-size: 0.95rem;
+  color: #777;
+}
+
+.avaliacoes {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.linkComentarios {
+  color: #00777d;
+  text-decoration: none;
+}
+
+.linkComentarios:hover {
+  text-decoration: underline;
+}
+
+.distancia {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.botao {
+  background-color: #00777d;
+  color: white;
   border: none;
-  padding: 10px 15px;
   border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 0.95rem;
   cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
+  align-self: flex-start;
+  font-family: Comfortaa-regular;
 }
 
-.btnConsulta:hover {
-  background-color: #0056b3;
-}
-
-/* Lixeira */
-.lixeira {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-}
-
-/* Estrelas */
-.estrelaPro {
-  width: 20px;
-  height: auto;
-}
-
-/* Paginação */
-.nextPages {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.nPagina {
-  width: 40px;
-  height: 40px;
-  border: 1px solid #ddd;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  cursor: pointer;
-  background-color: #fff;
-  transition: background-color 0.3s ease;
-}
-
-.nPagina.active {
-  background-color: #007BFF;
-  color: #fff;
-}
-
-.nPagina:hover {
-  background-color: #0056b3;
-  color: #fff;
+.botao:hover {
+  background-color: #26b8cf;
 }
 
 

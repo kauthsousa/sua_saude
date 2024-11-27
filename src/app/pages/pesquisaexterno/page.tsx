@@ -24,14 +24,33 @@ export default function Home() {
         },
         {
             id: 2,
-            nome: "Carlos Oliveira",
-            especialidade: "Fisioterapeuta",
-            endereco: "Avenida Central, 45 - Bairro Sul - Cidade do Norte - CE",
-            avaliacoes: 20,
-            distancia: "5 km",
+            nome: "Amália Andréia",
+            especialidade: "Nutricionista Materno Infantil",
+            endereco: "Rua dos Prazeres, 18, Centro - Cidade do Norte - CE",
+            avaliacoes: 15,
+            distancia: "9 km",
             imagem: "/images/proFavorito2.png",
         },
+        {
+            id: 3,
+            nome: "João Albuquerque",
+            especialidade: "Nutrição Comportamental",
+            endereco: "Rua dos Prazeres, 18, Centro - Cidade do Norte - CE",
+            avaliacoes: 8,
+            distancia: "9 km",
+            imagem: "/images/proFavorito3.png",
+        },
+        {
+            id: 4,
+            nome: "Joana Patrícia",
+            especialidade: "Nutrição Coletiva e Hospitalar",
+            endereco: "Rua dos Prazeres, 18, Centro - Cidade do Norte - CE",
+            avaliacoes: 10,
+            distancia: "9 km",
+            imagem: "/images/proFavorito4.png",
+        },
     ];
+
 
     return (
         <div className={styles.page}>
@@ -47,7 +66,7 @@ export default function Home() {
                     <Pesquisa />
 
                     {/* LISTA PROFISSIONAIS*/}
-                    <div className={styles.listaprofissionais}>
+                    <div className={styles.lista}>
                         <CardProfissional profissionais={profissionais} />
                     </div>
 
