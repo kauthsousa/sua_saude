@@ -3,6 +3,7 @@ import React, {useState} from "react";
 import styles from "../../page.module.css";
 import MenuDeslogado from "../../components/menusuperior_deslogado";
 import Image from "next/image";
+import Rodape from "@/app/components/rodape";
 
 export default function CadastroProfissional() {
 
@@ -81,6 +82,7 @@ export default function CadastroProfissional() {
                 </div>
             </main>
             <footer className={styles.footer} aria-label="Rodapé">
+                <Rodape/>
             </footer>
         </div>
     );

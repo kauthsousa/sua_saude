@@ -5,6 +5,7 @@ import styles from "../../page.module.css";
 import MenuDeslogado from "../../components/menusuperior_deslogado";
 import Image from "next/image";
 import { useRouter } from 'next/router';
+import Rodape from "@/app/components/rodape";
 
 export default function CadastroUser() {
   const [inputType, setInputType] = useState<string>('text');
@@ -130,6 +131,7 @@ export default function CadastroUser() {
         </div>
       </main>
       <footer className={styles.footer} aria-label="Rodapé">
+        <Rodape/>
       </footer>
     </div>
   );

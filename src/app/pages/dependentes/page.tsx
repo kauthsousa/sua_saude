@@ -4,6 +4,7 @@ import styles from "../../page.module.css";
 import MenuLogado from "../../components/menusuperior_logado";
 import Image from "next/image";
 import NovoDependente from "@/app/components/novoDependente";
+import Rodape from "@/app/components/rodape";
 
 export default function Dependentes() {
 
@@ -37,7 +38,7 @@ export default function Dependentes() {
                 <NovoDependente onClose={closeModal} /> // Passa a função `closeModal` como prop
             )}
 
-            <footer className={styles.footer} aria-label="Rodapé"></footer>
+            <footer className={styles.footer} aria-label="Rodapé"><Rodape/></footer>
         </div>
     );
 }

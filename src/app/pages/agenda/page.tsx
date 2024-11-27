@@ -6,7 +6,8 @@ import Calendar from "../../components/calendario";
 import Compromissos from "../../components/compromissos";
 import Mapa from "@/app/components/mapa";
 import Cancelamento from "@/app/components/cancelamento";
-import DetalhesConsulta from "@/app/components/detalhesConsulta";
+/*import DetalhesConsulta from "@/app/components/detalhesConsulta";*/
+import Rodape from "@/app/components/rodape";
 
 export default function Agenda() {
     
@@ -111,15 +112,15 @@ export default function Agenda() {
                     />
                 )}
 
-                {modalAberto && (
+                {/*{modalAberto && (
                     <DetalhesConsulta 
                         onClose={fecharModal} 
                     />
-                )}
+                )}*/}
 
                 <Mapa/>
             </main>
-            <footer className={styles.footer}></footer>
+            <footer className={styles.footer}><Rodape/></footer>
         </div>
     );
 }

@@ -3,6 +3,7 @@ import React from "react";
 import styles from "../../page.module.css";
 import MenuLogado from "../../components/menusuperior_logado";
 import ListaFavoritos from "@/app/components/listafavoritos";
+import Rodape from "@/app/components/rodape";
 
 export default function Favoritos() {
 
@@ -18,6 +19,7 @@ export default function Favoritos() {
                 </div>
             </main>
             <footer className={styles.footer} aria-label="Rodapé">
+                <Rodape/>
             </footer>
         </div>
     );

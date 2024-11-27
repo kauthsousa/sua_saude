@@ -5,6 +5,7 @@ import styles from "../../page.module.css";
 import MenuLogado from "../../components/menusuperior_logado";
 import Image from "next/image";
 import { useRouter } from 'next/router';
+import Rodape from "@/app/components/rodape";
 
 export default function Configuracoes() {
   const [inputType, setInputType] = useState<string>('text');
@@ -158,6 +159,7 @@ export default function Configuracoes() {
         </div>
       </main>
       <footer className={styles.footer} aria-label="Rodapé">
+        <Rodape/>
       </footer>
     </div>
   );

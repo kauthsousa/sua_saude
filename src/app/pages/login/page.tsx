@@ -4,6 +4,7 @@ import styles from "../../page.module.css";
 import MenuDeslogado from "../../components/menusuperior_deslogado";
 import Image from "next/image";
 import Link from "next/link";
+import Rodape from "@/app/components/rodape";
 
 export default function Login() {
 
@@ -55,6 +56,7 @@ export default function Login() {
                 </div>
             </main>
             <footer className={styles.footer} aria-label="Rodapé">
+                <Rodape/>
             </footer>
         </div>
     );

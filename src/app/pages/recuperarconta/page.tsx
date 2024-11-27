@@ -3,7 +3,7 @@ import React from "react";
 import styles from "../../page.module.css";
 import MenuDeslogado from "../../components/menusuperior_deslogado";
 import Image from "next/image";
-import Link from "next/link";
+import Rodape from "@/app/components/rodape";
 
 export default function RecuperarConta() {
 
@@ -43,6 +43,7 @@ export default function RecuperarConta() {
                 </div>
             </main>
             <footer className={styles.footer} aria-label="Rodapé">
+                <Rodape/>
             </footer>
         </div>
     );
