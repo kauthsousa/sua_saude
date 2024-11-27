@@ -875,6 +875,123 @@
   cursor: pointer;
 }
 
+/* CARD PROFISSIONAL */
+.listaprofissionais {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilizar o item do card */
+.itemFavorito {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Imagem do profissional */
+.imgFavorito {
+  flex-shrink: 0;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+
+.imgFavorito img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Informações e botão */
+.dadosPro_favorito {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Informações do profissional */
+.dadosGeral {
+  font-size: 1rem;
+  color: #333;
+}
+
+.nomePro {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Botão de consulta */
+.btnConsulta {
+  margin-top: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btnConsulta:hover {
+  background-color: #0056b3;
+}
+
+/* Lixeira */
+.lixeira {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+/* Estrelas */
+.estrelaPro {
+  width: 20px;
+  height: auto;
+}
+
+/* Paginação */
+.nextPages {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.nPagina {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.nPagina.active {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+.nPagina:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+
 /* OUTROS */
 .ctas {
   display: flex;
