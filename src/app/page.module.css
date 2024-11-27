@@ -347,13 +347,73 @@
 .verDetalhes{
   height: auto !important;
   width: auto !important;
+  border-radius: 20px !important;
+  padding: 6vh 6vh !important;
 }
 
 .detalhesContent{
+  font-size: 0.9em;
+  background: transparent;
+  margin-right: -200px;
+}
+
+.inputDetalhes{
+  background-color: transparent;
+  color: #fff;
+  line-height: 5vh;
+  font-size: 0.9em;
+}
+
+.interiorDetalhes{
   background: url(../../public/images/fundoModalConsulta.png);
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   width: 100%;
   height: auto;
+  display: flex;
+  padding: 9vh 6vh;
+  color: #fff;
+}
+
+.valorConsulta{
+  border: 1px solid #fff;
+  width: 25vh;
+  height: 30vh;
+  padding: 3vh;
+  margin-left: 0 !important;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.vProduto{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-size: 1.1em;
+  width: 100%;
+  padding-left: 3.5vh;
+}
+
+.vProduto input{
+  margin-left: 4vh;
+}
+
+.adicionais{
+  display: flex;
+  flex-direction: column;
+  margin-left: 4vh;
+  align-items: flex-end;
+  gap: 1vh;
+}
+
+.formaPagamento input{
+  font-size: 0.75em;
+  justify-content: flex-end;
+  justify-items: flex-end;
+  width: 100%;
 }
 
 /*  HOME  */

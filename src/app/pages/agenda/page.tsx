@@ -1,5 +1,5 @@
-"use client"
-import React, {useState} from "react";
+"use client";
+import React, { useState } from "react";
 import styles from "../../page.module.css";
 import MenuLogado from "../../components/menusuperior_logado";
 import Calendar from "../../components/calendario";
@@ -9,7 +9,6 @@ import Cancelamento from "@/app/components/cancelamento";
 import DetalhesConsulta from "@/app/components/detalhesConsulta";
 
 export default function Agenda() {
-    
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalAberto, abrirModal] = useState(false);
 
@@ -25,11 +24,24 @@ export default function Agenda() {
         closeModal(); // Fecha o modal após confirmar
     };
 
+    const detalhesConsulta = {
+        nome_profissional: "Dr. Rômulo",
+        nome_paciente: "Daniel Soares",
+        status_paciente: "Dependente",
+        idade: "12 anos",
+        data_consulta: "20/02/2024",
+        hora_consulta: "15h00min",
+        modalidade: "Por ordem de chegada",
+        valor_total: "200,00",
+        valor_unitario: "200,00",
+        forma_pagamento: "Cartão de Crédito"
+    };
+
     return (
         <div>
             <header><MenuLogado/></header>
             <main className={styles.main}>
-                <div  className={styles.agenda}></div>
+                <div className={styles.agenda}></div>
                 <div className={styles.divCalendario}><Calendar/></div>
                 <div className={styles.consultas}>
                     <span className={styles.consultasTitle}>Consultas Marcadas</span>
@@ -41,8 +53,10 @@ export default function Agenda() {
                             botoes={[
                             {
                                 texto: "Cancelar compromisso",
-                                onClick: () => {console.log("Cancelado");
-                                openModal()},
+                                onClick: () => {
+                                    console.log("Cancelado");
+                                    openModal();
+                                },
                                 classeEstilo: styles.btnCancelar,
                                 ariaLabel: "Cancelar compromisso",
                             },
@@ -63,8 +77,10 @@ export default function Agenda() {
                             botoes={[
                             {
                                 texto: "Cancelar compromisso",
-                                onClick: () => {console.log("Cancelado");
-                                    openModal()},
+                                onClick: () => {
+                                    console.log("Cancelado");
+                                    openModal();
+                                },
                                 classeEstilo: styles.btnCancelar,
                                 ariaLabel: "Cancelar compromisso",
                             },
@@ -88,7 +104,8 @@ export default function Agenda() {
                             botoes={[
                             {
                                 texto: "Ver detalhes",
-                                onClick: () => {console.log("Detalhes vistos");
+                                onClick: () => {
+                                    console.log("Detalhes vistos");
                                     modalAbrir();
                                 },
                                 classeEstilo: styles.btnCancelar,
@@ -114,6 +131,7 @@ export default function Agenda() {
                 {modalAberto && (
                     <DetalhesConsulta 
                         onClose={fecharModal} 
+                        detalhes={detalhesConsulta}
                     />
                 )}
 
