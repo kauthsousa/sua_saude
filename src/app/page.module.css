@@ -644,6 +644,10 @@
   background-color: #26b8cf;
 }
 
+.divMapa {
+  cursor: pointer;
+}
+
 /* OUTROS */
 .ctas {
   display: flex;

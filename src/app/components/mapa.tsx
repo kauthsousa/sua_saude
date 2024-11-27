@@ -42,8 +42,8 @@ const Mapa = () => {
     return (
         <div>
             <Modal isOpen={isModalOpen} onClose={closeModal} />
-            <div onClick={handleMapaClick}>
-                <LoadScript googleMapsApiKey="SUA_CHAVE_DE_API_AQUI">
+            <div onClick={handleMapaClick} className={styles.divMapa}>
+                <LoadScript googleMapsApiKey="API">
                     <GoogleMap
                         mapContainerStyle={containerStyle}
                         center={center}
