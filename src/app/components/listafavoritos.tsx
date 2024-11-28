@@ -1,52 +1,114 @@
 "use client";
+
 import React, { useState } from "react";
 import styles from "../page.module.css";
-import Image from "next/image"; 
+import Image from "next/image";
 import Link from "next/link";
 
-export default function ListaFavoritos() {
+interface Profissional {
+    nome: string;
+    endereco: string;
+    avaliacoes: number;
+    distancia: string;
+    imagem: string;
+}
 
-    const [activePage, setActivePage] = useState<number>(1); // Estado com tipo explícito
+interface ListaFavoritosProps {
+    profissional: Profissional;
+    botaoTexto: string;
+    onBotaoClick: (profissional: Profissional) => void;
+}
+
+const ListaFavoritos: React.FC<ListaFavoritosProps> = ({ profissional, botaoTexto, onBotaoClick }) => {
+    const [activePage, setActivePage] = useState<number>(1);
 
     const handlePageClick = (pageNumber: number) => {
-        setActivePage(pageNumber); // Atualiza o estado com o número do botão clicado
+        setActivePage(pageNumber);
     };
 
     return (
         <div className={styles.componenteFav}>
             <div className={styles.itemFavorito}>
                 <div className={styles.imgFavorito}>
-                    <Image src="/images/proFavorito.png" className={styles.proFavorito} alt="Foto do profissional favorito" width={3500} height={3500} priority/><br/>
-                <div>
-                    <Image src="/images/estrela.png" className={styles.estrela} alt="Foto do profissional favorito" width={500} height={500} priority/>
-                    <Image src="/images/estrela.png" className={styles.estrela} alt="Foto do profissional favorito" width={500} height={500} priority/>
-                    <Image src="/images/estrela.png" className={styles.estrela} alt="Foto do profissional favorito" width={500} height={500} priority/>
-                    <Image src="/images/estrela.png" className={styles.estrela} alt="Foto do profissional favorito" width={500} height={500} priority/>
-                    <Image src="/images/estrela.png" className={styles.estrela} alt="Foto do profissional favorito" width={500} height={500} priority/>
+                    {/* Imagem do profissional */}
+                    <Image
+                        src={profissional.imagem}
+                        className={styles.proFavorito}
+                        alt={`Foto de ${profissional.nome}`}
+                        width={3500}
+                        height={3500}
+                        priority
+                    />
+                    <br />
+                    <div>
+                        {/* Estrelas fixas */}
+                        {[...Array(5)].map((_, index) => (
+                            <Image
+                                key={index}
+                                src="/images/estrela.png"
+                                className={styles.estrelas}
+                                alt="Estrela"
+                                width={500}
+                                height={500}
+                                priority
+                            />
+                        ))}
+                    </div>
+                </div>
+                <div className={styles.dadosPro_favorito}>
+                    <Image
+                        src="/images/lixeira.svg"
+                        className={styles.lixeira}
+                        alt="Lixeira"
+                        width={100}
+                        height={100}
+                        priority
+                    />
+                    <div>
+                        {/* Dados do profissional */}
+                        <span className={`${styles.dadosGeral} ${styles.nomePro}`}>
+                            {profissional.nome}
+                        </span>
+                        <br />
+                        <span className={`${styles.dadosGeral}`}>
+                            Endereço: {profissional.endereco}
+                        </span>
+                        <br />
+                        <span className={`${styles.dadosGeral}`}>
+                            {profissional.avaliacoes} avaliações{" "}
+                            <Link href="/comentarios">
+                                ( <u>ver comentários</u> )
+                            </Link>
+                        </span>
+                        <br />
+                        <span className={`${styles.dadosGeral}`}>
+                            {profissional.distancia} de distância de você
+                        </span>
+                        <br />
+                    </div>
+                    {/* Botão dinâmico */}
+                    <button
+                        className={`${styles.btnConsulta}`}
+                        onClick={() => onBotaoClick(profissional)}
+                    >
+                        Agendar Consulta
+                    </button>
                 </div>
             </div>
-            <div className={styles.dadosPro_favorito}>
-            <Image src="/images/lixeira.svg" className={styles.lixeira} alt="Lixeira" width={100} height={100} priority/>
-                <div>
-                    <span className={`${styles.dadosGeral} ${styles.nomePro}`}>Ana Moreira - Nutricionista Clínica e Esportiva</span><br/>
-                    <span className={`${styles.dadosGeral}`}>Endereço: Rua dos Prazeres, 18, Centro - Cidade do Norte - CE</span><br/>
-                    <span className={`${styles.dadosGeral}`}>12 avaliações <Link href="/comentarios">( <u>ver comentários</u> )</Link></span><br/>
-                    <span className={`${styles.dadosGeral}`}>9 km de distância de você</span><br/>
-                </div>
-                <button className={`${styles.btnConsulta}`}>Agendar Consulta</button>
-            </div>
-            </div>
+            {/* Paginação */}
             <div className={styles.nextPages}>
                 {[1, 2, 3].map((page) => (
                     <button
-                    key={page}
-                    className={`${styles.nPagina} ${activePage === page ? styles.active : ""}`}
-                    onClick={() => handlePageClick(page)}
+                        key={page}
+                        className={`${styles.nPagina} ${activePage === page ? styles.active : ""}`}
+                        onClick={() => handlePageClick(page)}
                     >
-                    {page}
+                        {page}
                     </button>
                 ))}
             </div>
         </div>
     );
-}
+};
+
+export default ListaFavoritos;

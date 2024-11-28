@@ -271,7 +271,7 @@
 }
 
 .btnCancelar {
-  color: #007486;
+  color: #000;
   border: 1px solid #007486;
   background-color: #fff;
   margin-left: 50px;
@@ -279,9 +279,8 @@
 }
 
 .btnCancelar:hover {
-  border: 1px solid hsla(188, 69%, 48%, 1);
-  color: hsla(188, 69%, 48%, 1);
-  /* Texto branco ao passar o mouse */
+  border: 1px solid #888888;
+  background-color: #cccccc;
 }
 
 .btnConfirmar {
@@ -343,13 +342,149 @@
 .verDetalhes {
   height: auto !important;
   width: auto !important;
+  border-radius: 20px !important;
+  padding: 6vh 6vh !important;
 }
 
 .detalhesContent {
+  font-size: 0.9em;
+  background: transparent;
+  margin-right: -200px;
+}
+
+.inputDetalhes {
+  background-color: transparent;
+  color: #fff;
+  line-height: 5vh;
+  font-size: 0.9em;
+}
+
+.interiorDetalhes {
   background: url(../../public/images/fundoModalConsulta.png);
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   width: 100%;
   height: auto;
+  display: flex;
+  padding: 9vh 6vh;
+  color: #fff;
+}
+
+.valorConsulta {
+  border: 1px solid #fff;
+  width: 25vh;
+  height: 30vh;
+  padding: 3vh;
+  margin-left: 0 !important;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.vProduto {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-size: 1.1em;
+  width: 100%;
+  padding-left: 3.5vh;
+}
+
+.vProduto input {
+  margin-left: 4vh;
+}
+
+.adicionais {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4vh;
+  align-items: flex-end;
+  gap: 1vh;
+}
+
+.formaPagamento input {
+  font-size: 0.75em;
+  justify-content: flex-end;
+  justify-items: flex-end;
+  width: 100%;
+}
+
+/* avaliar consulta */
+.avaliarConsulta {
+  color: #007486;
+  line-height: 2em;
+  height: auto !important;
+  width: 40% !important;
+  padding: 2em 3em !important;
+  border-radius: 20px !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputAvaliacao {
+  color: #007486;
+  width: auto;
+  padding: 0 !important;
+  background: transparent;
+}
+
+.opinião {
+  font-family: Comfortaa-regular;
+  width: 69%;
+  height: 15vh;
+  padding: 1em;
+  border-radius: 10px;
+  margin: 1em 0;
+  outline: none;
+}
+
+.opinião:focus {
+  outline: 1px solid hsla(0, 0%, 49%, 1);
+}
+
+.btnAvaliar {
+  width: 69% !important;
+  line-height: 2.5em !important;
+}
+
+.topAvaliar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.estrela {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-left: -50px;
+  align-items: center;
+}
+
+.estrelaImg {
+  width: 3em;
+  height: auto;
+}
+
+.estrelaItem {
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border: none;
+  outline: none;
+}
+
+.estrelaAtiva {
+  width: 3em;
+  height: auto;
+}
+
+.estrelaInativa {
+  transform: scale(1);
+  filter: grayscale(100%);
+  opacity: 0.7;
 }
 
 /*  HOME  */
@@ -876,96 +1011,6 @@
 }
 
 /* CARD PROFISSIONAL */
-.lista {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
-  margin: 0;
-  width: 100%;
-  font-family: Comfortaa-regular;
-}
-
-.cardPro {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  gap: 20px;
-  width: 50vh;
-}
-
-.imagemPro {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
-  border: 2px solid #ddd;
-}
-
-.informacoes {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  flex-grow: 1;
-}
-
-.nome {
-  font-size: 1.4rem;
-  font-weight: bold;
-  margin: 0;
-}
-
-.especialidade {
-  color: #555;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.endereco {
-  font-size: 0.95rem;
-  color: #777;
-}
-
-.avaliacoes {
-  font-size: 0.85rem;
-  color: #555;
-}
-
-.linkComentarios {
-  color: #00777d;
-  text-decoration: none;
-}
-
-.linkComentarios:hover {
-  text-decoration: underline;
-}
-
-.distancia {
-  font-size: 0.85rem;
-  color: #777;
-}
-
-.botao {
-  background-color: #00777d;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 15px;
-  font-size: 0.95rem;
-  cursor: pointer;
-  align-self: flex-start;
-  font-family: Comfortaa-regular;
-}
-
-.botao:hover {
-  background-color: #26b8cf;
-}
 
 
 /* OUTROS */
@@ -1505,18 +1550,18 @@ a.secondary {
   align-items: flex-start;
   flex-wrap: wrap;
   flex-direction: column;
-  margin-top: 4em;
+  margin-top: 10vh;
   align-content: center;
 }
 
 .telaFavoritos span {
-  margin-bottom: 1em;
+  margin-bottom: 10vh;
 }
 
 .itemFavorito {
   border: 1px solid hsla(0, 0%, 76%, 1);
   border-radius: 10px;
-  padding: 1.5em;
+  padding: 3vh;
   display: grid;
   grid-template-columns: 20% 80%;
   grid-template-rows: 9em;
@@ -1540,12 +1585,12 @@ a.secondary {
 
 .proFavorito {
   border-radius: 50%;
-  width: 7.5em;
+  width: 12vh;
   height: auto;
 }
 
-.estrela {
-  width: 1.2em;
+.estrelas {
+  width: 2vh;
   height: auto;
 }
 
@@ -1553,34 +1598,34 @@ a.secondary {
   grid: proFavorito;
   font-family: Comfortaa-regular;
   height: 100%;
-  padding-top: -5em;
-  margin-top: -1.5em;
+  padding-top: -1vh;
+  margin-top: -1vh;
 }
 
 .dadosGeral {
-  line-height: 2em;
+  line-height: 2.5vh;
   font-size: 0.8em;
 }
 
 .nomePro {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .btnConsulta {
   font-family: Comfortaa-regular;
   background: hsla(188, 100%, 26%, 1);
   border-radius: 20px;
-  width: 15vw;
+  width: 30vh;
   height: auto;
   border: none;
   color: white;
   transition: 0.3s ease-in-out;
   cursor: pointer;
-  font-size: 0.8em;
-  margin-top: 2em;
-  padding: 0.5em 2em;
+  font-size: 1em;
+  margin-top: 1vh;
+  padding: 1vh 3vh;
   text-align: center;
-  line-height: 1em;
+  line-height: 2vh;
 }
 
 .btnConsulta:hover {
@@ -1588,16 +1633,21 @@ a.secondary {
 }
 
 .lixeira {
-  width: 1.5em;
+  width: 3vh;
   height: auto;
   float: right;
-  margin: 1em;
+  margin: 1vh;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 
 .lixeira:hover {
   filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(180deg);
+}
+
+.lista {
+  width: 100%;
+  margin: 5vh;
 }
 
 .nextPages {
@@ -1767,6 +1817,8 @@ a.secondary {
   display: flex;
   justify-self: flex-end;
   cursor: pointer;
+  align-self: flex-end;
+
 }
 
 /* AGENDA */

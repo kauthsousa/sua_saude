@@ -8,8 +8,37 @@ import Carousel from "../../components/carrosel_especialidades";
 import Rodape from "../../components/rodape";
 import Mapa from '../../components/mapa';
 import Pesquisa from "../../components/inputs_pesquisa";
+import ListaFavoritos from "@/app/components/listafavoritos";
 
 export default function Home() {
+
+    const profissionais = [
+        {
+            nome: "Ana Moreira - Nutricionista Clínica e Esportiva",
+            endereco: "Rua dos Prazeres, 18, Centro - Cidade do Norte - CE",
+            avaliacoes: 12,
+            distancia: "9 km",
+            imagem: "/images/proFavorito.png",
+        },
+        {
+            nome: "Carlos Souza - Personal Trainer",
+            endereco: "Avenida das Flores, 123, Bairro Jardim - Cidade do Norte - CE",
+            avaliacoes: 20,
+            distancia: "5 km",
+            imagem: "/images/carlos.png",
+        },
+        {
+            nome: "Marina Oliveira - Psicóloga",
+            endereco: "Praça Central, 45, Centro - Cidade do Norte - CE",
+            avaliacoes: 15,
+            distancia: "8 km",
+            imagem: "/images/marina.png",
+        }
+    ];
+
+    const handleAgendarConsulta = (profissional: any) => {
+        alert(`Você clicou em Agendar Consulta para: ${profissional.nome}`);
+    };
 
     return (
         <div className={styles.page}>
@@ -24,9 +53,16 @@ export default function Home() {
                     {/* INPUTS DE PESQUISA */}
                     <Pesquisa />
 
-                    {/* LISTA PROFISSIONAIS*/}
+                    {/* LISTA PROFISSIONAIS */}
                     <div className={styles.lista}>
-                        {/* aqui ai ficar os ngc dos profissas */}
+                        {profissionais.map((profissional, index) => (
+                            <ListaFavoritos
+                                key={index}
+                                profissional={profissional}
+                                botaoTexto="Agendar Consulta"
+                                onBotaoClick={handleAgendarConsulta}
+                            />
+                        ))}
                     </div>
 
                     {/* ESPECIALIDADES */}
@@ -41,8 +77,7 @@ export default function Home() {
                 </div>
             </main>
 
-
-            <Rodape></Rodape>
+            <Rodape />
         </div>
     );
 }
