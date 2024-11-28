@@ -26,6 +26,7 @@ export default function Home() {
 
                     {/* LISTA PROFISSIONAIS*/}
                     <div className={styles.lista}>
+                        {/* aqui ai ficar os ngc dos profissas */}
                     </div>
 
                     {/* ESPECIALIDADES */}
