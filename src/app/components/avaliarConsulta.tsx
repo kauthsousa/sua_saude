@@ -45,6 +45,7 @@ const AvaliarConsulta: React.FC<AvaliarConsultaProps> = ({ onClose, avaliacao })
         </span>
 
         {/* Conteúdo do modal */}
+        <form>
         <div className={styles.detalhesContent}>
             <div className={styles.topAvaliar}>
                 <div>
@@ -72,25 +73,30 @@ const AvaliarConsulta: React.FC<AvaliarConsultaProps> = ({ onClose, avaliacao })
                     </div>
                 </div>
                 <div className={styles.estrela}>
-                    {estrelas.map((ativa, index) => (
-                        <Image
-                        key={index}
-                        src={ativa ? "/images/estrela.png" : "/images/estrelaCinza.png"} // Imagens das estrelas
+                  {estrelas.map((ativa, index) => (
+                    <div
+                      key={index}
+                      onClick={() => alternarEstrela(index)}
+                      className={`${styles.estrelaItem} ${ativa ? styles.estrelaAtiva : styles.estrelaInativa}`}
+                    >
+                      <Image
+                        src="/images/estrela.svg"
                         alt={`Estrela ${index + 1}`}
                         width={600}
                         height={600}
-                        onClick={() => alternarEstrela(index)} // Alterna as estrelas ao clicar
                         className={styles.estrelaImg}
                         priority
-                        />
-                    ))}
+                      />
+                    </div>
+                  ))}
                 </div>
             </div>
             <div>
-                <textarea className={styles.opinião} placeholder="Escreva aqui sua opinião..."></textarea>
+                <textarea className={styles.opinião} placeholder="Escreva aqui sua opinião..." maxLength={300}></textarea>
                 <button className={styles.btnAvaliar}>Enviar opinião</button>
             </div>
         </div>
+        </form>
       </div>
     </div>
   );
