@@ -27,7 +27,7 @@ const AvaliarConsulta: React.FC<AvaliarConsultaProps> = ({ onClose, avaliacao })
 
   return (
     <div className={styles.modalOverlay}>
-      <div className={`${styles.modalCadastro} ${styles.avaliarConsulta}`}>
+      <div className={`${styles.avaliarConsulta}`}>
         {/* Botão de Fechar */}
         <Image
           src="/images/close.png"
@@ -46,7 +46,7 @@ const AvaliarConsulta: React.FC<AvaliarConsultaProps> = ({ onClose, avaliacao })
 
         {/* Conteúdo do modal */}
         <form>
-        <div className={styles.detalhesContent}>
+        <div className={`${styles.conteudoAvaliacao}`}>
             <div className={styles.topAvaliar}>
                 <div>
                     <div>
@@ -91,9 +91,9 @@ const AvaliarConsulta: React.FC<AvaliarConsultaProps> = ({ onClose, avaliacao })
                   ))}
                 </div>
             </div>
-            <div>
+            <div className={styles.escreveropiniao}>
                 <textarea className={styles.opinião} placeholder="Escreva aqui sua opinião..." maxLength={300}></textarea>
-                <button className={styles.btnAvaliar}>Enviar opinião</button>
+                <button className={`${styles.btnAvaliar} ${styles.btn}`}>Enviar opinião</button>
             </div>
         </div>
         </form>
