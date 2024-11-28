@@ -474,9 +474,9 @@
 }
 
 .estrelaItem {
-  display: inline-block; /* Permite que o item seja clicável */
-  cursor: pointer; /* Adiciona o cursor de clique */
-  transition: transform 0.2s ease; /* Animação para feedback visual */
+  display: inline-block;
+  cursor: pointer; 
+  transition: transform 0.2s ease;
   border: none;
   outline: none;
 }
@@ -487,9 +487,9 @@
 }
 
 .estrelaInativa {
-  transform: scale(1); /* Mantém a estrela inativa sem zoom */
-  filter: grayscale(100%); /* Remove a saturação */
-  opacity: 0.7; /* Torna a estrela inativa mais opaca */
+  transform: scale(1); 
+  filter: grayscale(100%); 
+  opacity: 0.7; 
 }
 
 /*  HOME  */
@@ -1054,7 +1054,7 @@ a.secondary {
   height: auto;
 }
 
-.estrela{
+.estrelas{
   width: 1.2em;
   height: auto;
 }
