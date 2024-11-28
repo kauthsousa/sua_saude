@@ -1647,7 +1647,7 @@ a.secondary {
 
 .lista {
   width: 100%;
-  margin: 5vh;
+  margin: 5vh 0 10vh 0;
 }
 
 .nextPages {

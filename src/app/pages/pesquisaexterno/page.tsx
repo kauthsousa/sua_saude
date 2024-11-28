@@ -47,14 +47,12 @@ export default function Home() {
 
                 {/* BANNER TOPO */}
                 <div className={styles.banner_pesquisa}>
-                    <Image className={styles.top} src="/images/top.png" alt={""} layout="responsive" width={1500} height={300} />
-                    <Image className={styles.icone_central} src="/images/locale.png" alt={""} width={80} height={80} />
+                    <Image className={styles.top} src="/images/top2.png" alt={""} layout="responsive" width={1500} height={300} />
 
-                    {/* INPUTS DE PESQUISA */}
-                    <Pesquisa />
 
                     {/* LISTA PROFISSIONAIS */}
                     <div className={styles.lista}>
+                        Especialidade
                         {profissionais.map((profissional, index) => (
                             <ListaFavoritos
                                 key={index}
