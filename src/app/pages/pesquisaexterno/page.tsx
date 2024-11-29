@@ -7,7 +7,6 @@ import MenuDeslogado from "../../components/menusuperior_deslogado";
 import Carousel from "../../components/carrosel_especialidades";
 import Rodape from "../../components/rodape";
 import Mapa from '../../components/mapa';
-import Pesquisa from "../../components/inputs_pesquisa";
 import ListaFavoritos from "@/app/components/listafavoritos";
 
 export default function Home() {
