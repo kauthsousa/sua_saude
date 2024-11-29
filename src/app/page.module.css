@@ -1569,7 +1569,7 @@ a.secondary {
   grid-template-areas: 
   "imgFavorito proFavorito"
   ;
-  width: 70%;
+  width: 75%;
   align-items: center;
   justify-content: center;
 }
@@ -1694,6 +1694,17 @@ a.secondary {
 .tituloFav{
   margin-left: 14vw;
 }
+
+.pesquisaEXT {
+   height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center; 
+}
+
 /* HOME PACIENTE */
 .home_paciente {
   background: url(../../public/images/bgHomePaciente.png);

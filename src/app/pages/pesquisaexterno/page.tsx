@@ -52,7 +52,7 @@ export default function PesquisaExterno() {
     return (
         <div className={styles.page}>
             <header><MenuDeslogado /></header>
-            <main className={styles.main}>
+            <main className={styles.pesquisaEXT}>
 
                 {/* BANNER TOPO */}
                 <div>
@@ -62,7 +62,7 @@ export default function PesquisaExterno() {
 
 
                     {/* LISTA PROFISSIONAIS */}
-                    <div className={styles.containerFav}>
+                    <div className={`${styles.lista} ${styles.containerFav}`}>
                         {profissionais.map((profissional, index) => (
                             <ListaFavoritos
                                 key={index}
