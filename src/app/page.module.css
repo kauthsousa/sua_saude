@@ -360,7 +360,7 @@
 .inputDetalhes{
   background-color: transparent;
   color: #fff;
-  line-height: 5vh;
+  line-height: 2rem;
   font-size: 0.9em;
 }
 
@@ -373,18 +373,20 @@
   display: flex;
   padding: 9vh 6vh;
   color: #fff;
+  display: flex;
+  align-items: flex-start;
 }
 
 .valorConsulta{
   border: 1px solid #fff;
-  width: 25vh;
-  height: 30vh;
-  padding: 3vh;
+  width: 10rem;
+  height: 12.1rem;
+  padding: 1.2rem;
   margin-left: 0 !important;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 1vh;
+  gap: 0.4rem;
 }
 
 .vProduto{
@@ -394,19 +396,19 @@
   align-items: center;
   font-size: 1.1em;
   width: 100%;
-  padding-left: 3.5vh;
+  padding-left: 1.5rem;
 }
 
 .vProduto input{
-  margin-left: 4vh;
+  margin-left: 1.6rem;
 }
 
 .adicionais{
   display: flex;
   flex-direction: column;
-  margin-left: 4vh;
+  margin-left: 1.5rem;
   align-items: flex-end;
-  gap: 1vh;
+  gap: 0.4rem;
 }
 
 .formaPagamento input{
@@ -450,11 +452,31 @@
   background: transparent;
 }
 
+.dadoAvaliado{
+  display: flex;
+  flex-wrap: nowrap;
+  line-height: 1.7em;
+}
+
+.dadoAvaliado input{
+  margin-left: 0.2em;
+}
+
 .inputAvaliacao{
   color: #007486;
   width: auto;
   padding: 0 !important;
   background: transparent;
+}
+
+.inputCompromisso:focus{
+  border: none;
+  outline: none;
+}
+
+.dadosAvaliacao{
+  display: flex;
+  flex-direction: column;
 }
 
 .escreveropiniao{
@@ -485,7 +507,7 @@
 .topAvaliar{
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   width: 100%;
   justify-content: space-between;
 }
@@ -499,7 +521,7 @@
 }
 
 .estrelaImg{
-  width: 3em;
+  width: 5vh;
   height: auto;
 }
 
@@ -512,7 +534,7 @@
 }
 
 .estrelaAtiva {
-  width: 3em;
+  width: 5vh;
   height: auto;
 }
 
@@ -1093,7 +1115,6 @@ a.secondary {
   grid: proFavorito;
   font-family: Comfortaa-regular;
   height: 100%;
-  padding-top: -5em;
   margin-top: -1.5em;
 }
 
@@ -1128,10 +1149,10 @@ a.secondary {
 }
 
 .lixeira{
-  width: 1.5em;
+  width: 3.7vh;
   height: auto;
   float: right;
-  margin: 1em;
+  margin: 2.5vh;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
@@ -1147,7 +1168,7 @@ a.secondary {
   justify-items: center;
   align-self: center;
   align-items: center;
-  margin: 2em;
+  margin: 5vh;
 }
 
 .nPagina{

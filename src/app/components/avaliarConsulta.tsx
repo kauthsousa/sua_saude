@@ -48,8 +48,8 @@ const AvaliarConsulta: React.FC<AvaliarConsultaProps> = ({ onClose, avaliacao })
         <form>
         <div className={`${styles.conteudoAvaliacao}`}>
             <div className={styles.topAvaliar}>
-                <div>
-                    <div>
+                <div className={styles.dadosAvaliacao}>
+                    <div className={styles.dadoAvaliado}>
                         <label htmlFor="profissional-nome">Profissional: </label>
                         <input
                             id="profissional-nome"
@@ -60,7 +60,7 @@ const AvaliarConsulta: React.FC<AvaliarConsultaProps> = ({ onClose, avaliacao })
                             aria-readonly="true"
                         />
                     </div>
-                    <div>
+                    <div className={styles.dadoAvaliado}>
                         <label htmlFor="data-consulta">Data: </label>
                         <input
                             id="data-consulta"
