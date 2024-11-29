@@ -446,6 +446,10 @@
   font-size: 1.1em;
 }
 
+.btn:hover{
+  background: hsla(188, 69%, 48%, 1);
+}
+
 .conteudoAvaliacacao{
   margin-left: 0;
   font-size: 0.9em;
@@ -1206,7 +1210,6 @@ a.secondary {
   margin-left: 14vw;
 }
 
-
 /* HOME PACIENTE */
 .home_paciente{
   background: url(../../public/images/bgHomePaciente.png);
@@ -1412,4 +1415,37 @@ a.secondary {
 .btnComFundo:hover{
   background-color: hsla(188, 69%, 48%, 1);
   border: 1px solid hsla(188, 69%, 48%, 1);
+}
+
+/* PAGAMENTO */
+.telaPagamento{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 7em 0;
+}
+
+.conteudoPagamento{
+  width: 67%;
+}
+
+.tituloPagamento{
+  align-items: flex-start;
+  width: 100%;
+}
+
+.btnBoletos{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.btnBoletos button{
+  border-radius: 20px !important;
+}
+
+.cartaoCredito{
+  margin-top: 2rem;
 }
