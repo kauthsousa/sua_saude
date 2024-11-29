@@ -7,9 +7,11 @@ import MenuDeslogado from "../../components/menusuperior_deslogado";
 import Carousel from "../../components/carrosel_especialidades";
 import Rodape from "../../components/rodape";
 import Mapa from '../../components/mapa';
+import ProxPaginas from "@/app/components/proxPaginas";
 import ListaFavoritos from "@/app/components/listafavoritos";
 
-export default function Home() {
+
+export default function PesquisaExterno() {
 
     const profissionais = [
         {
@@ -17,23 +19,31 @@ export default function Home() {
             endereco: "Rua dos Prazeres, 18, Centro - Cidade do Norte - CE",
             avaliacoes: 12,
             distancia: "9 km",
-            imagem: "/images/proFavorito.png",
+            imagem: "/images/profissional_foto1.png",
         },
         {
-            nome: "Carlos Souza - Personal Trainer",
-            endereco: "Avenida das Flores, 123, Bairro Jardim - Cidade do Norte - CE",
-            avaliacoes: 20,
-            distancia: "5 km",
-            imagem: "/images/carlos.png",
+            nome: "Amália Andréia - Nutricionista Materno Infantil",
+            endereco: "Rua dos Prazeres, 18, Centro - Cidade do Norte - CE",
+            avaliacoes: 12,
+            distancia: "9 km",
+            imagem: "/images/profissional_foto2.png",
         },
         {
-            nome: "Marina Oliveira - Psicóloga",
-            endereco: "Praça Central, 45, Centro - Cidade do Norte - CE",
-            avaliacoes: 15,
-            distancia: "8 km",
-            imagem: "/images/marina.png",
+            nome: "João Albuquerque - Nutrição Comportamental",
+            endereco: "Rua dos Prazeres, 18, Centro - Cidade do Norte - CE",
+            avaliacoes: 12,
+            distancia: "9 km",
+            imagem: "/images/profissional_foto3.png",
+        },
+        {
+            nome: "Joana Patrícia - Nutrição Coletiva e Hospitalar",
+            endereco: "Rua dos Prazeres, 18, Centro - Cidade do Norte - CE",
+            avaliacoes: 12,
+            distancia: "9 km",
+            imagem: "/images/profissional_foto4.png",
         }
     ];
+    
 
     const handleAgendarConsulta = (profissional: any) => {
         alert(`Você clicou em Agendar Consulta para: ${profissional.nome}`);
@@ -45,13 +55,14 @@ export default function Home() {
             <main className={styles.main}>
 
                 {/* BANNER TOPO */}
-                <div className={styles.banner_pesquisa}>
+                <div>
                     <Image className={styles.top} src="/images/top2.png" alt={""} layout="responsive" width={1500} height={300} />
+                    <span className={`${styles.titulo_modalConfiguracoes} ${styles.tituloFav}`}>Especialidades &gt; Nutricionista </span>
+                </div>
 
 
                     {/* LISTA PROFISSIONAIS */}
-                    <div className={styles.lista}>
-                        Especialidade
+                    <div className={styles.containerFav}>
                         {profissionais.map((profissional, index) => (
                             <ListaFavoritos
                                 key={index}
@@ -60,6 +71,8 @@ export default function Home() {
                                 onBotaoClick={handleAgendarConsulta}
                             />
                         ))}
+
+                        <ProxPaginas/>
                     </div>
 
                     {/* ESPECIALIDADES */}
@@ -71,7 +84,6 @@ export default function Home() {
                     <div className={styles.mapa}>
                         <Mapa />
                     </div>
-                </div>
             </main>
 
             <Rodape />

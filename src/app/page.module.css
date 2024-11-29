@@ -1544,37 +1544,38 @@ a.secondary {
 }
 
 /* FAVORITOS */
-.telaFavoritos {
+.telaFavoritos{
   width: 100%;
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
   flex-direction: column;
-  margin-top: 10vh;
+  margin-top: 4em;
   align-content: center;
 }
 
-.telaFavoritos span {
-  margin-bottom: 10vh;
+.telaFavoritos span{ 
+  margin-bottom: 1em;
 }
 
-.itemFavorito {
+.itemFavorito{
+  margin-top: 1rem;
   border: 1px solid hsla(0, 0%, 76%, 1);
   border-radius: 10px;
-  padding: 3vh;
+  padding: 1.5em;
   display: grid;
   grid-template-columns: 20% 80%;
   grid-template-rows: 9em;
   gap: 1em;
-  grid-template-areas:
-    "imgFavorito proFavorito"
+  grid-template-areas: 
+  "imgFavorito proFavorito"
   ;
   width: 70%;
   align-items: center;
   justify-content: center;
 }
 
-.imgFavorito {
+.imgFavorito{
   grid-area: imgFavorito;
   display: flex;
   flex-direction: column;
@@ -1583,84 +1584,84 @@ a.secondary {
   flex-wrap: wrap;
 }
 
-.proFavorito {
+.proFavorito{
   border-radius: 50%;
-  width: 12vh;
+  width: 7.5em;
   height: auto;
 }
 
-.estrelas {
-  width: 2vh;
+.estrelas{
+  width: 1.2em;
   height: auto;
 }
 
-.dadosPro_favorito {
+.estrelasDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.dadosPro_favorito{
   grid: proFavorito;
   font-family: Comfortaa-regular;
   height: 100%;
-  padding-top: -1vh;
-  margin-top: -1vh;
+  margin-top: -1.5em;
 }
 
-.dadosGeral {
-  line-height: 2.5vh;
+.dadosGeral{
+  line-height: 2em;
   font-size: 0.8em;
 }
 
-.nomePro {
-  font-size: 1em;
+.nomePro{
+  font-size: 1.2em;
 }
 
-.btnConsulta {
+.btnConsulta{
   font-family: Comfortaa-regular;
   background: hsla(188, 100%, 26%, 1);
   border-radius: 20px;
-  width: 30vh;
+  width: 15vw;
   height: auto;
   border: none;
   color: white;
   transition: 0.3s ease-in-out;
   cursor: pointer;
-  font-size: 1em;
-  margin-top: 1vh;
-  padding: 1vh 3vh;
+  font-size: 0.8em;
+  margin-top: 2em;
+  padding: 0.5em 2em;
   text-align: center;
-  line-height: 2vh;
+  line-height: 1em;
 }
 
-.btnConsulta:hover {
+.btnConsulta:hover{
   background: hsla(188, 69%, 48%, 1);
 }
 
-.lixeira {
-  width: 3vh;
+.lixeira{
+  width: 3.7vh;
   height: auto;
   float: right;
-  margin: 1vh;
+  margin: 2.5vh;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 
-.lixeira:hover {
+.lixeira:hover{
   filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(180deg);
 }
 
-.lista {
-  width: 100%;
-  margin: 5vh 0 10vh 0;
-}
-
-.nextPages {
+.nextPages{
   width: 12%;
   display: flex;
   justify-content: space-between;
   justify-items: center;
   align-self: center;
   align-items: center;
-  margin: 2em;
+  margin: 5vh;
 }
 
-.nPagina {
+.nPagina{
   color: #007486;
   border-radius: 100%;
   border: 1px solid #007486;
@@ -1674,28 +1675,26 @@ a.secondary {
   background-color: #fff;
 }
 
-.nPagina.active {
+.nPagina.active{
   background-color: #007486;
   color: #fff;
 }
 
-.containerFav {
+.containerFav{
   width: 95%;
   display: flex;
   flex-direction: column;
   justify-items: center;
 }
 
-.componenteFav {
+.componenteFav{
   width: 100%;
   justify-items: center;
 }
 
-.tituloFav {
+.tituloFav{
   margin-left: 14vw;
 }
-
-
 /* HOME PACIENTE */
 .home_paciente {
   background: url(../../public/images/bgHomePaciente.png);

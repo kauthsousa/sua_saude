@@ -40,12 +40,12 @@ const ListaFavoritos: React.FC<ListaFavoritosProps> = ({ profissional, botaoText
                         priority
                     />
                     <br />
-                    <div>
+                    <div className={styles.estrelasDiv}>
                         {/* Estrelas fixas */}
                         {[...Array(5)].map((_, index) => (
                             <Image
                                 key={index}
-                                src="/images/estrela.png"
+                                src="/images/estrela.svg"
                                 className={styles.estrelas}
                                 alt="Estrela"
                                 width={500}
@@ -94,18 +94,6 @@ const ListaFavoritos: React.FC<ListaFavoritosProps> = ({ profissional, botaoText
                         Agendar Consulta
                     </button>
                 </div>
-            </div>
-            {/* Paginação */}
-            <div className={styles.nextPages}>
-                {[1, 2, 3].map((page) => (
-                    <button
-                        key={page}
-                        className={`${styles.nPagina} ${activePage === page ? styles.active : ""}`}
-                        onClick={() => handlePageClick(page)}
-                    >
-                        {page}
-                    </button>
-                ))}
             </div>
         </div>
     );
