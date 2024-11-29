@@ -17,9 +17,15 @@ interface ListaFavoritosProps {
     profissional: Profissional;
     botaoTexto: string;
     onBotaoClick: (profissional: Profissional) => void;
+    iconeLixeira?: string; // Parâmetro opcional
 }
 
-const ListaFavoritos: React.FC<ListaFavoritosProps> = ({ profissional, botaoTexto, onBotaoClick }) => {
+const ListaFavoritos: React.FC<ListaFavoritosProps> = ({
+    profissional,
+    botaoTexto,
+    onBotaoClick,
+    iconeLixeira,
+}) => {
     const [activePage, setActivePage] = useState<number>(1);
 
     const handlePageClick = (pageNumber: number) => {
@@ -56,14 +62,17 @@ const ListaFavoritos: React.FC<ListaFavoritosProps> = ({ profissional, botaoText
                     </div>
                 </div>
                 <div className={styles.dadosPro_favorito}>
-                    <Image
-                        src="/images/lixeira.svg"
-                        className={styles.lixeira}
-                        alt="Lixeira"
-                        width={100}
-                        height={100}
-                        priority
-                    />
+                    {/* Ícone de lixeira, renderizado apenas se iconeLixeira for fornecido */}
+                    {iconeLixeira && (
+                        <Image
+                            src={iconeLixeira}
+                            className={styles.lixeira}
+                            alt="Lixeira"
+                            width={100}
+                            height={100}
+                            priority
+                        />
+                    )}
                     <div>
                         {/* Dados do profissional */}
                         <span className={`${styles.dadosGeral} ${styles.nomePro}`}>
@@ -91,7 +100,7 @@ const ListaFavoritos: React.FC<ListaFavoritosProps> = ({ profissional, botaoText
                         className={`${styles.btnConsulta}`}
                         onClick={() => onBotaoClick(profissional)}
                     >
-                        Agendar Consulta
+                        {botaoTexto}
                     </button>
                 </div>
             </div>

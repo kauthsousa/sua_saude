@@ -749,8 +749,7 @@
 }
 
 .card {
-  min-width: 18vh;
-  max-width: 18vh;
+  width: 10rem;
   background-color: white;
   border-radius: 15%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
