@@ -8,6 +8,7 @@ import Carousel from "../../components/carrosel_especialidades";
 import Rodape from "../../components/rodape";
 import Mapa from '../../components/mapa';
 import ProxPaginas from "@/app/components/proxPaginas";
+import Pesquisa from "@/app/components/inputs_pesquisa";
 import ListaFavoritos from "@/app/components/listafavoritos";
 
 
@@ -56,8 +57,10 @@ export default function PesquisaExterno() {
 
                 {/* BANNER TOPO */}
                 <div>
-                    <Image className={styles.top} src="/images/top2.png" alt={""} layout="responsive" width={1500} height={300} />
-                    <span className={`${styles.titulo_modalConfiguracoes} ${styles.tituloFav}`}>Especialidades &gt; Nutricionista </span>
+                    <Image className={styles.top} src="/images/top.png" alt={""} layout="responsive" width={1500} height={300} />
+                    <Image className={styles.icone_central} src="/images/locale.png" alt={""} width={80} height={80} />
+                    <Pesquisa/>
+                    {/* <span className={`${styles.titulo_modalConfiguracoes} ${styles.tituloFav}`}>Especialidades &gt; Nutricionista </span> */}
                 </div>
 
 
