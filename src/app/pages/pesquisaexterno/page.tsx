@@ -69,7 +69,7 @@ export default function PesquisaExterno() {
                             <ListaFavoritos
                                 key={index}
                                 profissional={profissional}
-                                botaoTexto="Agendar Consulta"
+                                botaoTexto="Verificar Disponibilidade"
                                 onBotaoClick={handleAgendarConsulta}
                             />
                         ))}
