@@ -35,6 +35,9 @@ const ListaFavoritos: React.FC<ListaFavoritosProps> = ({
     { nome: 'Anônimo', texto: 'Excelente profissional, muito atenciosa!' },
     { nome: 'Anônimo', texto: 'Ótimo atendimento e ambiente agradável.' },
     { nome: 'Anônimo', texto: 'Recomendo a todos, ótima experiência!' },
+    { nome: 'Anônimo', texto: 'Excelente profissional, muito atenciosa!' },
+    { nome: 'Anônimo', texto: 'Ótimo atendimento e ambiente agradável.' },
+    { nome: 'Anônimo', texto: 'Recomendo a todos, ótima experiência!' },
   ];
 
   const abrirModal = (e) => {
