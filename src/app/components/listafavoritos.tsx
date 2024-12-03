@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import styles from "../page.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import ModalComentarios from "./modal_comentários";
 
 interface Profissional {
     nome: string;
@@ -28,10 +29,20 @@ const ListaFavoritos: React.FC<ListaFavoritosProps> = ({
 }) => {
     const [activePage, setActivePage] = useState<number>(1);
 
-    const handlePageClick = (pageNumber: number) => {
-        setActivePage(pageNumber);
-    };
+    const [modalAberto, setModalAberto] = useState(false);
 
+  const comentarios = [
+    { nome: 'Anônimo', texto: 'Excelente profissional, muito atenciosa!' },
+    { nome: 'Anônimo', texto: 'Ótimo atendimento e ambiente agradável.' },
+    { nome: 'Anônimo', texto: 'Recomendo a todos, ótima experiência!' },
+  ];
+
+  const abrirModal = (e) => {
+    e.preventDefault(); // Previne a navegação padrão do Link
+    setModalAberto(true);
+  };
+
+  const fecharModal = () => setModalAberto(false);
     return (
         <div className={styles.componenteFav}>
             <div className={styles.itemFavorito}>
@@ -85,7 +96,7 @@ const ListaFavoritos: React.FC<ListaFavoritosProps> = ({
                         <br />
                         <span className={`${styles.dadosGeral}`}>
                             {profissional.avaliacoes} avaliações{" "}
-                            <Link href="/comentarios">
+                            <Link href="#" onClick={abrirModal}>
                                 ( <u>ver comentários</u> )
                             </Link>
                         </span>
@@ -103,6 +114,7 @@ const ListaFavoritos: React.FC<ListaFavoritosProps> = ({
                         {botaoTexto}
                     </button>
                 </div>
+                {modalAberto && <ModalComentarios comentarios={comentarios} onClose={fecharModal} />}
             </div>
         </div>
     );

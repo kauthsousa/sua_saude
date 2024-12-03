@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../../page.module.css";
-import MenuDeslogado from "../../components/menusuperior_deslogado";
+import MenuLogado from "@/app/components/menusuperior_logado";
 import Carousel from "../../components/carrosel_especialidades";
 import Rodape from "../../components/rodape";
 import Mapa from '../../components/mapa';
@@ -11,7 +11,7 @@ import ProxPaginas from "@/app/components/proxPaginas";
 import ListaFavoritos from "@/app/components/listafavoritos";
 
 
-export default function PesquisaExterno() {
+export default function ResultadoPesquisa() {
 
     const profissionais = [
         {
@@ -45,13 +45,13 @@ export default function PesquisaExterno() {
     ];
     
 
-    const handleAgendarConsulta = (profissional: any) => {
-        alert(`Você clicou em Agendar Consulta para: ${profissional.nome}`);
+    const modalVerificarDisponibilidade = (profissional: any) => {
+        
     };
 
     return (
         <div className={styles.page}>
-            <header><MenuDeslogado /></header>
+            <header><MenuLogado /></header>
             <main className={styles.pesquisaEXT}>
 
                 {/* BANNER TOPO */}
@@ -68,7 +68,7 @@ export default function PesquisaExterno() {
                                 key={index}
                                 profissional={profissional}
                                 botaoTexto="Agendar Consulta"
-                                onBotaoClick={handleAgendarConsulta}
+                                onBotaoClick={modalVerificarDisponibilidade}
                             />
                         ))}
 
