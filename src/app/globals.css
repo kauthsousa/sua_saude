@@ -42,3 +42,8 @@ a {
   font-family: AbhayaLibre-Regular;
   src: url(../../public/fonts/AbhayaLibre-Regular.ttf);
 }
+
+@font-face {
+  font-family: Inter;
+  src: url(../../public/fonts/Inter-Regular.otf);
+}
