@@ -1795,7 +1795,7 @@ a.secondary {
 
 /* VERIFICAR DISPONIBILIDADE */
 
-.modalVerificarDisponibilidadeOverlay {
+.verificarDisponibilidadeOverlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -1808,67 +1808,124 @@ a.secondary {
   z-index: 1000;
 }
 
-.modalVerificarDisponibilidadeContainer {
+.verificarDisponibilidadeContainer {
   background: #fff;
   border-radius: 8px;
   width: 90%;
-  max-width: 500px;
-  padding: 20px;
+  max-width: 600px;
+  padding: 4vh;
   position: relative;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.closeButton {
+.verificarDisponibilidadeCloseButton {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 2vh;
+  right: 2vh;
   background: transparent;
   border: none;
-  font-size: 20px;
   cursor: pointer;
 }
 
-.modalVerificarDisponibilidadeTitle {
-  color: #004d40;
-  margin-bottom: 20px;
-  font-size: 18px;
-  font-family: "Comfortaa-regular";
+.verificarDisponibilidadeContent {
+  font-family: Comfortaa-regular;
+  display: flex;
+  gap: 10px;
 }
 
-.modalVerificarDisponibilidadeContent {
+.verificarDisponibilidadeLeft {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
+  flex: 1; 
+  text-align: center;
 }
 
-.profileImage {
-  width: 80px;
-  height: 80px;
+.verificarDisponibilidadeProfileImage {
+  width: 15vh;
+  height: 15vh;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.verificarDisponibilidadeRight {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 2;
+}
+
+.verificarDisponibilidadeName {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.verificarDisponibilidadeTitle {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.verificarDisponibilidadeCalendarContainer {
+  display: flex;
+  justify-content: center;
+}
+
+
+.customCalendar {
+  width: 100%;
+  max-width: 300px;
+  border: none;
+  background: transparent;
+  font-family: Arial, sans-serif;
+}
+
+.customCalendar .react-calendar__tile {
+  background-color: transparent !important;
+  border: none !important;
+  color: #000 !important;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Destaque da data selecionada */
+.customCalendar .react-calendar__tile--active {
+  background-color: transparent !important;
+  color: #000 !important;
+  border: none !important;
+}
+
+.customCalendar .react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 10px;
 }
 
-.profissionalInfo {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.profissionalName {
+.customCalendar .react-calendar__navigation__arrow {
+  background-color: #ccc !important;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 16px;
-  margin-bottom: 5px;
+  cursor: pointer;
 }
 
-.stars {
-  color: #ffcc00;
-  font-size: 14px;
+.customCalendar .react-calendar__navigation__label {
+  font-weight: bold;
+  font-size: 16px;
+  flex-grow: 1;
+  text-align: center;
 }
 
-.calendarContainer {
-  width: 100%;
-  max-width: 300px;
-}
 
 
 /* HOME PACIENTE */
