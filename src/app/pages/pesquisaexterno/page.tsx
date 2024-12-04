@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../../page.module.css";
@@ -10,9 +11,10 @@ import Mapa from '../../components/mapa';
 import ProxPaginas from "@/app/components/proxPaginas";
 import Pesquisa from "@/app/components/inputs_pesquisa";
 import ListaFavoritos from "@/app/components/listafavoritos";
-
+import ModalVerificarDisponibilidade from "@/app/components/verificar_disponibilidade";
 
 export default function PesquisaExterno() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const profissionais = [
         {
@@ -44,48 +46,57 @@ export default function PesquisaExterno() {
             imagem: "/images/profissional_foto4.png",
         }
     ];
-    
 
-    const handleAgendarConsulta = (profissional: any) => {
-        alert(`Você clicou em Agendar Consulta para: ${profissional.nome}`);
+    const fecharModalDisponibilidade = () => setIsModalOpen(false);
+
+    const modal_verificar_disponibilidade = (profissional: any) => {
+        setIsModalOpen(true); // Abre o modal ao clicar no botão
+        console.log(`Verificando disponibilidade para: ${profissional.nome}`);
     };
 
     return (
         <div className={styles.page}>
             <header><MenuDeslogado /></header>
             <main className={styles.pesquisaEXT}>
-
                 {/* BANNER TOPO */}
                 <div>
                     <Image className={styles.top} src="/images/top.png" alt={""} layout="responsive" width={1500} height={300} />
                     <Image className={styles.icone_central} src="/images/locale.png" alt={""} width={80} height={80} />
-                    <Pesquisa/>
+                    <Pesquisa />
                 </div>
 
+                {/* LISTA PROFISSIONAIS */}
+                <div className={`${styles.lista} ${styles.containerFav}`}>
+                    {profissionais.map((profissional, index) => (
+                        <ListaFavoritos
+                            key={index}
+                            profissional={profissional}
+                            botaoTexto="Verificar Disponibilidade"
+                            onBotaoClick={modal_verificar_disponibilidade}
+                        />
+                    ))}
 
-                    {/* LISTA PROFISSIONAIS */}
-                    <div className={`${styles.lista} ${styles.containerFav}`}>
-                        {profissionais.map((profissional, index) => (
-                            <ListaFavoritos
-                                key={index}
-                                profissional={profissional}
-                                botaoTexto="Verificar Disponibilidade"
-                                onBotaoClick={handleAgendarConsulta}
-                            />
-                        ))}
+                    <ProxPaginas />
+                </div>
 
-                        <ProxPaginas/>
-                    </div>
+                {/* ESPECIALIDADES */}
+                <div>
+                    <Carousel />
+                </div>
 
-                    {/* ESPECIALIDADES */}
-                    <div>
-                        <Carousel />
-                    </div>
+                {/* LOCALIZAÇÃO */}
+                <div className={styles.mapa}>
+                    <Mapa />
+                </div>
 
-                    {/* LOCALIZAÇÃO */}
-                    <div className={styles.mapa}>
-                        <Mapa />
-                    </div>
+                {/* Modal de Verificar Disponibilidade */}
+                {isModalOpen && (
+                    <ModalVerificarDisponibilidade
+                        isOpen={isModalOpen}
+                        onClose={fecharModalDisponibilidade}
+                        profissional={profissionais.find(p => p.nome === "Ana Moreira - Nutricionista Clínica e Esportiva")} // Exemplo
+                    />
+                )}
             </main>
 
             <Rodape />

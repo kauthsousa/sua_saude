@@ -1730,7 +1730,7 @@ a.secondary {
   border-radius: 20px;
   width: 90%;
   max-width: 500px;
-  padding: 20px;
+  padding: 5vh;
   position: relative;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   font-family: "Comfortaa-regular"; 
@@ -1738,15 +1738,15 @@ a.secondary {
 
 .modalComentariosCloseButton {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 30px;
+  right: 30px;
   background: transparent;
   border: none;
   cursor: pointer;
 }
 
 .modalComentariosCloseButton .btnClose {
-  width: 2em;
+  width: 1.7em;
   height: auto;
   display: flex;
   justify-self: flex-end;
@@ -1791,6 +1791,83 @@ a.secondary {
   color: #888888;
   line-height: 1.5;
   font-family: "Comfortaa-regular";
+}
+
+/* VERIFICAR DISPONIBILIDADE */
+
+.modalVerificarDisponibilidadeOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalVerificarDisponibilidadeContainer {
+  background: #fff;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modalVerificarDisponibilidadeTitle {
+  color: #004d40;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-family: "Comfortaa-regular";
+}
+
+.modalVerificarDisponibilidadeContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.profissionalInfo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profissionalName {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.stars {
+  color: #ffcc00;
+  font-size: 14px;
+}
+
+.calendarContainer {
+  width: 100%;
+  max-width: 300px;
 }
 
 

@@ -7,7 +7,7 @@ const ModalComentarios = ({ comentarios, onClose }) => {
     <div className={styles.modalComentariosOverlay}>
       <div className={styles.modalComentariosContainer}>
         <button className={styles.modalComentariosCloseButton} onClick={onClose}>
-          <Image className={styles.btnClose} src={'/images/close.png'} alt={'Fechar Modal'} width={80} height={80}/>
+          <Image className={styles.btnClose} src={'/images/close.png'} alt={'Fechar Modal'} width={160} height={160}/>
         </button>
         <h2 className={styles.modalComentariosTitle}>Comentários ({comentarios.length})</h2>
         <div className={styles.modalComentariosContent}>
