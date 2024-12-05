@@ -1,7 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import ReactCalendar from "react-calendar";
-import "react-calendar/dist/Calendar.css"; 
 import styles from "../page.module.css";
 
 const ModalVerificarDisponibilidade = ({ isOpen, onClose, profissional }) => {
@@ -14,7 +12,7 @@ const ModalVerificarDisponibilidade = ({ isOpen, onClose, profissional }) => {
           className={styles.verificarDisponibilidadeCloseButton}
           onClick={onClose}
         >
-          <Image src="/images/close.png" alt="Fechar Modal" width={24} height={24} />
+          <Image className={styles.btnCloseDep} src="/images/close.png" alt="Fechar Modal" width={24} height={24} />
         </button>
         <div className={styles.verificarDisponibilidadeContent}>
           <div className={styles.verificarDisponibilidadeLeft}>
@@ -40,7 +38,7 @@ const ModalVerificarDisponibilidade = ({ isOpen, onClose, profissional }) => {
             <h3 className={styles.verificarDisponibilidadeName}>{profissional.nome}</h3>
             <p className={styles.verificarDisponibilidadeTitle}>{profissional.titulo}</p>
             <div className={styles.verificarDisponibilidadeCalendarContainer}>
-            <ReactCalendar className={styles.customCalendar} />
+
             </div>
           </div>
         </div>

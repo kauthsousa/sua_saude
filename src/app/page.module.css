@@ -554,7 +554,7 @@
   display: flex;
   gap: 16px;
   justify-content: center;
-  margin-top: 2vh;
+  margin: 2vh 0 10vh 0;
   max-width: 100%;
 }
 
@@ -1009,7 +1009,6 @@
 }
 
 /* CARD PROFISSIONAL */
-
 
 /* OUTROS */
 .ctas {
@@ -1542,7 +1541,7 @@ a.secondary {
 }
 
 /* FAVORITOS */
-.telaFavoritos{
+.telaFavoritos {
   width: 100%;
   display: flex;
   align-items: flex-start;
@@ -1552,11 +1551,11 @@ a.secondary {
   align-content: center;
 }
 
-.telaFavoritos span{ 
+.telaFavoritos span {
   margin-bottom: 1em;
 }
 
-.itemFavorito{
+.itemFavorito {
   margin-top: 1rem;
   border: 1px solid hsla(0, 0%, 76%, 1);
   border-radius: 10px;
@@ -1565,15 +1564,15 @@ a.secondary {
   grid-template-columns: 20% 80%;
   grid-template-rows: 9em;
   gap: 1em;
-  grid-template-areas: 
-  "imgFavorito proFavorito"
+  grid-template-areas:
+    "imgFavorito proFavorito"
   ;
   width: 75%;
   align-items: center;
   justify-content: center;
 }
 
-.imgFavorito{
+.imgFavorito {
   grid-area: imgFavorito;
   display: flex;
   flex-direction: column;
@@ -1582,13 +1581,13 @@ a.secondary {
   flex-wrap: wrap;
 }
 
-.proFavorito{
+.proFavorito {
   border-radius: 50%;
   width: 7.5em;
   height: auto;
 }
 
-.estrelas{
+.estrelas {
   width: 1.2em;
   height: auto;
 }
@@ -1599,23 +1598,23 @@ a.secondary {
   flex-wrap: nowrap;
 }
 
-.dadosPro_favorito{
+.dadosPro_favorito {
   grid: proFavorito;
   font-family: Comfortaa-regular;
   height: 100%;
   margin-top: -1.5em;
 }
 
-.dadosGeral{
+.dadosGeral {
   line-height: 2em;
   font-size: 0.8em;
 }
 
-.nomePro{
+.nomePro {
   font-size: 1.2em;
 }
 
-.btnConsulta{
+.btnConsulta {
   font-family: Comfortaa-regular;
   background: hsla(188, 100%, 26%, 1);
   border-radius: 20px;
@@ -1632,11 +1631,11 @@ a.secondary {
   line-height: 1em;
 }
 
-.btnConsulta:hover{
+.btnConsulta:hover {
   background: hsla(188, 69%, 48%, 1);
 }
 
-.lixeira{
+.lixeira {
   width: 3.7vh;
   height: auto;
   float: right;
@@ -1645,11 +1644,11 @@ a.secondary {
   transition: 0.3s ease-in-out;
 }
 
-.lixeira:hover{
+.lixeira:hover {
   filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(180deg);
 }
 
-.nextPages{
+.nextPages {
   width: 12%;
   display: flex;
   justify-content: space-between;
@@ -1659,7 +1658,7 @@ a.secondary {
   margin: 5vh;
 }
 
-.nPagina{
+.nPagina {
   color: #007486;
   border-radius: 100%;
   border: 1px solid #007486;
@@ -1673,24 +1672,24 @@ a.secondary {
   background-color: #fff;
 }
 
-.nPagina.active{
+.nPagina.active {
   background-color: #007486;
   color: #fff;
 }
 
-.containerFav{
+.containerFav {
   width: 95%;
   display: flex;
   flex-direction: column;
   justify-items: center;
 }
 
-.componenteFav{
+.componenteFav {
   width: 100%;
   justify-items: center;
 }
 
-.tituloFav{
+.tituloFav {
   margin-left: 14vw;
 }
 
@@ -1701,11 +1700,11 @@ a.secondary {
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .pesquisaEXT .icone_central {
-  position: absolute; /* Permite centralizar baseado no contêiner pai */
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -1733,7 +1732,7 @@ a.secondary {
   padding: 5vh;
   position: relative;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  font-family: "Comfortaa-regular"; 
+  font-family: "Comfortaa-regular";
 }
 
 .modalComentariosCloseButton {
@@ -1766,17 +1765,17 @@ a.secondary {
   max-height: 300px;
   overflow-y: auto;
   padding-right: 10px;
-  font-family: "Comfortaa-regular"; 
+  font-family: "Comfortaa-regular";
 }
 
 .modalComentariosComment {
   background: none;
   border: 1px solid #888888;
-  color:#888888;
+  color: #888888;
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 10px;
-  font-family: "Comfortaa-regular"; 
+  font-family: "Comfortaa-regular";
 }
 
 .modalComentariosAuthor {
@@ -1830,6 +1829,15 @@ a.secondary {
   cursor: pointer;
 }
 
+.verificarDisponibilidadeCloseButton .btnCloseDep {
+  width: 1.7em;
+  height: auto;
+  display: flex;
+  justify-self: flex-end;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
 .verificarDisponibilidadeContent {
   font-family: Comfortaa-regular;
   display: flex;
@@ -1841,7 +1849,7 @@ a.secondary {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  flex: 1; 
+  flex: 1;
   text-align: center;
 }
 
@@ -1875,57 +1883,6 @@ a.secondary {
   display: flex;
   justify-content: center;
 }
-
-
-.customCalendar {
-  width: 100%;
-  max-width: 300px;
-  border: none;
-  background: transparent;
-  font-family: Arial, sans-serif;
-}
-
-.customCalendar .react-calendar__tile {
-  background-color: transparent !important;
-  border: none !important;
-  color: #000 !important;
-  font-size: 14px;
-  text-align: center;
-}
-
-/* Destaque da data selecionada */
-.customCalendar .react-calendar__tile--active {
-  background-color: transparent !important;
-  color: #000 !important;
-  border: none !important;
-}
-
-.customCalendar .react-calendar__navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.customCalendar .react-calendar__navigation__arrow {
-  background-color: #ccc !important;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.customCalendar .react-calendar__navigation__label {
-  font-weight: bold;
-  font-size: 16px;
-  flex-grow: 1;
-  text-align: center;
-}
-
 
 
 /* HOME PACIENTE */
