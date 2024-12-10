@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "../page.module.css";
+import CalendarioDisponibilidade from "./calendarioDisponibilidade";
 
 const ModalVerificarDisponibilidade = ({ isOpen, onClose, profissional }) => {
   if (!isOpen) return null;
@@ -38,7 +39,7 @@ const ModalVerificarDisponibilidade = ({ isOpen, onClose, profissional }) => {
             <h3 className={styles.verificarDisponibilidadeName}>{profissional.nome}</h3>
             <p className={styles.verificarDisponibilidadeTitle}>{profissional.titulo}</p>
             <div className={styles.verificarDisponibilidadeCalendarContainer}>
-
+              <CalendarioDisponibilidade />
             </div>
           </div>
         </div>
