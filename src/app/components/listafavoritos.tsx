@@ -44,7 +44,7 @@ const ListaFavoritos: React.FC<ListaFavoritosProps> = ({ profissional, botaoText
             {[...Array(5)].map((_, index) => (
               <Image
                 key={index}
-                src="/images/estrela.png"
+                src="/images/estrela.svg"
                 className={styles.estrelas}
                 alt="Estrela"
                 width={500}

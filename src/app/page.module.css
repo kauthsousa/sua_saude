@@ -1457,14 +1457,22 @@ a.secondary {
 .conteudoCartao{
   display: grid;
   grid-template-columns: repeat(2,50%);
+  grid-template-rows: auto auto;
   gap: 2rem;
   padding: 1rem  0;
+  grid-template-areas: 
+  "dadosCartao imgCartao"
+  "api api"
+  ;
 }
 
 .dadosCartao{
   border: 1px solid #D9D9D9;
   padding: 0.7rem 1.5rem;
   border-radius: 5px;
+  grid-row: 1;
+  grid-area: dadosCartao;
+  box-shadow: 0px 3px 5px rgba(46, 46, 66, 0.08);
 }
 
 .inputContent{
@@ -1489,7 +1497,7 @@ a.secondary {
   align-content: center;
   justify-items: center;
   border-radius: 8px;
-  padding: 0.4rem;
+  padding: 0.4rem 0.8rem;
 }
 
 .interiorInput input{
@@ -1516,6 +1524,14 @@ a.secondary {
   line-height: 2.1rem;
 }
 
+.nomeCartao{
+  padding-left: 0 !important;
+}
+
+.interiorNome{
+  padding-left: 0.5rem !important;
+}
+
 .btnPagamento{
   font-family: Inter;
   border-radius: 5px;
@@ -1539,6 +1555,8 @@ a.secondary {
 
 .imgCartao{
   grid-column: 2;
+  grid-row: 1;
+  grid-area: imgCartao;
 }
 
 .backCartao{
@@ -1576,4 +1594,23 @@ a.secondary {
   gap: 1rem;
   font-family: Comfortaa-regular;
   font-size: 1.2em;
+}
+
+.paypal{
+  grid-row: 2;
+  grid-column: 1/2;
+  width: 100%;
+  grid-area: api;
+}
+
+.apiPaypal{
+  border: 1px solid #C1C1C1;
+  grid-column: 1/2;
+  border-radius: 10px;
+  height: 50vh;
+  line-height: 50vh;
+  text-align: center;
+  font-family: Comfortaa-regular;
+  margin: 1rem 0;
+  font-size: 1.5em;
 }

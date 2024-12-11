@@ -5,7 +5,7 @@ import MenuLogado from "../../components/menusuperior_logado";
 import InputMask from "react-input-mask";
 import Image from "next/image";
 
-export default function Favoritos() {
+export default function RealizarPagamento() {
 
     const [monthYear, setMonthYear] = useState("");
     const [cardNumber, setCardNumber] = useState("");
@@ -48,14 +48,14 @@ export default function Favoritos() {
                                 <div className={styles.inputContent}>
                                     <label htmlFor="Número do cartão">Número do cartão </label>
                                     <div className={styles.interiorInput}>
-                                        <Image src="/images/mini_ cartao.svg" alt="ícone de cartão de crédito" width={30} height={30} priority/>
+                                        <Image src="/images/mini_ cartao.svg" alt="ícone de cartão de crédito" width={25} height={25} priority/>
                                         <InputMask mask="9999 9999 9999 9999" placeholder="0000 0000 0000 0000" className={styles.inputCartao} required aria-required="true" aria-label="Número do cartão" value={cardNumber} onChange={handleCardNumberChange}/>
                                     </div>
                                 </div>
                                 <div className={styles.inputContent}>
                                     <label htmlFor="Expira em">Expira em</label>
                                     <div className={styles.interiorInput}>
-                                        <Image src="/images/data_cartao.svg" alt="ícone de calendário" width={30} height={30} priority/>
+                                        <Image src="/images/data_cartao.svg" alt="ícone de calendário" width={25} height={25} priority/>
                                         <InputMask
                                             id="monthYear"
                                             mask="99/9999"
@@ -70,14 +70,14 @@ export default function Favoritos() {
                                 <div className={styles.inputContent}>
                                     <label htmlFor="Número do cartão">Código de segurança</label>
                                     <div className={styles.interiorInput}>
-                                        <Image src="/images/cadeado.svg" alt="ícone de cadeado" width={30} height={30} priority/>
+                                        <Image src="/images/cadeado.svg" alt="ícone de cadeado" width={25} height={25} priority/>
                                         <InputMask mask="999" type="text" placeholder="CVC" className={styles.inputCartao} required aria-required="true" aria-label="Número do cartão"/>
                                     </div>
                                 </div>
                                 <div className={styles.inputContent}>
                                     <label htmlFor="Nome no cartão">Nome no cartão </label>
-                                    <div className={styles.interiorInput}>
-                                        <input type="text" placeholder="Escreva o nome que está no cartão" className={styles.inputCartao} required aria-required="true" aria-label="Número do cartão" value={cardName} onChange={(e) => setCardName(e.target.value)}/>
+                                    <div className={`${styles.interiorInput} ${styles.interiorNome}`}>
+                                        <input type="text" placeholder="Escreva o nome que está no cartão" className={`${styles.inputCartao} ${styles.nomeCartao}`} required aria-required="true" aria-label="Número do cartão" value={cardName} onChange={(e) => setCardName(e.target.value)}/>
                                     </div>
                                 </div>
                                 <div className={styles.inputContent}>
@@ -101,6 +101,12 @@ export default function Favoritos() {
                                         <span>{cardNumber || "0000 0000 0000 0000"}</span>
                                         <span>{cardName || "NOME DO TITULAR"}</span>
                                     </div>
+                                </div>
+                            </div>
+                            <div className={styles.paypal}>
+                                <span className={styles.titulo_modalConfiguracoes}>PAYPAL</span>  
+                                <div className={styles.apiPaypal}>
+                                    <span>ADICIONAR API DO PAYPAL</span>
                                 </div>
                             </div>
                         </div>
