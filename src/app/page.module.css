@@ -1547,6 +1547,7 @@ a.secondary {
   display: flex;
   flex-direction: column;
   padding: 2.5rem;
+  height: 15rem;
 }
 
 .topCartao{
@@ -1554,11 +1555,25 @@ a.secondary {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  align-items: center;
+  height: 50%;
 }
 
 .chipCartao{
   background-color: #fff;
-  width: 5rem;
+  width: 4.5rem;
   height: 3rem;
   border-radius: 10px;
+}
+
+.dadosPessoa{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 50%;
+  justify-content: flex-end;
+  gap: 1rem;
+  font-family: Comfortaa-regular;
+  font-size: 1.2em;
 }

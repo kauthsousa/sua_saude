@@ -94,7 +94,7 @@ export default function Favoritos() {
                                         <div className={styles.chipCartao}>
                                         </div>
                                         <div className={styles.simboloCartao}>
-                                            <Image src={cardImage} alt="" height={100} width={100} priority/>
+                                            <Image src={cardImage} className={styles.bandeiraCartao} alt="Bandeira do cartão" height={50} width={80} priority/>
                                         </div>
                                     </div>
                                     <div className={styles.dadosPessoa}>
