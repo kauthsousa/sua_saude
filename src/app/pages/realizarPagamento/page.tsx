@@ -42,7 +42,7 @@ export default function RealizarPagamento() {
                         <button className={styles.btn}>Gerar Código Pix</button>
                     </div>
                     <div className={styles.cartaoCredito}>
-                        <span className={styles.titulo_modalConfiguracoes}>CARTÃO DE CRÉDITO</span>      
+                        <span className={`${styles.titulo_modalConfiguracoes} ${styles.tituloCartao}`}>CARTÃO DE CRÉDITO</span>      
                         <div className={styles.conteudoCartao}>
                             <div className={styles.dadosCartao}>
                                 <div className={styles.inputContent}>
@@ -104,7 +104,7 @@ export default function RealizarPagamento() {
                                 </div>
                             </div>
                             <div className={styles.paypal}>
-                                <span className={styles.titulo_modalConfiguracoes}>PAYPAL</span>  
+                                <span className={`${styles.titulo_modalConfiguracoes} ${styles.tituloCartao2}`}>PAYPAL</span>  
                                 <div className={styles.apiPaypal}>
                                     <span>ADICIONAR API DO PAYPAL</span>
                                 </div>

@@ -1614,6 +1614,7 @@ a.secondary {
   grid-column: 1/2;
   width: 100%;
   grid-area: api;
+  padding-top: 1rem;
 }
 
 .apiPaypal{
@@ -1626,4 +1627,8 @@ a.secondary {
   font-family: Comfortaa-regular;
   margin: 1rem 0;
   font-size: 1.5em;
+}
+
+.tituloCartao{
+  margin-top: 1rem;
 }
