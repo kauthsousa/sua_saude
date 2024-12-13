@@ -31,21 +31,21 @@ const ListaFavoritos: React.FC<ListaFavoritosProps> = ({
 
     const [modalAberto, setModalAberto] = useState(false);
 
-  const comentarios = [
-    { nome: 'Anônimo', texto: 'Excelente profissional, muito atenciosa!' },
-    { nome: 'Anônimo', texto: 'Ótimo atendimento e ambiente agradável.' },
-    { nome: 'Anônimo', texto: 'Recomendo a todos, ótima experiência!' },
-    { nome: 'Anônimo', texto: 'Excelente profissional, muito atenciosa!' },
-    { nome: 'Anônimo', texto: 'Ótimo atendimento e ambiente agradável.' },
-    { nome: 'Anônimo', texto: 'Recomendo a todos, ótima experiência!' },
-  ];
+    const comentarios = [
+        { nome: 'Anônimo', texto: 'Excelente profissional, muito atenciosa!' },
+        { nome: 'Anônimo', texto: 'Ótimo atendimento e ambiente agradável.' },
+        { nome: 'Anônimo', texto: 'Recomendo a todos, ótima experiência!' },
+        { nome: 'Anônimo', texto: 'Excelente profissional, muito atenciosa!' },
+        { nome: 'Anônimo', texto: 'Ótimo atendimento e ambiente agradável.' },
+        { nome: 'Anônimo', texto: 'Recomendo a todos, ótima experiência!' },
+    ];
 
-  const abrirModal = (e) => {
-    e.preventDefault(); // Previne a navegação padrão do Link
-    setModalAberto(true);
-  };
+    const abrirModal = (e) => {
+        e.preventDefault(); // Previne a navegação padrão do Link
+        setModalAberto(true);
+    };
 
-  const fecharModal = () => setModalAberto(false);
+    const fecharModal = () => setModalAberto(false);
     return (
         <div className={styles.componenteFav}>
             <div className={styles.itemFavorito}>
