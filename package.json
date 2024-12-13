@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@paypal/react-paypal-js": "^8.7.0",
     "@react-google-maps/api": "^2.20.3",
     "next": "14.2.14",
     "react": "^18",
@@ -22,9 +23,10 @@
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/react": "^18",
+    "@types/react": "^18.3.14",
     "@types/react-dom": "^18",
     "@types/react-slick": "^0.23.13",
+    "@types/react-input-mask": "^3.0.6",
     "eslint": "^8",
     "eslint-config-next": "14.2.14",
     "typescript": "^5"

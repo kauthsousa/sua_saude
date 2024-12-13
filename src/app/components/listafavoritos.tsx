@@ -40,7 +40,7 @@ const ListaFavoritos: React.FC<ListaFavoritosProps> = ({
         { nome: 'Anônimo', texto: 'Recomendo a todos, ótima experiência!' },
     ];
 
-    const abrirModal = (e) => {
+    const abrirModal = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault(); // Previne a navegação padrão do Link
         setModalAberto(true);
     };
