@@ -27,7 +27,7 @@ export default function Favoritos() {
             <main className={`${styles.main} ${styles.telaConfiguracoes}`}>
                 <div className={styles.telaFavoritos} role="imagem">
                     <span className={`${styles.titulo_modalConfiguracoes} ${styles.tituloFav}`}>Favoritos</span>   
-                    <div className={styles.containerFav}><ListaFavoritos profissional={profissional} botaoTexto="Agendar Consulta" onBotaoClick={handleAgendarConsulta}/></div>{/* no onBotãoClick você coloca para chamar o modal, ao invés desse handleAgendarConsulta */}
+                    <div className={styles.containerFav}><ListaFavoritos profissional={profissional} botaoTexto="Agendar Consulta" onBotaoClick={handleAgendarConsulta} iconeLixeira="/images/lixeira.svg"/></div>{/* no onBotãoClick você coloca para chamar o modal, ao invés desse handleAgendarConsulta */}
                 </div>
             </main>
             <footer className={styles.footer} aria-label="Rodapé">
