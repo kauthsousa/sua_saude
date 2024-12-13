@@ -1564,7 +1564,7 @@ a.secondary {
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  padding: 2.5rem;
+  padding: 2.5rem 3.5rem;
   height: 15rem;
 }
 
@@ -1592,8 +1592,21 @@ a.secondary {
   height: 50%;
   justify-content: flex-end;
   gap: 1rem;
-  font-family: Comfortaa-regular;
+  font-family: Montserrat;
+  line-height: 1em;
+}
+
+.dadosPessoa span{
+  font-size: 1em;
+}
+
+.dadosPessoa span:first-child{
   font-size: 1.2em;
+}
+
+.amex{
+  width: 7rem;
+  height: auto;
 }
 
 .paypal{

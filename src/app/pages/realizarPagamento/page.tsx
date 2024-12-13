@@ -94,7 +94,7 @@ export default function RealizarPagamento() {
                                         <div className={styles.chipCartao}>
                                         </div>
                                         <div className={styles.simboloCartao}>
-                                            <Image src={cardImage} className={styles.bandeiraCartao} alt="Bandeira do cartão" height={50} width={80} priority/>
+                                            <Image src={cardImage} className={`${styles.bandeiraCartao} ${cardImage === "/images/amex.svg" ? styles.amex : ""}`} alt="Bandeira do cartão" height={40} width={70} priority/>
                                         </div>
                                     </div>
                                     <div className={styles.dadosPessoa}>

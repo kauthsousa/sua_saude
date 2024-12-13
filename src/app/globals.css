@@ -47,3 +47,8 @@ a {
   font-family: Inter;
   src: url(../../public/fonts/Inter-Regular.otf);
 }
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../../public/fonts/Montserrat-Regular.ttf);
+}
