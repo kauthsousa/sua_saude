@@ -1,9 +1,9 @@
- import React from "react";
+import React from "react";
 import Image from "next/image";
 import styles from "../page.module.css";
 import CalendarioDisponibilidade from "./calendarioDisponibilidade";
 
-interface Profissional {
+/*interface Profissional {
   imagem: string;
   nome: string;
   titulo: string;
@@ -13,9 +13,9 @@ interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   profissional: Profissional;
-}
+}*/
 
-const ModalVerificarDisponibilidade = ({ isOpen, onClose, profissional } : ModalProps) => {
+const AgendarConsulta = ({ isOpen, onClose, profissional }) => {
   if (!isOpen) return null;
 
   return (
@@ -60,4 +60,4 @@ const ModalVerificarDisponibilidade = ({ isOpen, onClose, profissional } : Modal
   );
 };
 
-export default ModalVerificarDisponibilidade;
+export default AgendarConsulta;
