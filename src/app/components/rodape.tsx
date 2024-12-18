@@ -17,7 +17,7 @@ export default function Rodape() {
                 <p>© Steno Solutions 2023 - Todos os direitos reservados</p>
             </div>
             <div className={styles.section}>
-                <h4>Sobre</h4>
+                <h4><u>Sobre</u></h4>
                 <ul>
                     <li><Link href="../pages/cadastrouser">Cadastre-se</Link></li>
                     <li><Link href="../pages/termosdeuso">Termos de Uso</Link></li>
@@ -25,14 +25,14 @@ export default function Rodape() {
                 </ul>
             </div>
             <div className={styles.section}>
-                <h4>Paciente</h4>
+                <h4><u>Paciente</u></h4>
                 <ul>
                     <li><Link href="../pages/centraldeajuda">Central de ajuda</Link></li>
                     <li><Link href="../pages/login">Login</Link></li>
                 </ul>
             </div>
             <div className={styles.section}>
-                <h4>Clínicas</h4>
+                <h4><u>Clínicas</u></h4>
                 <ul>
                     <li>Quero ser uma clínica parceira</li>
                 </ul>

@@ -1116,12 +1116,11 @@ a.secondary {
 .rodape {
   display: flex;
   justify-content: space-around;
-  padding: 5vh 0 5vh 0;
+  padding: 1vh 0 5vh 0;
   background-color: #fff;
   color: #000;
   font-family: Comfortaa-regular;
   font-size: 12px;
-
 }
 
 .contato {
@@ -1135,6 +1134,7 @@ a.secondary {
 
 .contato p {
   white-space: nowrap;
+  line-height: 1.39rem;
 }
 
 .social {
@@ -1167,6 +1167,7 @@ a.secondary {
 .section li {
   margin-bottom: 5px;
   cursor: pointer;
+  line-height: 1.5rem;
 }
 
 

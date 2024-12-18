@@ -1,5 +1,5 @@
 "use client";
-
+import React, {useState} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../../page.module.css";
@@ -9,6 +9,7 @@ import Rodape from "../../components/rodape";
 import Mapa from '../../components/mapa';
 import ProxPaginas from "@/app/components/proxPaginas";
 import ListaFavoritos from "@/app/components/listafavoritos";
+import AgendarConsulta from "@/app/components/agendarconsulta";
 
 
 export default function ResultadoPesquisa() {
@@ -20,6 +21,7 @@ export default function ResultadoPesquisa() {
             avaliacoes: 12,
             distancia: "9 km",
             imagem: "/images/profissional_foto1.png",
+            titulo: "Agendar Consulta"
         },
         {
             nome: "Amália Andréia - Nutricionista Materno Infantil",
@@ -27,6 +29,7 @@ export default function ResultadoPesquisa() {
             avaliacoes: 12,
             distancia: "9 km",
             imagem: "/images/profissional_foto2.png",
+            titulo: "Agendar Consulta"
         },
         {
             nome: "João Albuquerque - Nutrição Comportamental",
@@ -34,6 +37,7 @@ export default function ResultadoPesquisa() {
             avaliacoes: 12,
             distancia: "9 km",
             imagem: "/images/profissional_foto3.png",
+            titulo: "Agendar Consulta"
         },
         {
             nome: "Joana Patrícia - Nutrição Coletiva e Hospitalar",
@@ -41,12 +45,21 @@ export default function ResultadoPesquisa() {
             avaliacoes: 12,
             distancia: "9 km",
             imagem: "/images/profissional_foto4.png",
+            titulo: "Agendar Consulta"
         }
     ];
     
 
-    const modalVerificarDisponibilidade = (profissional: any) => {
-        
+    const [modalOpen, setModalOpen] = useState(false);
+    const [selectedProfissional, setSelectedProfissional] = useState(null);
+
+    const handleOpenModal = (profissionais: any) => {
+        setSelectedProfissional(profissionais); // Define o profissional selecionado
+        setModalOpen(true); // Abre o modal
+    };
+
+    const handleCloseModal = () => {
+        setModalOpen(false); // Fecha o modal
     };
 
     return (
@@ -68,9 +81,17 @@ export default function ResultadoPesquisa() {
                                 key={index}
                                 profissional={profissional}
                                 botaoTexto="Agendar Consulta"
-                                onBotaoClick={modalVerificarDisponibilidade}
+                                onBotaoClick={handleOpenModal}
                             />
                         ))}
+
+                        {modalOpen && (
+                            <AgendarConsulta
+                                isOpen={modalOpen}
+                                onClose={handleCloseModal}
+                                profissional={selectedProfissional}
+                            />
+                        )}
 
                         <ProxPaginas/>
                     </div>
@@ -85,6 +106,7 @@ export default function ResultadoPesquisa() {
                         <Mapa />
                     </div>
             </main>
+
 
             <Rodape />
         </div>
