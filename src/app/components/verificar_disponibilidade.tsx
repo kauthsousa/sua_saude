@@ -1,19 +1,7 @@
- import React from "react";
+import React from "react";
 import Image from "next/image";
 import styles from "../page.module.css";
 import CalendarioDisponibilidade from "./calendarioDisponibilidade";
-
-interface Profissional {
-  imagem: string;
-  nome: string;
-  titulo: string;
-}
-
-interface ModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  profissional: Profissional;
-}
 
 const ModalVerificarDisponibilidade = ({ isOpen, onClose, profissional } : ModalProps) => {
   if (!isOpen) return null;

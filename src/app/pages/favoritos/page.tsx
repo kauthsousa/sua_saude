@@ -17,6 +17,7 @@ export default function Favoritos() {
         avaliacoes: 12,
         distancia: "9 km",
         imagem: "/images/profissional_foto1.png",
+        titulo: "Agendar Consulta"
       };
     
     const handleOpenModal = (profissional: any) => {
@@ -42,9 +43,9 @@ export default function Favoritos() {
 
             {modalOpen && (
                 <AgendarConsulta
-                isOpen={modalOpen}
-                onClose={handleCloseModal}
-                profissional={selectedProfissional}
+                    isOpen={modalOpen}
+                    onClose={handleCloseModal}
+                    profissional={selectedProfissional}
                 />
             )}
 

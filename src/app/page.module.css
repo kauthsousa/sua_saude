@@ -638,11 +638,11 @@
   font-family: Comfortaa-light;
 }
 
-.inputs_pesquisa select,
+.apparenceSelect,
 .inputs_pesquisa input {
   width: 40vh;
   padding: 1.1vh 2.5vh;
-  font-size: 1em;
+  font-size: 0.8em;
   border-radius: 30px;
   outline: none;
   color: gray;
@@ -652,14 +652,23 @@
 }
 
 .inputs_pesquisa select {
-  appearance: none;
-  background-repeat: no-repeat;
-  background-position: right 12px center;
-  background-size: 16px;
-  border: 2px solit #d1d1d1;
+  border: none;
+  color: #7E7E7E;
+  font-family: Comfortaa-regular;
+  font-size: 0.9em;
+  width: 100%;
+  appearance: none; /* Remove a aparência padrão */ 
+  -webkit-appearance: none; /* Remove a aparência padrão no WebKit */ 
+  -moz-appearance: none; /* Remove a aparência padrão no Mozilla */ 
+  background: url('/images/arrow.svg') no-repeat right center; /* Adicione a imagem da seta personalizada */ 
+  background-size: 15px; /* Ajuste o tamanho da seta */ 
 }
 
-.inputs_pesquisa select:focus,
+.apparenceSelect select:focus{
+  border: none;
+  outline: none;
+}
+
 .inputs_pesquisa input:focus {
   border-color: #888888;
 }
@@ -1890,18 +1899,20 @@ a.secondary {
 }
 
 .verificarDisponibilidadeCloseButton .btnCloseDep {
-  width: 1.7em;
+  width: 1.5em;
   height: auto;
   display: flex;
   justify-self: flex-end;
   cursor: pointer;
   align-self: flex-end;
+  margin: 0.5rem;
 }
 
 .verificarDisponibilidadeContent {
   font-family: Comfortaa-regular;
   display: flex;
   gap: 10px;
+  flex-direction: column;
 }
 
 .verificarDisponibilidadeLeft {
@@ -2452,5 +2463,126 @@ a.secondary {
 }
 
 .tituloCartao{
+  margin-top: 1rem;
+}
+
+/* AGENDAR CONSULTA */
+
+.modal_agendarConsulta{
+  padding: 2.5rem;
+  height: auto;
+  padding-bottom: 1.5rem;
+}
+
+.containerAgendar{
+  border: 1px solid #CFCFCF;
+  border-radius: 10px;
+  padding: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.nomeProfissional{
+  font-size: 0.7em;
+  width: 100%;
+  font-weight: 400;
+}
+
+.titleAgendar{
+  text-align: center;
+  font-family: Comfortaa-regular;
+  color: #000;
+  font-size: 1em;
+}
+
+.setaCalendario{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5em;
+  height: 1.5em;
+  border: 2px solid rgba(0, 116, 134, 1);
+  border-radius: 50%;
+  cursor: pointer;
+  padding-top: 0.1rem;
+}
+
+.setaCalendario button{
+  padding: 0;
+  background: none;
+  border: none;
+  color: rgba(0, 116, 134, 1);
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+.semanaAgendarConsulta ul{
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+  margin: 1rem 1em 0.6rem -5px;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.semanaAgendarConsulta ul li{
+  color: hsla(0, 0%, 49%, 1);
+  font-size: 0.6em;
+}
+
+.daysAgendados{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  width: 100%;
+}
+
+.dayAgenda{ 
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75em;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.titleCalendarAgendar{
+  font-size: 0.8em;
+  font-weight: 700;
+  font-family: Comfortaa-regular;
+  text-align: center;
+}
+
+.containerAgendarConsulta{
+  display: flex;
+  flex-direction: column;
+}
+
+.inputsAgendar{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  gap: 0.5rem;
+}
+
+.selectAgendar{
+  width: 100%;
+}
+
+.conteudoAgendar{
+  display: flex;
+  flex-direction: row;
+}
+
+.btnAgendar{
+  display: flex;
+  justify-content: center;
+}
+
+.btnAgendarConsulta{
+  font-size: 0.9em;
   margin-top: 1rem;
 }

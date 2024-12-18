@@ -6,14 +6,16 @@ export default function Pesquisa() {
     return (
         <form>
             <div className={styles.inputs_pesquisa}>
-                <select aria-label="Pesquisar por especialidade">
-                    <option disabled selected>Pesquisar por especialidade</option>
-                    <option>Cardiologista</option>
-                    <option>Ortopedista</option>
-                    <option>Esp. 1</option>
-                    <option>Esp. 2</option>
-                    <option>Esp. 3</option>
-                </select>
+                <div className={styles.apparenceSelect}>
+                    <select aria-label="Pesquisar por especialidade">
+                        <option disabled selected>Pesquisar por especialidade</option>
+                        <option>Cardiologista</option>
+                        <option>Ortopedista</option>
+                        <option>Esp. 1</option>
+                        <option>Esp. 2</option>
+                        <option>Esp. 3</option>
+                    </select>
+                </div>
                 <input
                     type="text"
                     placeholder="Pesquisar por Cidade"
