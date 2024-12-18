@@ -1116,7 +1116,7 @@ a.secondary {
 .rodape {
   display: flex;
   justify-content: space-around;
-  padding: 1vh 0 5vh 0;
+  padding: 4vh 0 5vh 0;
   background-color: #fff;
   color: #000;
   font-family: Comfortaa-regular;
@@ -2606,4 +2606,41 @@ a.secondary {
   width: 1.5em !important;
   height: auto;
   margin: 0.5rem;
+}
+
+/* PLANOS */
+.telaPlanos{
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.topPlanos{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.planos{
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  
+}
+
+.plano{
+  background-color: #fff;
+  color: #000;
+  height: 70vh;
+  width: 50vh;
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.plano span{
+  font-size: 1.5em;
+  font-weight: 700;
 }
