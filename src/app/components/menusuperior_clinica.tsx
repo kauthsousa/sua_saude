@@ -6,7 +6,7 @@ import styles from "../page.module.css";
 export default function MenuClinica() {
     return (
         <div className={styles.menusuperior}>
-            <Image src="/images/logodeitada.png" className={styles.imagem_logo} alt="Sua Saúde logo" width={400} height={50} priority />
+            <Link href="home_clinica"><Image src="/images/logodeitada.png" className={styles.imagem_logo} alt="Sua Saúde logo" width={400} height={50} priority /></Link>
             <nav className={styles.menu_opcoes} aria-label="Menu superior">
                 <ul className={styles.deslogado}>
                     <li><Link href="../pages/planos" aria-label="Vizualizar planos disponíveis">Planos</Link></li>
