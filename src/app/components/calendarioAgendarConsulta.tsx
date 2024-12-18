@@ -63,7 +63,7 @@ const CalendarioAgendarConsulta = () => {
     };
 
     return (
-        <div className={styles.calendarDisponibilidade}>
+        <div className={`${styles.calendarDisponibilidade} ${styles.calendarAgendar}`}>
             <div className={styles.calendarTopDisponibilidade}>
                 <div className={`${styles.setaCalendario}`}>
                     <button onClick={() => changeMonth(-1)}>

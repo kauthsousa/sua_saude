@@ -16,15 +16,16 @@ const AgendarConsulta = ({ isOpen, onClose, profissional }) => {
               className={styles.verificarDisponibilidadeCloseButton}
               onClick={onClose}
               >
-                <Image className={styles.btnCloseDep} src="/images/close.png" alt="Fechar Modal" width={24} height={24} />
+                <Image className={`${styles.btnCloseDep} ${styles.closeAgendar}`} src="/images/close.png" alt="Fechar Modal" width={24} height={24} />
               </button>
-              <div className={styles.verificarDisponibilidadeContent}>
+              <div className={`${styles.verificarDisponibilidadeContent} ${styles.agendarContent}`}>
                 <div className={styles.conteudoAgendar}>
-                  <div className={styles.verificarDisponibilidadeLeft}>
-                      <img
-                      src={profissional.imagem}
-                      alt={profissional.nome}
-                      className={styles.verificarDisponibilidadeProfileImage}
+                  <div className={`${styles.verificarDisponibilidadeLeft} ${styles.leftAgendar}`}>
+                      <Image
+                        src={profissional.imagem}
+                        alt={profissional.nome}
+                        className={`${styles.verificarDisponibilidadeProfileImage}`}
+                        width={500} height={500}
                       />
                       <div className={styles.estrelasDiv}>
                       {[...Array(5)].map((_, index) => (

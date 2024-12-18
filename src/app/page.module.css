@@ -1899,20 +1899,18 @@ a.secondary {
 }
 
 .verificarDisponibilidadeCloseButton .btnCloseDep {
-  width: 1.5em;
+  width: 1.7em;
   height: auto;
   display: flex;
   justify-self: flex-end;
   cursor: pointer;
   align-self: flex-end;
-  margin: 0.5rem;
 }
 
 .verificarDisponibilidadeContent {
   font-family: Comfortaa-regular;
   display: flex;
   gap: 10px;
-  flex-direction: column;
 }
 
 .verificarDisponibilidadeLeft {
@@ -2472,6 +2470,7 @@ a.secondary {
   padding: 2.5rem;
   height: auto;
   padding-bottom: 1.5rem;
+  width: auto;
 }
 
 .containerAgendar{
@@ -2585,4 +2584,25 @@ a.secondary {
 .btnAgendarConsulta{
   font-size: 0.9em;
   margin-top: 1rem;
+}
+
+.agendarContent{
+  display: flex;
+  flex-direction: column;
+}
+
+.leftAgendar{
+  display: flex;
+  align-items: normal;
+  margin-right: 1rem;
+}
+
+.calendarAgendar{
+  width: 17em;
+}
+
+.closeAgendar{
+  width: 1.5em !important;
+  height: auto;
+  margin: 0.5rem;
 }
