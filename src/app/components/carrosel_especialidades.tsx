@@ -16,8 +16,8 @@ const Carousel: React.FC = () => {
         { id: 5, label: "Ginecologista", image: "/images/especialidade_6.png" },
         { id: 6, label: "Urologista", image: "/images/especialidade_7.png" },
         { id: 7, label: "Ultrassonografia", image: "/images/especialidade_8.png" },
-        { id: 8, label: "Cardiologista", image: "/images/especialidade_9.jpg" },
-        { id: 9, label: "Pediatra", image: "/images/especialidade 10.jpg" },
+        { id: 8, label: "Cardiologista", image: "/images/especialidade 10.jpg" },
+        { id: 9, label: "Pediatra", image: "/images/especialidade_9.jpg" },
     ];
 
     const clonedItems = [...items, ...items, ...items];

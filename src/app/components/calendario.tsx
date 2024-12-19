@@ -2,7 +2,19 @@ import React, { useEffect, useState } from "react";
 import styles from "../page.module.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-const Calendario = () => {
+interface SpecialDay {
+  day: number;
+  month: number; // Agora inclui o mês também
+  year: number; // Agora inclui o ano
+  color: string; // Cor ou classe para estilização
+  description?: string; // Descrição opcional
+}
+
+interface CalendarioProps {
+  specialDays?: SpecialDay[]; // Prop para dias especiais
+}
+
+const Calendario: React.FC<CalendarioProps> = ({ specialDays = [] }) => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [daysInMonth, setDaysInMonth] = useState<(number | null)[]>([]);
   const [month, setMonth] = useState(currentDate.getMonth());
@@ -62,6 +74,41 @@ const Calendario = () => {
     }
   };
 
+  const isSpecialDay = (day: number | null): SpecialDay | null => {
+    if (!day) return null;
+
+    return specialDays.find(specialDay => 
+      specialDay.day === day && 
+      specialDay.month === month + 1 && // Comparando mês (de 0 a 11)
+      specialDay.year === year // Comparando o ano
+    ) || null;
+  };
+
+  const renderLegend = () => {
+    // Filtra as descrições únicas de dias especiais
+    const uniqueDescriptions = Array.from(
+      new Set(specialDays.map((event) => event.description))
+    );
+  
+    return (
+      <div className={styles.calendarLegend}>
+        {uniqueDescriptions.map((desc) => {
+          const color = specialDays.find((event) => event.description === desc)?.color;
+          return (
+            <div key={desc} className={styles.legendItem}>
+              <div
+                style={{ backgroundColor: color }}
+                className={styles.legendDot}
+              ></div>
+              {desc}
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
+  
+
   return (
     <div className={styles.calendar}>
       <div className={styles.calendarTop}>
@@ -93,24 +140,27 @@ const Calendario = () => {
       </div>
 
       <div className={styles.daysGrid}>
-        {daysInMonth.map((day, index) => (
-          <div
-            key={index}
-            className={`${styles.day} ${
-              day === null ? styles.disabledDay : day === selectedDay ? styles.selectedDay : ""
-            }`}
-            onClick={day ? () => handleDayClick(day) : undefined} // Só permite clique em dias válidos
-          >
-            {day || ""}
-          </div>
-        ))}
+        {daysInMonth.map((day, index) => {
+          const specialDay = isSpecialDay(day);
+          return (
+            <div
+              key={index}
+              className={`${styles.day} ${
+                day === selectedDay ? styles.selectedDay : ""
+              }`}
+              style={{
+                border: specialDay ? `3px solid ${specialDay.color}` : "none",
+              }}
+              onClick={day ? () => handleDayClick(day) : undefined}
+            >
+              {day}
+            </div>
+          );
+        })}
       </div>
 
-      {selectedDay && (
-        <p className={styles.selectedDate} hidden>
-          Data selecionada: {selectedDay}/{month + 1}/{year}
-        </p>
-      )}
+      {renderLegend()}
+
     </div>
   );
 };

@@ -22,6 +22,10 @@ export default function HomePaciente() {
     closeModal(); // Fecha o modal após confirmar
   };
 
+  const specialDays = [
+    {day:30, month: 11, year: 2024, color: "teal", description: "Consulta marcada"}
+  ]
+
   return (
     <div className={styles.pagina_homePaciente}>
       <header><MenuLogado/></header>
@@ -29,7 +33,7 @@ export default function HomePaciente() {
         <div className={`${styles.home_paciente}`}></div>
         <div className={styles.especialidadesH}></div>
         <div><Carousel/></div>
-        <div><Calendar/></div>
+        <div><Calendar specialDays={specialDays}/></div>
         <div>
           <Compromissos
             nome="Dra. Cleide Albuquerque - Ginecologista"

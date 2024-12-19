@@ -131,7 +131,7 @@
 }
 
 .calendar {
-  width: 85%;
+  width: 70%;
   border: 1px solid hsla(0, 0%, 76%, 1);
   border-radius: 10px;
   padding: 1em;
@@ -153,11 +153,11 @@
 .semana ul li {
   color: hsla(0, 0%, 49%, 1);
   font-size: 0.8em;
-  margin: 0 3.5em;
+  margin: 0 2.5em;
 }
 
 .semana ul li:nth-child(5) {
-  margin-right: 2em;
+  margin-right: 0em;
 }
 
 .semana ul li:nth-child(6) {
@@ -175,8 +175,8 @@
 }
 
 .seta_calendar {
-  width: 10px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
 }
 
 .titleCalendar {
@@ -188,9 +188,8 @@
 
 .daysGrid {
   display: grid;
-  grid-template-columns: repeat(7, 8.5em);
-  gap: 5px;
-  padding: 10px;
+  grid-template-columns: repeat(7, 7.2em);
+  padding: 5px;
 }
 
 .day {
@@ -221,12 +220,16 @@
 }
 
 .navigation button {
-  padding: 12px 13px 10px 13px;
+  padding: 1vh;
   cursor: pointer;
   color: rgba(0, 116, 134, 1);
   border: none;
-  font-size: 16px;
+  font-size: 18px;
   background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
 }
 
 /* compromisso */
@@ -234,7 +237,7 @@
   border: 1px solid rgba(193, 193, 193, 1);
   border-radius: 10px;
   padding: 1.5em 2em;
-  width: 85%;
+  width: 70%;
   display: flex;
   justify-content: center;
   justify-self: center;
@@ -261,6 +264,17 @@
   font-family: Comfortaa-regular;
 }
 
+.inputEspecificoCompromisso{
+  width: 22em;
+}
+
+.btnCompromisso{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
 .btnCompromisso button {
   width: 15vw;
   padding: 5px 0;
@@ -274,7 +288,7 @@
   color: #000;
   border: 1px solid #007486;
   background-color: #fff;
-  margin-left: 50px;
+
   transition: 0.3s ease-in-out;
 }
 
@@ -287,7 +301,7 @@
   color: #fff;
   background-color: #007486;
   border: 1px solid #007486;
-  margin-left: 15px;
+
   transition: 0.3s ease-in-out;
 }
 
@@ -524,7 +538,7 @@
 }
 
 .estrelaImg {
-  width: 2em;
+  width: 2rem;
   height: auto;
 }
 
@@ -537,7 +551,7 @@
 }
 
 .estrelaAtiva {
-  width: 5vh;
+  width: 2rem;
   height: auto;
 }
 
@@ -777,7 +791,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 70%;
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
@@ -806,7 +820,7 @@
 
 .carouselTrack {
   display: flex;
-  gap: 16px;
+  gap: 2rem;
   overflow-x: auto;
   scroll-behavior: smooth;
   scrollbar-width: none;
@@ -817,10 +831,10 @@
 }
 
 .card {
-  width: 10rem;
+  width: 9.5rem;
   background-color: white;
-  border-radius: 15%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   flex-shrink: 0;
   display: flex;
@@ -2185,7 +2199,7 @@ a.secondary {
 
 .consultasTitle {
   font-family: Comfortaa-regular;
-  margin: 0 16vh;
+  margin: 0 31vh;
   font-size: 1.2em;
   font-weight: 600;
 }
@@ -2210,6 +2224,10 @@ a.secondary {
   display: flex;
   flex-direction: column;
   gap: 2vh;
+}
+
+.botoesModal button{
+  cursor: pointer;
 }
 
 .btnSemFundo {
@@ -2643,4 +2661,43 @@ a.secondary {
 .plano span{
   font-size: 1.5em;
   font-weight: 700;
+}
+
+/* HOME MÉDICO */
+.btnMedico{
+  width: auto;
+}
+
+.agendaMedico {
+  background: url(../../public/images/propaganda.png);
+  height: 40vh;
+  width: 100%;
+  background-size: cover;
+}
+
+.opcoesMedico{
+  right: 6.8em;
+  margin-top: 12.5em;
+}
+
+.calendarLegend{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+  width: 70%;
+  margin: 1rem;
+}
+
+.legendDot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.legendItem{
+  display: flex;
+  flex-direction: row;
 }

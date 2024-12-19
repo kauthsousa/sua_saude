@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import styles from "../../page.module.css";
-import MenuLogado from "../../components/menusuperior_logado";
-import Calendario from "../../components/calendario";
+import MenuMedico from "@/app/components/menusuperior_medico";
+import Calendar from "../../components/calendario";
 import Compromissos from "../../components/compromissos";
 import Mapa from "@/app/components/mapa";
 import Cancelamento from "@/app/components/cancelamento";
@@ -10,7 +10,7 @@ import DetalhesConsulta from "@/app/components/detalhesConsulta";
 import AvaliarConsulta from "@/app/components/avaliarConsulta";
 import Rodape from "@/app/components/rodape";
 
-export default function Agenda() {
+export default function HomeMedico() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalAberto, abrirModal] = useState(false);
     const [aberto, vaiAbrir] = useState(false);
@@ -49,15 +49,18 @@ export default function Agenda() {
     }
 
     const specialDays = [
-        {day: 1, month: 12, year: 2024, color: "teal", description: "Consulta marcada"}
-    ]
+        { day: 1, month: 11, year: 2024, color: "red", description: "Posto de Saúde" },
+        { day: 3, month: 12, year: 2024, color: "red", description: "Posto de Saúde" },
+        { day: 2, month: 12, year: 2024, color: "yellow", description: "Hospital Geral" },
+        { day: 18, month: 12, year: 2024, color: "green", description: "Clínica São Lucas" },
+      ];
 
     return (
         <div>
-            <header><MenuLogado /></header>
+            <header><MenuMedico /></header>
             <main className={styles.main}>
-                <div className={styles.agenda}></div>
-                <div className={styles.divCalendario}><Calendario specialDays={specialDays}/></div>
+                <div className={`${styles.agenda} ${styles.agendaMedico}`}></div>
+                <div className={styles.divCalendario}><Calendar specialDays={specialDays}/></div>
                 <div className={styles.consultas}>
                     <span className={styles.consultasTitle}>Consultas Marcadas</span>
                     <div className={styles.compromissoAgenda}>

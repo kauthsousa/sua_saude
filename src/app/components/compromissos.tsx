@@ -34,7 +34,7 @@ const Compromissos: React.FC<CompromissosProps> = ({
             id="compromisso-nome"
             type="text"
             value={nome}
-            className={styles.inputCompromisso}
+            className={`${styles.inputCompromisso} ${styles.inputEspecificoCompromisso}`}
             readOnly
             aria-readonly="true"
           />
