@@ -1,8 +1,19 @@
 import React, { useEffect, useState } from "react";
 import styles from "../page.module.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+interface SpecialDay {
+  day: number;
+  month: number; // Agora inclui o mês também
+  year: number; // Agora inclui o ano
+  color: string; // Cor ou classe para estilização
+  description?: string; // Descrição opcional
+}
 
-const CalendarioAgendarConsulta = () => {
+interface CalendarioProps {
+  specialDays?: SpecialDay[]; // Prop para dias especiais
+}
+
+const CalendarioAgendarConsulta: React.FC<CalendarioProps> = ({ specialDays = [] }) => {
     const [currentDate, setCurrentDate] = useState(new Date());
     const [daysInMonth, setDaysInMonth] = useState<(number | null)[]>([]);
     const [month, setMonth] = useState(currentDate.getMonth());
@@ -62,54 +73,74 @@ const CalendarioAgendarConsulta = () => {
         }
     };
 
+    const isSpecialDay = (day: number | null): SpecialDay | null => {
+        if (!day) return null;
+    
+        return specialDays.find(specialDay => 
+          specialDay.day === day && 
+          specialDay.month === month + 1 && // Comparando mês (de 0 a 11)
+          specialDay.year === year // Comparando o ano
+        ) || null;
+      };
+    
+
     return (
-        <div className={`${styles.calendarDisponibilidade} ${styles.calendarAgendar}`}>
+        <div className={`${styles.calendarDisponibilidade} ${styles.calendarAgendar}`} role="region" aria-labelledby="calendar-title">
             <div className={styles.calendarTopDisponibilidade}>
                 <div className={`${styles.setaCalendario}`}>
-                    <button onClick={() => changeMonth(-1)}>
+                    <span onClick={() => changeMonth(-1)} aria-label="Mês anterior">
                         <FaArrowLeft />
-                    </button>
+                    </span>
                 </div>
-                <span className={styles.titleCalendarAgendar}>
+                <span className={styles.titleCalendarAgendar} id="celndar-title" role="heading" aria-level={1}>
                     {monthNames[month]} {year}
                 </span>
                 <div className={`${styles.setaCalendario}`}>
-                    <button onClick={() => changeMonth(1)}>
+                    <span onClick={() => changeMonth(1)} aria-label="Próximo mês">
                         <FaArrowRight />
-                    </button>
+                    </span>
                 </div>
             </div>
 
             <div className={styles.semanaAgendarConsulta}>
-                <ul>
-                    <li>SEG</li>
-                    <li>TER</li>
-                    <li>QUA</li>
-                    <li>QUI</li>
-                    <li>SEX</li>
-                    <li>SÁB</li>
-                    <li>DOM</li>
+                <ul aria-label="Dias da semana" role="list">
+                    <li role="listitem">SEG</li>
+                    <li role="listitem">TER</li>
+                    <li role="listitem">QUA</li>
+                    <li role="listitem">QUI</li>
+                    <li role="listitem">SEX</li>
+                    <li role="listitem">SÁB</li>
+                    <li role="listitem">DOM</li>
                 </ul>
             </div>
 
             <div className={styles.daysAgendados}>
-                {daysInMonth.map((day, index) => (
+                {daysInMonth.map((day, index) => {
+                    const specialDay = isSpecialDay(day);
+                    return (
                     <div
                         key={index}
-                        className={`${styles.dayAgenda} ${day === null ? styles.disabledDayDisponibilidade : day === selectedDay ? styles.selectedDayDisponibilidade : ""
+                        role="gridcell"
+                        aria-selected={day === selectedDay}
+                        aria-label={
+                            day
+                            ? `${day} ${monthNames[month]} ${year}` +
+                                (specialDay ? ` - ${specialDay.description}` : "")
+                            : undefined
+                        }
+                        className={`${styles.dayAgenda} ${day === selectedDay ? styles.selectedDay : ""
                             }`}
-                        onClick={day ? () => handleDayClick(day) : undefined} // Só permite clique em dias válidos
+                            style={{
+                                border: specialDay ? `2px solid ${specialDay.color}` : "none",
+                            }}
+                            onClick={day ? () => handleDayClick(day) : undefined} // Só permite clique em dias válidos
                     >
-                        {day || ""}
+                        {day}
                     </div>
-                ))}
+                    );
+                })}
             </div>
 
-            {selectedDay && (
-                <p className={styles.selectedDateDisponibilidade} hidden>
-                    Data selecionada: {selectedDay}/{month + 1}/{year}
-                </p>
-            )}
         </div>
     );
 };

@@ -7,7 +7,6 @@ import Rodape from "@/app/components/rodape";
 import AgendarConsulta from "@/app/components/agendarconsulta";
 
 export default function Favoritos() {
-
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedProfissional, setSelectedProfissional] = useState(null);
 
@@ -18,9 +17,9 @@ export default function Favoritos() {
         distancia: "9 km",
         imagem: "/images/profissional_foto1.png",
         titulo: "Agendar Consulta"
-      };
-    
-    const handleOpenModal = (profissional: any) => {
+    };
+
+    const handleOpenModal = (profissional : any) => {
         setSelectedProfissional(profissional); // Define o profissional selecionado
         setModalOpen(true); // Abre o modal
     };
@@ -34,10 +33,19 @@ export default function Favoritos() {
             <header aria-label="Menu Principal">
                 <MenuLogado />
             </header>
-            <main className={`${styles.main} ${styles.telaConfiguracoes}`}>
-                <div className={styles.telaFavoritos} role="imagem">
-                    <span className={`${styles.titulo_modalConfiguracoes} ${styles.tituloFav}`}>Favoritos</span>   
-                    <div className={styles.containerFav}><ListaFavoritos profissional={profissional} botaoTexto="Agendar Consulta" onBotaoClick={handleOpenModal} iconeLixeira="/images/lixeira.svg"/></div>{/* no onBotãoClick você coloca para chamar o modal, ao invés desse handleAgendarConsulta */}
+            <main className={`${styles.main} ${styles.telaConfiguracoes}`} role="main">
+                <div className={styles.telaFavoritos} role="region" aria-labelledby="favoritos-title">
+                    <span id="favoritos-title" className={`${styles.titulo_modalConfiguracoes} ${styles.tituloFav}`}>
+                        Favoritos
+                    </span>
+                    <div className={styles.containerFav}>
+                        <ListaFavoritos
+                            profissional={profissional}
+                            botaoTexto="Agendar Consulta"
+                            onBotaoClick={handleOpenModal}
+                            iconeLixeira="/images/lixeira.svg"
+                        />
+                    </div>
                 </div>
             </main>
 
@@ -50,7 +58,7 @@ export default function Favoritos() {
             )}
 
             <footer className={styles.footer} aria-label="Rodapé">
-                <Rodape/>
+                <Rodape />
             </footer>
         </div>
     );

@@ -663,6 +663,7 @@
   border: 2px solid #d1d1d1;
   transition: border-color 0.3s ease;
   font-family: Comfortaa-light;
+  cursor: pointer;
 }
 
 .inputs_pesquisa select {
@@ -676,6 +677,7 @@
   -moz-appearance: none; /* Remove a aparência padrão no Mozilla */ 
   background: url('/images/arrow.svg') no-repeat right center; /* Adicione a imagem da seta personalizada */ 
   background-size: 15px; /* Ajuste o tamanho da seta */ 
+  cursor: pointer;
 }
 
 .apparenceSelect select:focus{
@@ -1651,7 +1653,7 @@ a.secondary {
   grid-template-areas:
     "imgFavorito proFavorito"
   ;
-  width: 75%;
+  width: 70%;
   align-items: center;
   justify-content: center;
 }
@@ -2524,7 +2526,7 @@ a.secondary {
   padding-top: 0.1rem;
 }
 
-.setaCalendario button{
+.setaCalendario span{
   padding: 0;
   background: none;
   border: none;

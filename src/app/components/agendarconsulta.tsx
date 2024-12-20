@@ -2,9 +2,14 @@ import React from "react";
 import Image from "next/image";
 import styles from "../page.module.css";
 import CalendarioAgendarConsulta from "./calendarioAgendarConsulta";
+import { BiColor } from "react-icons/bi";
 
 const AgendarConsulta = ({ isOpen, onClose, profissional }) => {
   if (!isOpen) return null;
+
+  const specialDay =[
+    {day: 1, month: 1, year: 2025, color: "teal"}
+  ]
 
   return (
     <div className={styles.verificarDisponibilidadeOverlay}>
@@ -44,7 +49,7 @@ const AgendarConsulta = ({ isOpen, onClose, profissional }) => {
                   <div className={styles.verificarDisponibilidadeRight}>
                       <h3 className={`${styles.verificarDisponibilidadeName} ${styles.nomeProfissional}`}>{profissional.nome}</h3>
                       <div className={`${styles.verificarDisponibilidadeCalendarContainer} ${styles.containerAgendarConsulta}`}>
-                        <CalendarioAgendarConsulta />
+                        <CalendarioAgendarConsulta specialDays={specialDay}/>
                         
                         <div className={`${styles.inputs_pesquisa} ${styles.inputsAgendar}`}>
                           <div className={`${styles.apparenceSelect} ${styles.selectAgendar}`}>

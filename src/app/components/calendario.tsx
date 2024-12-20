@@ -91,7 +91,7 @@ const Calendario: React.FC<CalendarioProps> = ({ specialDays = [] }) => {
     );
   
     return (
-      <div className={styles.calendarLegend}>
+      <div className={styles.calendarLegend} aria-label="Legenda do Calendário">
         {uniqueDescriptions.map((desc) => {
           const color = specialDays.find((event) => event.description === desc)?.color;
           return (
@@ -110,41 +110,49 @@ const Calendario: React.FC<CalendarioProps> = ({ specialDays = [] }) => {
   
 
   return (
-    <div className={styles.calendar}>
+    <div className={styles.calendar} role="region" aria-labelledby="calendar-title">
       <div className={styles.calendarTop}>
         <div className={styles.navigation}>
-          <button onClick={() => changeMonth(-1)}>
+          <button onClick={() => changeMonth(-1)} aria-label="Mês anterior">
             <FaArrowLeft />
           </button>
         </div>
-        <span className={styles.titleCalendar}>
+        <span id="calendar-title" className={styles.titleCalendar} role="heading" aria-level={1}>
           {monthNames[month]} {year}
         </span>
         <div className={styles.navigation}>
-          <button onClick={() => changeMonth(1)}>
+          <button onClick={() => changeMonth(1)} aria-label="Próximo mês">
             <FaArrowRight />
           </button>
         </div>
       </div>
 
       <div className={styles.semana}>
-        <ul>
-          <li>SEGUNDA</li>
-          <li>TERÇA</li>
-          <li>QUARTA</li>
-          <li>QUINTA</li>
-          <li>SEXTA</li>
-          <li>SÁBADO</li>
-          <li>DOMINGO</li>
+        <ul aria-label="Dias da semana" role="list">
+          <li role="listitem">SEGUNDA</li>
+          <li role="listitem">TERÇA</li>
+          <li role="listitem">QUARTA</li>
+          <li role="listitem">QUINTA</li>
+          <li role="listitem">SEXTA</li>
+          <li role="listitem">SÁBADO</li>
+          <li role="listitem">DOMINGO</li>
         </ul>
       </div>
 
-      <div className={styles.daysGrid}>
+      <div className={styles.daysGrid} role="grid" aria-labelledby="calendar-title">
         {daysInMonth.map((day, index) => {
           const specialDay = isSpecialDay(day);
           return (
             <div
               key={index}
+              role="gridcell"
+              aria-selected={day === selectedDay}
+              aria-label={
+                day
+                  ? `${day} ${monthNames[month]} ${year}` +
+                    (specialDay ? ` - ${specialDay.description}` : "")
+                  : undefined
+              }
               className={`${styles.day} ${
                 day === selectedDay ? styles.selectedDay : ""
               }`}

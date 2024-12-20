@@ -44,50 +44,53 @@ export default function RealizarPagamento() {
                     <div className={styles.cartaoCredito}>
                         <span className={`${styles.titulo_modalConfiguracoes} ${styles.tituloCartao}`}>CARTÃO DE CRÉDITO</span>      
                         <div className={styles.conteudoCartao}>
-                            <div className={styles.dadosCartao}>
-                                <div className={styles.inputContent}>
-                                    <label htmlFor="Número do cartão">Número do cartão </label>
-                                    <div className={styles.interiorInput}>
-                                        <Image src="/images/mini_ cartao.svg" alt="ícone de cartão de crédito" width={25} height={25} priority/>
-                                        <InputMask mask="9999 9999 9999 9999" placeholder="0000 0000 0000 0000" className={styles.inputCartao} required aria-required="true" aria-label="Número do cartão" value={cardNumber} onChange={handleCardNumberChange}/>
+                            <form>
+                                <div className={styles.dadosCartao}>
+                                    <div className={styles.inputContent}>
+                                        <label htmlFor="Número do cartão">Número do cartão </label>
+                                        <div className={styles.interiorInput}>
+                                            <Image src="/images/mini_ cartao.svg" alt="ícone de cartão de crédito" width={25} height={25} priority/>
+                                            <InputMask mask="9999 9999 9999 9999" placeholder="0000 0000 0000 0000" className={styles.inputCartao} required aria-required="true" aria-label="Número do cartão" value={cardNumber} onChange={handleCardNumberChange}/>
+                                        </div>
+                                    </div>
+                                    <div className={styles.inputContent}>
+                                        <label htmlFor="Expira em">Expira em</label>
+                                        <div className={styles.interiorInput}>
+                                            <Image src="/images/data_cartao.svg" alt="ícone de calendário" width={25} height={25} priority/>
+                                            <InputMask
+                                                id="monthYear"
+                                                mask="99/9999"
+                                                value={monthYear}
+                                                onChange={(e) => setMonthYear(e.target.value)}
+                                                placeholder="MM/YYYY"
+                                                required aria-required="true"
+                                            >
+                                                {(inputProps) => <input {...inputProps} type="text" className={styles.inputCartao} />}
+                                            </InputMask>
+                                        </div>
+                                    </div>
+                                    <div className={styles.inputContent}>
+                                        <label htmlFor="Número do cartão">Código de segurança</label>
+                                        <div className={styles.interiorInput}>
+                                            <Image src="/images/cadeado.svg" alt="ícone de cadeado" width={25} height={25} priority/>
+                                            <InputMask mask="999" type="text" placeholder="CVC" className={styles.inputCartao} required aria-required="true" aria-label="Número do cartão"/>
+                                        </div>
+                                    </div>
+                                    <div className={styles.inputContent}>
+                                        <label htmlFor="Nome no cartão">Nome no cartão </label>
+                                        <div className={`${styles.interiorInput} ${styles.interiorNome}`}>
+                                            <input type="text" placeholder="Escreva o nome que está no cartão" className={`${styles.inputCartao} ${styles.nomeCartao}`} required aria-required="true" aria-label="Número do cartão" value={cardName} onChange={(e) => setCardName(e.target.value)}/>
+                                        </div>
+                                    </div>
+                                    <div className={styles.inputContent}>
+                                        <button className={`${styles.btn} ${styles.btnPagamento}`}>Pagar Agora</button>
+                                        <div className={styles.segurancaCartao}>
+                                            <Image src="/images/cadeado_preenchido.svg" alt="" height={12} width={12} priority/>
+                                            <span>Your transaction is secured with SSL encryption</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className={styles.inputContent}>
-                                    <label htmlFor="Expira em">Expira em</label>
-                                    <div className={styles.interiorInput}>
-                                        <Image src="/images/data_cartao.svg" alt="ícone de calendário" width={25} height={25} priority/>
-                                        <InputMask
-                                            id="monthYear"
-                                            mask="99/9999"
-                                            value={monthYear}
-                                            onChange={(e) => setMonthYear(e.target.value)}
-                                            placeholder="MM/YYYY"
-                                        >
-                                            {(inputProps) => <input {...inputProps} type="text" className={styles.inputCartao} />}
-                                        </InputMask>
-                                    </div>
-                                </div>
-                                <div className={styles.inputContent}>
-                                    <label htmlFor="Número do cartão">Código de segurança</label>
-                                    <div className={styles.interiorInput}>
-                                        <Image src="/images/cadeado.svg" alt="ícone de cadeado" width={25} height={25} priority/>
-                                        <InputMask mask="999" type="text" placeholder="CVC" className={styles.inputCartao} required aria-required="true" aria-label="Número do cartão"/>
-                                    </div>
-                                </div>
-                                <div className={styles.inputContent}>
-                                    <label htmlFor="Nome no cartão">Nome no cartão </label>
-                                    <div className={`${styles.interiorInput} ${styles.interiorNome}`}>
-                                        <input type="text" placeholder="Escreva o nome que está no cartão" className={`${styles.inputCartao} ${styles.nomeCartao}`} required aria-required="true" aria-label="Número do cartão" value={cardName} onChange={(e) => setCardName(e.target.value)}/>
-                                    </div>
-                                </div>
-                                <div className={styles.inputContent}>
-                                    <button className={`${styles.btn} ${styles.btnPagamento}`}>Pagar Agora</button>
-                                    <div className={styles.segurancaCartao}>
-                                        <Image src="/images/cadeado_preenchido.svg" alt="" height={12} width={12} priority/>
-                                        <span>Your transaction is secured with SSL encryption</span>
-                                    </div>
-                                </div>
-                            </div>
+                            </form>
                             <div className={styles.imgCartao}>
                                 <div className={styles.backCartao}>
                                     <div className={styles.topCartao}>
